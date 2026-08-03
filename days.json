@@ -2,437 +2,420 @@
   {
     "id": 1,
     "date": "2026-08-03",
-    "title": "Începem prin adevăr",
-    "icon": "🛤️",
-    "theme": "start",
-    "story": "Nu promitem cine vom fi cândva. Începem să devenim, de astăzi, oamenii cu care celălalt poate construi o viață.",
-    "action": "Trimite un mesaj scurt și sincer: ce simți astăzi când începe acest drum și ce vrei să păstrăm între noi?",
-    "question": "Ce ai vrea să înțeleg despre tine chiar de la început, fără să presupun și fără să te grăbesc?",
+    "title": "Adevărul de la început",
+    "icon": "🕯️",
+    "theme": "covenant",
+    "magic": "candles",
+    "magicLabel": "Legământ",
+    "scripture": "Doamne, învață-ne să iubim nu doar prin cuvinte, ci prin adevăr și faptă.",
+    "story": "Începem fără roluri și fără promisiuni spectaculoase. Îl punem pe Dumnezeu în centru și alegem să spunem adevărul cu blândețe.",
+    "action": "Trimite un mesaj simplu: cum ești astăzi și ce ai nevoie să păstrăm între noi în aceste două săptămâni.",
+    "question": "Ce ai vrea să pot auzi de la tine fără să te judec, să te grăbesc sau să încerc imediat să repar?",
     "options": [
-      "Sinceritatea",
-      "Rugăciunea",
-      "Respectul",
-      "Tandrețea",
-      "Comunicarea",
-      "Încrederea"
+      "Să mă asculți până la capăt",
+      "Să mă întrebi înainte să presupui",
+      "Să-mi dai timp",
+      "Să te rogi cu mine",
+      "Să-mi spui adevărul cu blândețe",
+      "Să rămâi aproape când îmi este greu"
     ],
     "photo": null,
-    "song": {
-      "title": "Scopul Meu",
-      "artist": "Alin și Emima Timofte",
-      "url": "https://www.youtube.com/results?search_query=Scopul+Meu+Alin+si+Emima+Timofte"
-    },
     "prayer": [
-      "Pentru starea și nevoia mea de astăzi",
-      "Pentru noi și felul în care învățăm să iubim",
-      "Pentru familiile noastre, biserică și voia lui Dumnezeu"
+      "Pentru sinceritate și pace în inimile noastre",
+      "Pentru o iubire curată, răbdătoare și atentă",
+      "Pentru voia lui Dumnezeu, familii și biserică"
     ],
-    "teaser": "Mâine vom învăța să vedem ziua prin ochii celuilalt.",
-    "special": null,
-    "build": "Aleg azi un lucru mic pe care îl fac, nu doar îl promit."
+    "teaser": "Mâine ne împrumutăm privirea unul altuia.",
+    "build": "Astăzi aleg să ascult un lucru până la capăt înainte să răspund.",
+    "secretPrompt": "Un adevăr mic pe care mi-a fost greu să ți-l spun este…"
   },
   {
     "id": 2,
     "date": "2026-08-04",
-    "title": "Lumea prin ochii tăi",
+    "title": "O fereastră spre lumea ta",
     "icon": "🌊",
     "theme": "window",
-    "story": "A iubi pe cineva înseamnă să fii curios de lumea lui, nu doar să aștepți să intre în a ta.",
-    "action": "Alege un lucru mic din ziua ta și povestește-mi de ce ți-a atras atenția. Fotografia este doar o opțiune.",
-    "question": "Ce lucru simplu dintr-o zi obișnuită îți aduce liniște sau bucurie și de ce?",
+    "magic": "window",
+    "magicLabel": "Privire",
+    "scripture": "Ajută-ne, Doamne, să nu iubim o imagine inventată, ci omul adevărat din fața noastră.",
+    "story": "Alina vede marea și Mentonul; Eugeniu vede Parisul. Astăzi distanța devine o fereastră, nu un zid.",
+    "action": "Alege un detaliu din ziua ta și povestește de ce ți-a atras atenția. Fotografia este complet opțională.",
+    "question": "Ce lucru simplu dintr-o zi obișnuită îți aduce pace și ce spune el despre tine?",
     "options": [],
-    "photo": "Opțional: poți alege din telefon o fotografie care completează povestea.",
-    "song": {
-      "title": "Pentru tine",
-      "artist": "Ramona Hanganu",
-      "url": "https://www.youtube.com/results?search_query=Ramona+Hanganu+Pentru+tine"
-    },
+    "photo": "Opțional: alege din galerie o fotografie frumoasă care completează povestea.",
     "prayer": [
-      "Pentru starea și nevoia mea de astăzi",
-      "Pentru noi și felul în care învățăm să iubim",
-      "Pentru familiile noastre, biserică și voia lui Dumnezeu"
+      "Pentru bucuria și odihna fiecăruia astăzi",
+      "Pentru curiozitate sinceră față de lumea celuilalt",
+      "Pentru a vedea darurile lui Dumnezeu în lucrurile mici"
     ],
-    "teaser": "Mâine nu vom explica totul. Vom trimite o stare.",
-    "special": null,
-    "build": "Învăț să observ lumea ta, nu doar să vorbesc despre lumea mea."
+    "teaser": "Mâine nu spunem doar ce am făcut, ci cum suntem cu adevărat.",
+    "build": "Învăț să observ lumea ta fără să mut imediat conversația la mine.",
+    "secretPrompt": "Ceva frumos ce observ la tine, dar spun prea rar, este…"
   },
   {
     "id": 3,
     "date": "2026-08-05",
-    "title": "Cum ești cu adevărat astăzi",
+    "title": "Constelația stării mele",
     "icon": "✨",
     "theme": "emotion",
-    "story": "Uneori întrebăm „ce faci?”, dar uităm să întrebăm „cum ești cu adevărat?”.",
-    "action": "Spune-mi starea ta reală și felul în care pot fi aproape fără să te sufoc sau să încerc să repar totul.",
-    "question": "Când ești obosit(ă), îngrijorat(ă) sau copleșit(ă), ce fel de apropiere îți face bine și ce te apasă mai mult?",
+    "magic": "constellation",
+    "magicLabel": "Stare",
+    "scripture": "Doamne, dă-ne curajul să nu ascundem oboseala sub un zâmbet și nici dorul sub tăcere.",
+    "story": "„Sunt bine” nu este întotdeauna adevărul. Astăzi punem nume pe ceea ce se întâmplă în noi.",
+    "action": "Spune starea ta reală și un singur lucru prin care celălalt poate fi aproape fără să te sufoce.",
+    "question": "Când ești obosit(ă), neliniștit(ă) sau copleșit(ă), ce fel de apropiere îți face bine și ce te apasă?",
     "options": [
-      "Liniștit(ă)",
-      "Obosit(ă)",
-      "Cu dor",
-      "Bucuros/oasă",
-      "Îngrijorat(ă)",
-      "Recunoscător/oare"
+      "Am nevoie să mă asculți",
+      "Am nevoie de liniște, dar nu de distanță",
+      "Am nevoie de încurajare",
+      "Am nevoie să ne rugăm",
+      "Am nevoie de tandrețe",
+      "Am nevoie de o soluție concretă"
     ],
     "photo": null,
-    "song": {
-      "title": "I Prayed for You",
-      "artist": "Christian Wedding Song",
-      "url": "https://www.youtube.com/results?search_query=I+Prayed+for+You+Christian+Wedding+Song"
-    },
     "prayer": [
-      "Pentru starea și nevoia mea de astăzi",
-      "Pentru noi și felul în care învățăm să iubim",
-      "Pentru familiile noastre, biserică și voia lui Dumnezeu"
+      "Pentru starea emoțională și fizică de astăzi",
+      "Pentru înțelepciunea de a susține fără control",
+      "Pentru pacea lui Dumnezeu peste fricile noastre"
     ],
-    "teaser": "Mâine vom exersa să ascultăm înainte să reparăm.",
-    "special": null,
-    "build": "Nu ghicesc nevoia ta. Te întreb și te ascult."
+    "teaser": "Mâine exersăm darul rar de a asculta fără să ne apărăm.",
+    "build": "Nu ghicesc nevoia ta. Întreb: „Cum pot fi aproape astăzi?”",
+    "secretPrompt": "Când spun „sunt bine”, uneori în mine este de fapt…"
   },
   {
     "id": 4,
     "date": "2026-08-06",
-    "title": "Ascult ca să te înțeleg",
-    "icon": "🤍",
+    "title": "Ascult înainte să răspund",
+    "icon": "🎧",
     "theme": "listen",
-    "story": "O relație pentru o viață nu se ține doar prin cuvinte frumoase, ci prin siguranța că poți vorbi fără să fii imediat corectat.",
-    "action": "Trimite un mesaj vocal scurt. Celălalt răspunde mai întâi: „Am înțeles că pentru tine...”",
-    "question": "Ce te face să simți că ai fost ascultat(ă) cu adevărat, nu doar auzit(ă)?",
+    "magic": "listening",
+    "magicLabel": "Ascultare",
+    "scripture": "Fă-ne grabnici la ascultare, înceți la vorbire și blânzi când adevărul celuilalt ne incomodează.",
+    "story": "Faptul că putem vorbi despre orice este un dar. Astăzi îl protejăm: ascultăm fără proces, fără predică și fără apărare.",
+    "action": "Trimite un mesaj vocal scurt. Celălalt începe răspunsul cu: „Am înțeles că pentru tine…”",
+    "question": "Ce gest concret îți arată că nu doar am auzit cuvintele tale, ci am înțeles inima din spatele lor?",
     "options": [],
     "photo": null,
-    "song": {
-      "title": "Scopul Meu",
-      "artist": "Alin și Emima Timofte",
-      "url": "https://www.youtube.com/results?search_query=Scopul+Meu+Alin+si+Emima+Timofte"
-    },
     "prayer": [
-      "Pentru starea și nevoia mea de astăzi",
-      "Pentru noi și felul în care învățăm să iubim",
-      "Pentru familiile noastre, biserică și voia lui Dumnezeu"
+      "Pentru urechi care ascultă și o inimă fără defensivă",
+      "Pentru libertatea de a vorbi despre orice în siguranță",
+      "Pentru cuvinte care vindecă, nu rănesc"
     ],
-    "teaser": "Mâine vom vorbi despre partea care nu se vede ușor.",
-    "special": null,
-    "build": "Astăzi nu pregătesc răspunsul în timp ce tu încă vorbești."
+    "teaser": "Mâine deschidem ușa spre ceea ce purtăm în tăcere.",
+    "build": "Astăzi repet ce am înțeles înainte să ofer sfaturi.",
+    "secretPrompt": "Ceva ce mi-e teamă că ai putea înțelege greșit despre mine este…"
   },
   {
     "id": 5,
     "date": "2026-08-07",
-    "title": "Ce porți în tăcere",
+    "title": "Camera în care nu intră oricine",
     "icon": "🪞",
     "theme": "depth",
-    "story": "A cunoaște un om înseamnă să vezi și puterea lui, și oboseala pe care o ascunde.",
-    "action": "Spune un lucru pe care îl duci des singur(ă) și ce ar însemna pentru tine să nu mai fii singur(ă) în el.",
-    "question": "Ce responsabilitate, teamă sau presiune din viața ta aș vrea să învăț să o înțeleg mai bine?",
+    "magic": "mirror",
+    "magicLabel": "Adevăr",
+    "scripture": "Doamne, păzește vulnerabilitatea noastră și fă-ne oameni în care adevărul celuilalt este în siguranță.",
+    "story": "A cunoaște un om înseamnă să vezi și puterea lui, și locul în care obosește în tăcere.",
+    "action": "Spune un lucru pe care îl porți des singur(ă) și ce ar însemna pentru tine să nu mai fii singur(ă) în el.",
+    "question": "Ce responsabilitate, teamă sau presiune din viața ta ai vrea să învăț să o înțeleg mai bine?",
     "options": [],
     "photo": null,
-    "song": {
-      "title": "Pentru tine",
-      "artist": "Ramona Hanganu",
-      "url": "https://www.youtube.com/results?search_query=Ramona+Hanganu+Pentru+tine"
-    },
     "prayer": [
-      "Pentru starea și nevoia mea de astăzi",
-      "Pentru noi și felul în care învățăm să iubim",
-      "Pentru familiile noastre, biserică și voia lui Dumnezeu"
+      "Pentru povara pe care fiecare o poartă în tăcere",
+      "Pentru încredere și discreție între noi",
+      "Pentru curajul de a cere ajutor la timpul potrivit"
     ],
-    "teaser": "Mâine este zi de post: nu performanță, ci sinceritate înaintea lui Dumnezeu.",
-    "special": null,
-    "build": "Învăț să fiu sprijin fără să-ți iau vocea sau libertatea."
+    "teaser": "Mâine postim nu ca să impresionăm, ci ca să ne așezăm înaintea lui Dumnezeu.",
+    "build": "Aleg o grijă pe care o pot purta astăzi prin rugăciune, ascultare sau ajutor concret.",
+    "secretPrompt": "Mi-a fost greu să-ți cer asta, dar am nevoie de…"
   },
   {
     "id": 6,
     "date": "2026-08-08",
-    "title": "Postul nostru: ne purtăm în rugăciune",
+    "title": "Postul nostru: purtați unul pe altul",
     "icon": "🙏",
     "theme": "fast",
-    "story": "Postul nu este concurs și nici tăcere forțată. Este o zi în care spunem adevărul despre starea noastră și ne purtăm unul pe altul înaintea lui Dumnezeu.",
-    "action": "Discutați înainte: cum vă simțiți, dacă puteți posti și cum vă veți susține pe parcursul zilei.",
-    "question": "Cum ești fizic și sufletește? Pentru ce ai nevoie să mă rog și ce mesaj de susținere te-ar ajuta astăzi?",
+    "magic": "prayer-river",
+    "magicLabel": "Post",
+    "scripture": "Doamne, curăță motivele noastre. Nu vrem performanță spirituală, ci o inimă mai aproape de Tine și unul de altul.",
+    "story": "Înainte de post, discutăm sincer despre sănătate, energie, teamă și nevoie. Dragostea nu obligă; dragostea poartă.",
+    "action": "Hotărâți împreună forma zilei, momentele de verificare și felul în care vă susțineți.",
+    "question": "Cum ești fizic și sufletește? Pentru ce ai nevoie să mă rog și ce mesaj te-ar ajuta în timpul postului?",
     "options": [
-      "Pot posti și vreau",
-      "Pot posti, dar am nevoie de susținere",
-      "Nu pot posti astăzi, dar vreau să mă rog",
-      "Vreau să discutăm înainte să hotărâm"
+      "Pot și vreau să postesc",
+      "Pot, dar am nevoie de susținere",
+      "Aleg o perioadă mai scurtă",
+      "Nu pot posti alimentar, dar vreau timp de rugăciune",
+      "Mai întâi vreau să discutăm starea noastră"
     ],
     "photo": null,
-    "song": {
-      "title": "I Prayed for You",
-      "artist": "Christian Wedding Song",
-      "url": "https://www.youtube.com/results?search_query=I+Prayed+for+You+Christian+Wedding+Song"
-    },
     "prayer": [
-      "Pentru starea, puterea și pacea fiecăruia",
-      "Pentru relația noastră: curăție, înțelepciune și unitate",
-      "Pentru familiile noastre, biserică, pastori și viitorul nostru"
+      "Pentru putere, sănătate și pace în timpul postului",
+      "Pentru curăție, unitate și înțelepciune în relația noastră",
+      "Pentru familii, biserică, pastori și viitorul nostru înaintea lui Dumnezeu"
     ],
-    "teaser": "Mâine vom aduce din biserică nu doar o impresie, ci ceva de trăit.",
-    "special": "fast",
-    "build": "Astăzi nu joc rolul omului puternic. Spun sincer cum sunt și primesc sprijin."
+    "teaser": "Mâine luăm din biserică un adevăr pe care îl trăim, nu doar îl notăm.",
+    "build": "Stabilim un moment real când ne întrebăm: „Cum ești? Cum te pot susține?”",
+    "secretPrompt": "O rugăciune pe care încă mi-e greu să o spun cu voce tare este…",
+    "special": "fast"
   },
   {
     "id": 7,
     "date": "2026-08-09",
-    "title": "Duminica: din Cuvânt în relație",
+    "title": "Duminica: Cuvântul devine faptă",
     "icon": "⛪",
     "theme": "sunday",
-    "story": "Credința în centru nu înseamnă doar să mergem la biserică, ci să lăsăm adevărul auzit să schimbe felul în care ne iubim.",
-    "action": "După biserică, împărtășește o idee care te-a atins și un gest mic prin care vrei să o trăiești.",
-    "question": "Ce ți-a vorbit Dumnezeu astăzi despre caracter, iubire, iertare sau răbdare?",
+    "magic": "stained-glass",
+    "magicLabel": "Cuvânt",
+    "scripture": "Doamne, nu ne lăsa doar ascultători ai Cuvântului. Arată-ne cum să-l trăim în felul în care ne iubim.",
+    "story": "Credința în centru nu înseamnă doar biserică, ci o predică ce ajunge în tonul vocii, în iertare și în alegerile noastre.",
+    "action": "După biserică, împărtășește ideea care te-a atins și o aplicare pentru următoarele 24 de ore.",
+    "question": "Ce ți-a arătat Dumnezeu astăzi despre caracter, iubire, răbdare, milă sau adevăr?",
     "options": [],
-    "photo": null,
-    "song": {
-      "title": "Scopul Meu",
-      "artist": "Alin și Emima Timofte",
-      "url": "https://www.youtube.com/results?search_query=Scopul+Meu+Alin+si+Emima+Timofte"
-    },
+    "photo": "Opțional: un detaliu liniștit al duminicii tale.",
     "prayer": [
-      "Pentru starea și nevoia mea de astăzi",
-      "Pentru noi și felul în care învățăm să iubim",
-      "Pentru familiile noastre, biserică și voia lui Dumnezeu"
+      "Pentru ca adevărul auzit să schimbe caracterul nostru",
+      "Pentru biserică, slujitori și pace între oameni",
+      "Pentru relația noastră sub călăuzirea lui Dumnezeu"
     ],
-    "teaser": "Mâine vom afla ce înseamnă „acasă” pentru fiecare.",
-    "special": "sunday",
-    "build": "Nu păstrez predica doar în notițe. Aleg o aplicare pentru noi."
+    "teaser": "Mâine descoperim ce înseamnă „acasă” înainte să vorbim despre o casă.",
+    "build": "Aleg o propoziție din mesajul de azi și o transform într-o faptă.",
+    "secretPrompt": "Ce aș vrea să construim spiritual împreună, dar încă nu știu cum să spun, este…",
+    "special": "sunday"
   },
   {
     "id": 8,
     "date": "2026-08-10",
-    "title": "Ce înseamnă pentru tine „acasă”",
+    "title": "Acasă este mai întâi o stare",
     "icon": "🏡",
     "theme": "home",
-    "story": "Uneori „acasă” este starea în care nu trebuie să te aperi, să demonstrezi sau să porți totul singur.",
-    "action": "Creează astăzi un moment de siguranță pentru celălalt: timp, voce calmă, rugăciune sau un mesaj atent.",
-    "question": "Ce te face să te simți în siguranță și liber(ă) să fii tu lângă un om?",
+    "magic": "home-puzzle",
+    "magicLabel": "Siguranță",
+    "scripture": "Doamne, fă-ne un loc de pace unul pentru altul, fără să luăm locul pe care numai Tu îl ai în inimă.",
+    "story": "Nu vorbim încă despre a locui împreună. Întâi descoperim ce face o inimă să se simtă în siguranță lângă alta.",
+    "action": "Creează astăzi un moment de siguranță: timp, voce calmă, rugăciune, tandrețe sau respectarea unei limite.",
+    "question": "Ce te face să simți că poți fi tu, fără mască și fără teamă, lângă un om?",
     "options": [
       "Să fiu ascultat(ă)",
-      "Să fiu ales/aleasă clar",
+      "Să-mi fie respectate limitele",
+      "Să știu că sunt ales/aleasă clar",
       "Rugăciunea împreună",
-      "Tandrețea",
-      "Stabilitatea",
-      "Libertatea de a fi eu"
+      "Stabilitatea și consecvența",
+      "Tandrețea fără presiune"
     ],
-    "photo": "Opțional: un loc, un obiect sau o lumină care îți dă pace.",
-    "song": {
-      "title": "Pentru tine",
-      "artist": "Ramona Hanganu",
-      "url": "https://www.youtube.com/results?search_query=Ramona+Hanganu+Pentru+tine"
-    },
+    "photo": "Opțional: un loc, o lumină sau un obiect care pentru tine înseamnă pace.",
     "prayer": [
-      "Pentru starea și nevoia mea de astăzi",
-      "Pentru noi și felul în care învățăm să iubim",
-      "Pentru familiile noastre, biserică și voia lui Dumnezeu"
+      "Pentru siguranță emoțională și respect între noi",
+      "Pentru libertatea de a fi sinceri fără teamă",
+      "Pentru ca Dumnezeu să fie adevărata noastră temelie"
     ],
-    "teaser": "Mâine vom transforma o promisiune vagă într-un obicei real.",
-    "special": null,
-    "build": "Creez siguranță prin consecvență, nu prin declarații uriașe."
+    "teaser": "Mâine construim un pod din gesturi, nu din promisiuni.",
+    "build": "Aleg un gest care îți arată astăzi că ești în siguranță cu mine.",
+    "secretPrompt": "Un lucru care mă face să mă simt „acasă” lângă tine este…"
   },
   {
     "id": 9,
     "date": "2026-08-11",
-    "title": "Iubirea pe care o pot vedea",
-    "icon": "🧱",
-    "theme": "habit",
-    "story": "Viitorul se construiește din lucrurile mici pe care le repetăm acum.",
-    "action": "Alege un gest mic, realizabil în următoarele 24 de ore, care răspunde la ceva ce ai aflat despre celălalt.",
-    "question": "Ce gest mic și repetabil îți arată cel mai clar că ești ales/aleasă și important(ă)?",
+    "title": "Podul dintre intenție și faptă",
+    "icon": "🌉",
+    "theme": "bridge",
+    "magic": "bridge",
+    "magicLabel": "Pod",
+    "scripture": "Doamne, ajută-ne să nu iubim numai cu vorba, ci cu fapta, adevărul și consecvența.",
+    "story": "O relație pentru o viață nu se construiește din „voi face”, ci din lucruri mici, repetate și observabile.",
+    "action": "Alege un gest realizabil în următoarele 24 de ore și spune exact când îl faci.",
+    "question": "Prin ce gest mic și repetat simți cel mai clar că ești iubit(ă), nu doar admirat(ă)?",
     "options": [
-      "Un mesaj atent dimineața",
-      "Să întreb sincer cum ești",
-      "Să ne rugăm la o oră stabilită",
-      "Să ascult fără grabă",
-      "Să fac un gest practic",
-      "Să respect timpul tău cu familia"
+      "Un mesaj atent",
+      "Timp fără telefon",
+      "Ajutor concret",
+      "Cuvinte de apreciere",
+      "Tandrețe",
+      "Rugăciune și grijă spirituală"
     ],
     "photo": null,
-    "song": {
-      "title": "I Prayed for You",
-      "artist": "Christian Wedding Song",
-      "url": "https://www.youtube.com/results?search_query=I+Prayed+for+You+Christian+Wedding+Song"
-    },
     "prayer": [
-      "Pentru starea și nevoia mea de astăzi",
-      "Pentru noi și felul în care învățăm să iubim",
-      "Pentru familiile noastre, biserică și voia lui Dumnezeu"
+      "Pentru consecvență în lucrurile mici",
+      "Pentru iubire demonstrată fără manipulare",
+      "Pentru înțelepciunea de a nu promite ce nu putem duce"
     ],
-    "teaser": "Mâine cerul va primi o dorință, dar și un pas concret.",
-    "special": null,
-    "build": "Aleg un obicei mic, măsurabil și repetabil."
+    "teaser": "Mâine cerul ne amintește că speranța poate fi împărtășită fără presiune.",
+    "build": "Scriu gestul, ora aproximativă și cum vei putea observa că l-am făcut.",
+    "secretPrompt": "Un gest mic de la tine care înseamnă enorm pentru mine este…"
   },
   {
     "id": 10,
     "date": "2026-08-12",
     "title": "Sub același cer",
     "icon": "🌠",
-    "theme": "stars",
-    "story": "Paris și Menton sunt sub același cer. Dorul poate deveni rugăciune, iar visul poate deveni direcție.",
-    "action": "Priviți cerul în seara aceasta. Dacă doriți, trimiteți o fotografie; dacă nu, spuneți ora și gândul care v-a venit.",
-    "question": "Ce speranță pentru noi vrei să așezi înaintea lui Dumnezeu, fără s-o transformi într-o promisiune grăbită?",
+    "theme": "perseids",
+    "magic": "meteor",
+    "magicLabel": "Stea",
+    "scripture": "Doamne, Tu vezi același cer deasupra Parisului și Mentonului. Păzește dorințele noastre și învață-ne să le așezăm în mâna Ta.",
+    "story": "În noaptea Perseidelor, nu forțăm o dorință să devină promisiune. O transformăm în rugăciune și speranță.",
+    "action": "Privește cerul când poți. Poți adăuga o fotografie, o melodie sau doar o propoziție. Nimic nu este obligatoriu.",
+    "question": "Ce speranță pentru noi ai vrea să așezi înaintea lui Dumnezeu, fără să grăbești timpul și fără să ceri garanții?",
     "options": [],
-    "photo": "Opțional: cerul văzut de tine în seara aceasta.",
-    "song": {
-      "title": "Pentru tine",
-      "artist": "Ramona Hanganu",
-      "url": "https://www.youtube.com/results?search_query=Ramona+Hanganu+Pentru+tine"
-    },
+    "photo": "Opțional: cerul, marea, luminile orașului sau orice ți-a amintit că suntem sub același cer.",
     "prayer": [
-      "Pentru starea și nevoia mea de astăzi",
-      "Pentru noi și felul în care învățăm să iubim",
-      "Pentru familiile noastre, biserică și voia lui Dumnezeu"
+      "Pentru speranțe curate și răbdare cu timpul lui Dumnezeu",
+      "Pentru protecție, pace și bucurie în vacanță și la Paris",
+      "Pentru viitorul nostru, fără presiune și fără teamă"
     ],
-    "teaser": "Mâine vom vorbi despre conflicte înainte să avem unul.",
-    "special": null,
-    "build": "Pentru fiecare vis aleg și un pas."
+    "teaser": "Mâine învățăm să dezlegăm un nod fără să ne rănim.",
+    "build": "Transform speranța într-o rugăciune, nu într-o obligație pentru tine.",
+    "secretPrompt": "Dacă aș vedea o stea căzătoare, dorința pe care mi-e rușine să o spun ar fi…",
+    "musicMoment": true
   },
   {
     "id": 11,
     "date": "2026-08-13",
-    "title": "Rămânem de aceeași parte",
-    "icon": "🕊️",
+    "title": "Noi împotriva problemei",
+    "icon": "🪢",
     "theme": "conflict",
-    "story": "O relație matură nu este una fără tensiuni, ci una în care doi oameni știu să se întoarcă unul spre altul.",
-    "action": "Alegeți o regulă simplă pentru momentele de tensiune: pauză, ton, revenire la discuție sau rugăciune.",
-    "question": "Ce te ajută să nu te închizi și să nu simți că omul iubit a devenit adversarul tău?",
+    "magic": "unknot",
+    "magicLabel": "Nod",
+    "scripture": "Doamne, când nu suntem de acord, amintește-ne că omul din fața noastră nu este dușmanul.",
+    "story": "Relațiile lungi nu sunt fără tensiuni. Sunt relații în care adevărul poate fi spus fără dispreț și repararea este mai importantă decât victoria.",
+    "action": "Formulați împreună o regulă de conflict pe care amândoi o puteți respecta.",
+    "question": "Când apare un conflict, ce te ajută să rămâi deschis(ă) și ce te face să te închizi imediat?",
     "options": [
-      "Nu amenințăm cu despărțirea",
-      "Nu folosim vulnerabilitățile ca arme",
-      "Cerem pauză fără să dispărem",
-      "Revenim la conversație",
-      "Ne rugăm înainte de decizii mari",
-      "Vorbim despre faptă, nu atacăm omul"
+      "O pauză scurtă și revenire sigură",
+      "Ton calm",
+      "Să nu mi se invalideze emoția",
+      "Să nu fim ironici",
+      "Să ne rugăm înainte",
+      "Să căutăm soluția, nu vinovatul"
     ],
     "photo": null,
-    "song": {
-      "title": "Scopul Meu",
-      "artist": "Alin și Emima Timofte",
-      "url": "https://www.youtube.com/results?search_query=Scopul+Meu+Alin+si+Emima+Timofte"
-    },
     "prayer": [
-      "Pentru starea și nevoia mea de astăzi",
-      "Pentru noi și felul în care învățăm să iubim",
-      "Pentru familiile noastre, biserică și voia lui Dumnezeu"
+      "Pentru blândețe și adevăr în dezacorduri",
+      "Pentru vindecarea tiparelor vechi de apărare",
+      "Pentru capacitatea de a cere iertare și de a repara"
     ],
-    "teaser": "Mâine vom descoperi cum se simte iubirea în limbajul celuilalt.",
-    "special": null,
-    "build": "Învăț să lupt pentru noi, nu împotriva ta."
+    "teaser": "Mâine descoperim în ce limbă se aude iubirea cel mai clar.",
+    "build": "Aleg o frază de siguranță pentru conflicte: „Sunt cu tine, chiar dacă acum nu sunt de acord.”",
+    "secretPrompt": "Într-un conflict, frica pe care o ascund cel mai des este…"
   },
   {
     "id": 12,
     "date": "2026-08-14",
-    "title": "Cum auzi iubirea mea",
-    "icon": "🎁",
-    "theme": "love-language",
-    "story": "Nu este suficient să iubim sincer; trebuie să învățăm și cum ajunge iubirea noastră la inima celuilalt.",
-    "action": "Alege două moduri prin care simți iubirea și oferă câte un exemplu concret, realist.",
-    "question": "Prin ce cuvinte sau gesturi simți cel mai clar respect, grijă și alegere?",
+    "title": "Cum se traduce iubirea pentru tine",
+    "icon": "🫶",
+    "theme": "language",
+    "magic": "love-language",
+    "magicLabel": "Limbaj",
+    "scripture": "Doamne, învață-ne să iubim nu doar cum ne este nouă ușor, ci și cum celălalt poate primi.",
+    "story": "Putem iubi sincer și totuși să nu fim înțeleși. Astăzi învățăm traducerea fără să transformăm nevoile în pretenții.",
+    "action": "Alege două gesturi realiste prin care celălalt te poate iubi mai bine în această perioadă.",
+    "question": "Ce te face să te simți iubit(ă) în mod profund și ce gest aparent romantic nu are pentru tine aceeași greutate?",
     "options": [
+      "Timp de calitate",
       "Cuvinte sincere",
-      "Timp fără telefon",
-      "Ajutor practic",
-      "Atingere și îmbrățișare",
-      "Un dar atent",
+      "Ajutor concret",
+      "Atingere și tandrețe",
+      "Daruri cu semnificație",
       "Rugăciune și sprijin spiritual"
     ],
     "photo": null,
-    "song": {
-      "title": "I Prayed for You",
-      "artist": "Christian Wedding Song",
-      "url": "https://www.youtube.com/results?search_query=I+Prayed+for+You+Christian+Wedding+Song"
-    },
     "prayer": [
-      "Pentru starea și nevoia mea de astăzi",
-      "Pentru noi și felul în care învățăm să iubim",
-      "Pentru familiile noastre, biserică și voia lui Dumnezeu"
+      "Pentru înțelepciunea de a iubi pe limba celuilalt",
+      "Pentru nevoi spuse fără rușine și fără manipulare",
+      "Pentru bucuria de a dărui fără contabilitate emoțională"
     ],
-    "teaser": "Mâine este din nou post: verificăm nu doar motivele, ci și cum ne-am schimbat.",
-    "special": null,
-    "build": "Nu iubesc doar în limba mea. Învăț limba inimii tale."
+    "teaser": "Mâine, la al doilea post, privim ce a schimbat Dumnezeu în noi.",
+    "build": "Aleg un gest din limbajul tău și îl fac astăzi, nu „cândva”.",
+    "secretPrompt": "Mă simt cel mai iubit(ă) de tine atunci când…"
   },
   {
     "id": 13,
     "date": "2026-08-15",
-    "title": "Al doilea post: ce lucrează Dumnezeu în noi",
-    "icon": "🕯️",
+    "title": "Al doilea post: ce a lucrat Dumnezeu",
+    "icon": "🌿",
     "theme": "fast2",
-    "story": "Al doilea post nu repetă primul. Astăzi privim ce a lucrat Dumnezeu, unde încă ne este greu și ce avem nevoie unul de la altul.",
-    "action": "Comparați cu prima sâmbătă: ce s-a schimbat, ce a rămas greu și cum vă susțineți astăzi.",
-    "question": "Unde ai văzut creștere în noi și unde avem încă nevoie de har, răbdare și adevăr?",
+    "magic": "growth",
+    "magicLabel": "Creștere",
+    "scripture": "Doamne, arată-ne nu doar ce am cerut, ci și unde ne-ai schimbat, corectat și apropiat de Tine.",
+    "story": "A doua sâmbătă nu repetă prima. Privim rodul, oboseala, răspunsurile și locurile unde încă avem nevoie de har.",
+    "action": "Discutați sincer dacă postiți și în ce formă. Apoi numiți o schimbare observată și o nevoie rămasă.",
+    "question": "Ce ai văzut schimbându-se în tine sau în noi în aceste zile și unde ai nevoie încă de rugăciune și sprijin?",
     "options": [
-      "Sunt mai deschis(ă)",
-      "Înțeleg mai bine nevoile tale",
-      "Simt mai multă pace",
-      "Am încă temeri",
-      "Am nevoie de claritate",
-      "Vreau să învăț să iubesc mai practic"
+      "Am devenit mai sincer(ă)",
+      "Ascult mai bine",
+      "Cer ajutor mai clar",
+      "Mă rog mai conștient pentru noi",
+      "Am mai multă pace",
+      "Încă port o teamă importantă"
     ],
     "photo": null,
-    "song": {
-      "title": "Scopul Meu",
-      "artist": "Alin și Emima Timofte",
-      "url": "https://www.youtube.com/results?search_query=Scopul+Meu+Alin+si+Emima+Timofte"
-    },
     "prayer": [
-      "Pentru ce a schimbat Dumnezeu deja în noi",
-      "Pentru slăbiciunile, temerile și nevoile noastre reale",
-      "Pentru călăuzire, biserică, familii și pașii următori"
+      "Pentru recunoștință față de ce a lucrat Dumnezeu",
+      "Pentru locul unde încă avem nevoie de vindecare și creștere",
+      "Pentru întoarcerea Alinei, biserică, familii și pașii următori"
     ],
-    "teaser": "Mâine Alina revine. Vom păstra bucuria fără să grăbim sufletul.",
-    "special": "fast",
-    "build": "Mă uit sincer la rod, nu doar la emoția zilei."
+    "teaser": "Mâine ne întoarcem spre ritmul obișnuit și alegem ce nu vrem să pierdem.",
+    "build": "Spun o schimbare observabilă și un mod concret prin care o voi continua.",
+    "secretPrompt": "Un lucru pentru care Îi mulțumesc lui Dumnezeu în legătură cu tine este…",
+    "special": "fast"
   },
   {
     "id": 14,
     "date": "2026-08-16",
-    "title": "Ce păstrăm când revine rutina",
+    "title": "Întoarcerea: ce păstrăm cu noi",
     "icon": "🚗",
     "theme": "return",
-    "story": "Vacanța se termină, dar ce ați construit în aceste zile nu trebuie să rămână în Menton sau în telefon.",
-    "action": "Alege trei lucruri bune din aceste zile pe care nu vrei să le pierdem după întoarcere.",
-    "question": "Ce obicei, fel de comunicare sau moment de rugăciune vrei să continuăm în viața obișnuită?",
+    "magic": "suitcase",
+    "magicLabel": "Păstrăm",
+    "scripture": "Doamne, ajută-ne să nu lăsăm la Menton sau în Paris binele pe care l-am învățat la distanță.",
+    "story": "Alina se întoarce. Distanța geografică se schimbă, dar apropierea nu trebuie lăsată pe pilot automat.",
+    "action": "Alegeți trei lucruri din aceste zile pe care le păstrați în săptămâna următoare.",
+    "question": "Ce obicei, conversație sau formă de rugăciune ai vrea să continuăm după ce revine rutina?",
     "options": [
+      "Întrebarea sinceră despre stare",
       "Cele trei motive de rugăciune",
-      "Întrebările sincere",
-      "Mesajele de încurajare",
-      "Un obicei săptămânal",
-      "Timpul fără telefon",
-      "Gesturile practice"
+      "Un gest concret zilnic",
+      "Timp fără telefon",
+      "O conversație profundă pe săptămână",
+      "O piesă sau un mesaj-surpriză"
     ],
-    "photo": "Opțional: fotografia care îți amintește cel mai frumos această perioadă.",
-    "song": {
-      "title": "Pentru tine",
-      "artist": "Ramona Hanganu",
-      "url": "https://www.youtube.com/results?search_query=Ramona+Hanganu+Pentru+tine"
-    },
+    "photo": "Opțional: un ultim detaliu din drum sau din întoarcere.",
     "prayer": [
-      "Pentru starea și nevoia mea de astăzi",
-      "Pentru noi și felul în care învățăm să iubim",
-      "Pentru familiile noastre, biserică și voia lui Dumnezeu"
+      "Pentru drum, odihnă și întoarcere în siguranță",
+      "Pentru a păstra apropierea și în rutina obișnuită",
+      "Pentru prima zi de muncă și săptămâna care începe"
     ],
-    "teaser": "Mâine nu încheiem un joc. Alegem ce fel de relație construim mai departe.",
-    "special": "sunday",
-    "build": "Nu las lucrurile frumoase să fie doar „pentru vacanță”."
+    "teaser": "Mâine, după ce ne-am cunoscut mai bine, putem vorbi cu maturitate despre ce vrem să construim.",
+    "build": "Alegem trei obiceiuri și stabilim când le verificăm prima dată.",
+    "secretPrompt": "Ce nu vreau să pierdem niciodată din felul în care suntem acum este…"
   },
   {
     "id": 15,
     "date": "2026-08-17",
-    "title": "Ce alegem să construim mai departe",
+    "title": "Nu o promisiune perfectă, ci o direcție comună",
     "icon": "❤️",
-    "theme": "final",
-    "story": "Astăzi Alina revine la lucru. Viața obișnuită este locul în care iubirea devine adevărată: prin consecvență, har, muncă și alegere zilnică.",
-    "action": "Abia acum, după ce v-ați ascultat și cunoscut mai bine, alegeți un pas comun pentru următoarele 30 de zile.",
-    "question": "După aceste zile, ce ai înțeles despre mine, despre tine și despre relația serioasă pe care ai vrea să o construim cu Dumnezeu?",
-    "options": [],
-    "photo": null,
-    "song": {
-      "title": "I Prayed for You",
-      "artist": "Christian Wedding Song",
-      "url": "https://www.youtube.com/results?search_query=I+Prayed+for+You+Christian+Wedding+Song"
-    },
-    "prayer": [
-      "Pentru fidelitate în lucrurile mici",
-      "Pentru o relație care Îl onorează pe Dumnezeu",
-      "Pentru înțelepciune în pașii spre viitor și căsătorie, dacă aceasta este voia Lui"
+    "theme": "finale",
+    "magic": "final-hearts",
+    "magicLabel": "Întâlnire",
+    "scripture": "Doamne, dacă este voia Ta, continuă să ne călăuzești. Învață-ne să ne alegem, să ne slujim și să ne iubim așa cum ne chemi Tu.",
+    "story": "Abia acum, după întrebări, rugăciuni, post, adevăr și fapte mici, putem discuta despre viitor fără să idealizăm și fără să grăbim.",
+    "action": "Alegeți un pas comun pentru următoarele 30 de zile și data la care îl veți revizui înaintea lui Dumnezeu.",
+    "question": "Ce fundament vrem să protejăm dacă relația noastră merge spre o viață întreagă și ce trebuie să învățăm încă?",
+    "options": [
+      "Dumnezeu în centru",
+      "Sinceritate fără frică",
+      "Respect și limite sănătoase",
+      "Rugăciune și comunitate",
+      "Alegerea zilnică",
+      "Fapte, nu doar promisiuni"
     ],
-    "teaser": "Drumul acesta se încheie aici. Alegerea noastră continuă mâine.",
-    "special": null,
-    "build": "Nu promit perfecțiune. Aleg prezență, adevăr, rugăciune și creștere."
+    "photo": "Opțional: imaginea pe care vrei să o păstrezi ca final al drumului.",
+    "prayer": [
+      "Pentru călăuzirea clară a lui Dumnezeu în relația noastră",
+      "Pentru caracterul de care are nevoie o iubire de-o viață",
+      "Pentru următorii pași, la timpul potrivit, cu pace și înțelepciune"
+    ],
+    "teaser": "Harta se încheie, dar alegerea de a-L urma pe Dumnezeu și de a ne cunoaște continuă.",
+    "build": "Alegem un pas comun pentru 30 de zile, o dată și un mod sincer de evaluare.",
+    "secretPrompt": "După aceste zile, lucrul pe care îl pot spune cu mai mult curaj despre noi este…",
+    "musicMoment": true
   }
 ]

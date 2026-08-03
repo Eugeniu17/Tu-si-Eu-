@@ -1,3 +1,5 @@
-# Între noi — FINAL V9
+# Între noi — Cinematic Faith Edition V12
 
-Versiunea în care cele două jumătăți de inimă se unesc și devin pecetea plicului. Plicul primit deschide vizual ziua, iar mesajele și piesele pentru mâine sunt sigilate înainte de trimitere.
+15 capitole pentru Alina și Eugeniu: Dumnezeu în centru, conversații deschise, fapte reale, două zile de post, duminici, Perseide, plicuri secrete, muzică propusă de voi și două inimi care se întâlnesc la mijloc.
+
+Publicare: încărcați toate fișierele din rădăcina arhivei în GitHub Pages.

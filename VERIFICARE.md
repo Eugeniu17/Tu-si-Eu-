@@ -1,8 +1,9 @@
-# Verificare V9
-
-- Fișierele sunt în rădăcina arhivei.
-- Fotografia este opțională.
-- Muzica rulează în site prin iframe Spotify/YouTube.
-- Foaia intră în plic, inimile se unesc, iar inima rezultată ștampilează clapeta.
-- Plicul primit se deschide la începutul zilei.
-- Mesajul/piesa pentru mâine are propria animație de sigilare.
+# Verificare V12
+- profil separat pe fiecare telefon
+- zile calendaristice 3–17 august
+- fiecare zi are atmosferă proprie
+- fotografia este opțională
+- muzica este doar propusă prin link exact, nu impusă zilnic
+- plicuri: întrebare, gând, rugăciune, taină, verset, surpriză, piesă
+- inimile se întâlnesc la mijloc în final
+- progresul se păstrează local în browser
