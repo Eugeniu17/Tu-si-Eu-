@@ -36,7 +36,7 @@ function otherId(){return profile==="alina"?"eugeniu":"alina"}
 function other(){return config.people[otherId()]}
 
 async function load(){
-  const [c,d]=await Promise.all([fetch("./config.json?v=20260803-final3",{cache:"no-store"}),fetch("./days.json?v=20260803-final3",{cache:"no-store"})]);
+  const [c,d]=await Promise.all([fetch("./config.json?v=20260803-dialog-v4",{cache:"no-store"}),fetch("./days.json?v=20260803-dialog-v4",{cache:"no-store"})]);
   if(!c.ok) throw new Error(`config.json: HTTP ${c.status}`);
   if(!d.ok) throw new Error(`days.json: HTTP ${d.status}`);
   config=await c.json(); days=await d.json();
@@ -198,12 +198,44 @@ function interactionFinal(day){
   let n=0;document.querySelectorAll("[data-f]").forEach(b=>b.onclick=()=>{if(b.disabled)return;b.disabled=true;b.textContent=["🤍","🙏","🤝","💬","🕊️","✨","🤗","♾️","❤️"][b.dataset.f];n++;if(n===9){document.querySelector("#finalText").textContent="Toate piesele au ajuns la locul lor.";setTimeout(()=>showQuestion(day),800)}})
 }
 function showQuestion(day){
-  const q=day.question[profile], opts=day.options?.[profile];
-  el.view.innerHTML=scene(day,`<div class="quote">${esc(q)}</div>${opts?`<div class="answers" id="opts">${opts.map(x=>`<button class="answer" data-v="${esc(x)}">${esc(x)}</button>`).join("")}</div>`:`<textarea class="textarea" id="text" maxlength="800" placeholder="Scrie sincer, în ritmul tău…"></textarea><p class="small-note">Răspunsul rămâne pe telefonul tău până când alegi să-l trimiți.</p>`}<div class="feedback" id="fb"></div><button class="continue" id="saveAnswer">Păstrez răspunsul ❤️</button>`);
-  let answer="";
-  if(opts){document.querySelectorAll("[data-v]").forEach(b=>b.onclick=()=>{document.querySelectorAll("[data-v]").forEach(x=>x.classList.remove("is-selected"));b.classList.add("is-selected");answer=b.dataset.v;document.querySelector("#saveAnswer").classList.add("is-visible")})}
-  else{const t=document.querySelector("#text");t.oninput=()=>{answer=t.value.trim();document.querySelector("#saveAnswer").classList.toggle("is-visible",!!answer)}}
-  document.querySelector("#saveAnswer").onclick=()=>complete(day,answer)
+  const q=day.question[profile], opts=day.options?.[profile] || [];
+  const multi=Boolean(day.multi), allowCustom=day.allowCustom!==false;
+  const optionsHtml=opts.length?`<div class="answers" id="opts">${opts.map(x=>`<button class="answer" data-v="${esc(x)}">${esc(x)}</button>`).join("")}</div>`:"";
+  const customHtml=allowCustom&&opts.length?`<div class="custom-answer"><label for="customText">Alt răspuns, în cuvintele mele</label><textarea class="textarea textarea--compact" id="customText" maxlength="800" placeholder="Scrie aici ceva ce nu se regăsește în variante…"></textarea></div>`:"";
+  const freeTextHtml=!opts.length?`<textarea class="textarea" id="text" maxlength="1000" placeholder="Scrie sincer, în ritmul tău…"></textarea>`:"";
+  el.view.innerHTML=scene(day,`<div class="quote">${esc(q)}</div>${multi&&opts.length?`<p class="small-note">Poți alege mai multe variante și poți adăuga propriul răspuns.</p>`:""}${optionsHtml}${freeTextHtml}${customHtml}<p class="small-note">Răspunsul rămâne pe telefonul tău până când alegi să-l trimiți.</p><div class="feedback" id="fb"></div><button class="continue" id="saveAnswer">Păstrez răspunsul ❤️</button>`);
+  const selected=[];
+  const custom=document.querySelector("#customText");
+  const free=document.querySelector("#text");
+  const saveButton=document.querySelector("#saveAnswer");
+  const update=()=>{
+    const parts=[...selected];
+    const freeValue=free?.value.trim();
+    const customValue=custom?.value.trim();
+    if(freeValue) parts.push(freeValue);
+    if(customValue) parts.push(customValue);
+    saveButton.classList.toggle("is-visible",parts.length>0);
+    return parts;
+  };
+  document.querySelectorAll("[data-v]").forEach(button=>button.onclick=()=>{
+    const value=button.dataset.v;
+    if(multi){
+      button.classList.toggle("is-selected");
+      const i=selected.indexOf(value);
+      if(i>=0) selected.splice(i,1); else selected.push(value);
+    }else{
+      document.querySelectorAll("[data-v]").forEach(x=>x.classList.remove("is-selected"));
+      button.classList.add("is-selected"); selected.splice(0,selected.length,value);
+    }
+    update();
+  });
+  if(custom) custom.oninput=update;
+  if(free) free.oninput=update;
+  saveButton.onclick=()=>{
+    const parts=update();
+    if(!parts.length) return;
+    complete(day,parts.join(" • "));
+  };
 }
 function complete(day,answer){
   state.answers[day.id]={answer,question:day.question[profile],profile,thought:day.thought,date:new Date().toISOString()};

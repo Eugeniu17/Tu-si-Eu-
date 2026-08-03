@@ -107,3 +107,6 @@ button{-webkit-tap-highlight-color:transparent}
   .topbar,.app{width:calc(100% - 16px)}.route-card,.view{padding:16px;border-radius:23px}.tabs{grid-template-columns:repeat(2,1fr)}.answers,.action-grid{grid-template-columns:1fr}.day-grid{grid-template-columns:repeat(3,1fr)}.emotion-grid{grid-template-columns:repeat(2,1fr)}.profile-options{grid-template-columns:1fr}
 }
 @media(max-width:410px){.day-grid{grid-template-columns:repeat(2,1fr)}}
+.custom-answer{max-width:700px;margin:18px auto 0;text-align:left}
+.custom-answer label{display:block;margin:0 0 8px;color:var(--pink2);font-weight:850}
+.textarea--compact{min-height:105px;margin-top:0}

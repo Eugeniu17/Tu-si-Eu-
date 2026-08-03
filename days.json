@@ -12,7 +12,7 @@
     },
     "question": {
       "alina": "Ce ai vrea să nu pierdem niciodată, chiar și atunci când suntem departe?",
-      "eugeniu": "Ce vrei să protejezi cel mai mult între voi în perioada aceasta?"
+      "eugeniu": "Ce vreau să protejez cel mai mult între noi în perioada aceasta?"
     },
     "options": {
       "alina": [
@@ -20,17 +20,31 @@
         "Sinceritatea",
         "Tandrețea",
         "Rugăciunea",
-        "Alegerea de a ne căuta"
+        "Alegerea de a ne căuta",
+        "Încrederea",
+        "Comunicarea",
+        "Respectul",
+        "Răbdarea",
+        "Bucuria noastră",
+        "Visurile noastre"
       ],
       "eugeniu": [
         "Sinceritatea",
         "Liniștea dintre noi",
         "Rugăciunea",
         "Grija zilnică",
-        "Bucuria de a ne revedea"
+        "Bucuria de a ne revedea",
+        "Încrederea",
+        "Comunicarea",
+        "Respectul",
+        "Răbdarea",
+        "Bucuria noastră",
+        "Visurile noastre"
       ]
     },
-    "thought": "Distanța nu ne cere să fim mai puțin apropiați. Ne cere să fim mai atenți."
+    "thought": "Distanța nu ne cere să fim mai puțin apropiați. Ne cere să fim mai atenți.",
+    "multi": true,
+    "allowCustom": true
   },
   {
     "id": 2,
@@ -48,7 +62,8 @@
       "eugeniu": "Ce lucru din Paris ți-a amintit astăzi de Alina și de ce?"
     },
     "type": "text",
-    "thought": "Nu vrem doar să știm unde a fost celălalt. Vrem să vedem ziua prin ochii lui."
+    "thought": "Nu vrem doar să știm unde a fost celălalt. Vrem să vedem ziua prin ochii lui.",
+    "allowCustom": true
   },
   {
     "id": 3,
@@ -72,7 +87,10 @@
         "Tandrețe",
         "Curaj",
         "Dor",
-        "Speranță"
+        "Speranță",
+        "Recunoștință",
+        "Liniște",
+        "Încredere"
       ],
       "eugeniu": [
         "Pace",
@@ -80,10 +98,15 @@
         "Tandrețe",
         "Curaj",
         "Dor",
-        "Speranță"
+        "Speranță",
+        "Recunoștință",
+        "Liniște",
+        "Încredere"
       ]
     },
-    "thought": "Uneori un singur cuvânt poate traversa mai repede distanța decât o scrisoare întreagă."
+    "thought": "Uneori un singur cuvânt poate traversa mai repede distanța decât o scrisoare întreagă.",
+    "multi": true,
+    "allowCustom": true
   },
   {
     "id": 4,
@@ -106,17 +129,25 @@
         "Să mă îmbrățișeze și să aștepte",
         "Să mă facă să râd",
         "Să-mi dea spațiu, dar să rămână aproape",
-        "Să mă întrebe direct de ce am nevoie"
+        "Să mă întrebe direct de ce am nevoie",
+        "Să-mi vorbească blând",
+        "Să se roage cu mine",
+        "Să nu ia personal tăcerea mea"
       ],
       "eugeniu": [
         "Să ascult înainte să repar",
         "Să observ mai repede oboseala ei",
         "Să-i ofer liniște fără să dispar",
         "Să o fac să zâmbească",
-        "Să întreb clar de ce are nevoie"
+        "Să întreb clar de ce are nevoie",
+        "Să vorbesc blând",
+        "Să mă rog cu ea",
+        "Să nu iau personal tăcerea ei"
       ]
     },
-    "thought": "Iubirea nu înseamnă să ghicești mereu corect. Înseamnă să vrei să înveți."
+    "thought": "Iubirea nu înseamnă să ghicești mereu corect. Înseamnă să vrei să înveți.",
+    "multi": true,
+    "allowCustom": true
   },
   {
     "id": 5,
@@ -134,7 +165,8 @@
       "eugeniu": "Ce parte din tine ai vrea ca Alina să înțeleagă mai profund?"
     },
     "type": "text",
-    "thought": "A cunoaște un om înseamnă și a avea răbdare cu lucrurile pe care nu le arată imediat."
+    "thought": "A cunoaște un om înseamnă și a avea răbdare cu lucrurile pe care nu le arată imediat.",
+    "allowCustom": true
   },
   {
     "id": 6,
@@ -144,8 +176,8 @@
     "chapter": "Puzzle-ul nostru",
     "interaction": "puzzle",
     "intro": {
-      "alina": "Astăzi adaugi o piesă la ceea ce construiți.",
-      "eugeniu": "Astăzi adaugi o piesă la ceea ce construiți."
+      "alina": "Astăzi adaugi o piesă la ceea ce construim.",
+      "eugeniu": "Astăzi adaugi o piesă la ceea ce construim."
     },
     "question": {
       "alina": "Ce te-ar ajuta să-i spui lui Eugeniu și lucrurile greu de exprimat?",
@@ -157,17 +189,23 @@
         "Să mă asculte până la capăt",
         "Să nu transforme frica mea într-o problemă",
         "Să-mi amintească că nu pleacă",
-        "Să poată primi și lucruri incomode"
+        "Să poată primi și lucruri incomode",
+        "Să-mi dea timp să găsesc cuvintele",
+        "Să-mi arate că poate auzi adevărul fără să se îndepărteze"
       ],
       "eugeniu": [
         "Să ascult fără defensivă",
         "Să nu minimalizez fricile ei",
         "Să recunosc când greșesc",
         "Să nu cer răspunsuri imediat",
-        "Să rămân calm și sincer"
+        "Să rămân calm și sincer",
+        "Să-i dau timp să găsească cuvintele",
+        "Să-i arăt că adevărul ei nu mă face să mă îndepărtez"
       ]
     },
-    "thought": "Sinceritatea nu face relația mereu comodă. O face reală."
+    "thought": "Sinceritatea nu face relația mereu comodă. O face reală.",
+    "multi": true,
+    "allowCustom": true
   },
   {
     "id": 7,
@@ -196,7 +234,9 @@
         "Site-ul nu știe să numere atât"
       ]
     },
-    "thought": "Analiza oficială: amândoi prezentați simptome serioase de dor."
+    "thought": "Analiza oficială: amândoi prezentați simptome serioase de dor.",
+    "multi": false,
+    "allowCustom": true
   },
   {
     "id": 8,
@@ -210,8 +250,8 @@
       "eugeniu": "Alege simbolul care te atrage primul."
     },
     "question": {
-      "alina": "Care dintre momentele voastre simple îți lipsește cel mai mult?",
-      "eugeniu": "Care dintre momentele voastre simple îți lipsește cel mai mult?"
+      "alina": "Care dintre momentele noastre simple îți lipsește cel mai mult?",
+      "eugeniu": "Care dintre momentele noastre simple îți lipsește cel mai mult?"
     },
     "options": {
       "alina": [
@@ -220,7 +260,9 @@
         "Conversațiile fără grabă",
         "Rugăciunea împreună",
         "Privirile",
-        "Săruturile"
+        "Săruturile",
+        "Să râdem din lucruri mici",
+        "Să mergem unul lângă altul în liniște"
       ],
       "eugeniu": [
         "Să ne ținem de mână",
@@ -228,10 +270,14 @@
         "Conversațiile fără grabă",
         "Rugăciunea împreună",
         "Privirile",
-        "Săruturile"
+        "Săruturile",
+        "Să râdem din lucruri mici",
+        "Să mergem unul lângă altul în liniște"
       ]
     },
-    "thought": "Poate adevărata bogăție a apropierii este făcută din lucrurile care par mici."
+    "thought": "Poate adevărata bogăție a apropierii este făcută din lucrurile care par mici.",
+    "multi": true,
+    "allowCustom": true
   },
   {
     "id": 9,
@@ -241,15 +287,16 @@
     "chapter": "O echipă",
     "interaction": "bridge",
     "intro": {
-      "alina": "Alege trei lucruri din care ai construi un pod între voi.",
-      "eugeniu": "Alege trei lucruri din care ai construi un pod între voi."
+      "alina": "Alege trei lucruri din care ai construi un pod între noi.",
+      "eugeniu": "Alege trei lucruri din care ai construi un pod între noi."
     },
     "question": {
       "alina": "În ce moment ai simți cu adevărat că nu mai porți totul singură?",
       "eugeniu": "Ce înseamnă concret pentru tine să împarți responsabilitățile și viața de zi cu zi cu Alina?"
     },
     "type": "text",
-    "thought": "O echipă nu înseamnă că unul îl salvează mereu pe celălalt. Înseamnă că nimeni nu mai rămâne singur în fața vieții."
+    "thought": "O echipă nu înseamnă că unul îl salvează mereu pe celălalt. Înseamnă că nimeni nu mai rămâne singur în fața vieții.",
+    "allowCustom": true
   },
   {
     "id": 10,
@@ -267,7 +314,8 @@
       "eugeniu": "Ce gând ai vrea să trimiți spre Menton când vei privi cerul din Paris?"
     },
     "type": "text",
-    "thought": "Poate nu veți vedea aceeași stea. Dar veți privi aceeași noapte."
+    "thought": "Poate nu vom vedea aceeași stea. Dar vom privi aceeași noapte.",
+    "allowCustom": true
   },
   {
     "id": 11,
@@ -285,7 +333,8 @@
       "eugeniu": "Dacă ai putea trimite printr-o stea un singur gând până la Menton, care ar fi?"
     },
     "type": "text",
-    "thought": "Cerul nu a micșorat kilometrii. Dar pentru o noapte i-a făcut să pară mai puțin importanți."
+    "thought": "Cerul nu a micșorat kilometrii. Dar pentru o noapte i-a făcut să pară mai puțin importanți.",
+    "allowCustom": true
   },
   {
     "id": 12,
@@ -303,7 +352,8 @@
       "eugeniu": "Ce face Alina și îți dă sentimentul că poți fi tu însuți?"
     },
     "type": "text",
-    "thought": "Poate «acasă» începe când sufletul nu mai trebuie să fie permanent în gardă."
+    "thought": "Poate «acasă» începe când sufletul nu mai trebuie să fie permanent în gardă.",
+    "allowCustom": true
   },
   {
     "id": 13,
@@ -326,17 +376,23 @@
         "Să reparăm după greșeli",
         "Să rămânem sinceri",
         "Să ne rugăm unul pentru altul",
-        "Să nu fugim când devine greu"
+        "Să nu fugim când devine greu",
+        "Să ne cerem iertare sincer",
+        "Să ne protejăm timpul împreună"
       ],
       "eugeniu": [
         "Să fiu consecvent",
         "Să ascult și să aplic",
         "Să împart responsabilitățile",
         "Să păstrez tandrețea",
-        "Să aleg dialogul în locul orgoliului"
+        "Să aleg dialogul în locul orgoliului",
+        "Să-mi cer iertare sincer",
+        "Să protejez timpul nostru împreună"
       ]
     },
-    "thought": "Sentimentul ne apropie. Alegerea ne ajută să rămânem și să construim."
+    "thought": "Sentimentul ne apropie. Alegerea ne ajută să rămânem și să construim.",
+    "multi": true,
+    "allowCustom": true
   },
   {
     "id": 14,
@@ -350,11 +406,12 @@
       "eugeniu": "Nu trebuie să vezi tot viitorul. Doar o seară simplă."
     },
     "question": {
-      "alina": "Ce atmosferă ai vrea să existe într-o seară obișnuită din viața voastră?",
-      "eugeniu": "Ce lucru simplu ai vrea să faci constant pentru voi, chiar și după mulți ani?"
+      "alina": "Ce atmosferă ai vrea să existe într-o seară obișnuită din viața noastră?",
+      "eugeniu": "Ce lucru simplu aș vrea să fac constant pentru noi, chiar și după mulți ani?"
     },
     "type": "text",
-    "thought": "Poate viitorul se construiește din seri obișnuite în care doi oameni încă se aleg."
+    "thought": "Poate viitorul se construiește din seri obișnuite în care doi oameni încă se aleg.",
+    "allowCustom": true
   },
   {
     "id": 15,
@@ -372,6 +429,7 @@
       "eugeniu": "Ce promisiune simplă și realistă vrei să porți după aceste zile?"
     },
     "type": "text",
-    "thought": "Nu au fost doar cincisprezece zile între voi. Au fost cincisprezece pași făcuți unul spre celălalt."
+    "thought": "Nu au fost doar cincisprezece zile între noi. Au fost cincisprezece pași pe care i-am făcut unul spre celălalt.",
+    "allowCustom": true
   }
 ]
