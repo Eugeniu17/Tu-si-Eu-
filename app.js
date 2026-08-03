@@ -3,7 +3,7 @@ const enc=o=>btoa(unescape(encodeURIComponent(JSON.stringify(o))));
 const dec=s=>JSON.parse(decodeURIComponent(escape(atob(s))));
 const esc=s=>String(s??'').replace(/[&<>"']/g,m=>({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#039;'}[m]));
 
-const [config,days]=await Promise.all([fetch('config.json?v=9').then(r=>r.json()),fetch('days.json?v=9').then(r=>r.json())]);
+const [config,days]=await Promise.all([fetch('config.json?v=10').then(r=>r.json()),fetch('days.json?v=10').then(r=>r.json())]);
 const STORE='intre-noi-final-v8';
 const blank={profile:null,answers:{},steps:{},completed:{},otherDone:{},photos:{},photoModes:{},photoEffects:{},photoRotations:{},tomorrow:[],openedMusic:{},sealed:{},songLetters:[],celebrated:{}};
 let state={...blank,...JSON.parse(localStorage.getItem(STORE)||'{}')};
@@ -35,7 +35,9 @@ const MUSIC_LIBRARY=[
  {id:'marriage-prayer',title:'The Marriage Prayer',artist:'John Waller',query:'The Marriage Prayer John Waller',note:'Pentru angajament, slujire reciprocă și viitor.'},
  {id:'god-made-you',title:'When God Made You',artist:'Newsong & Natalie Grant',query:'When God Made You Newsong Natalie Grant',note:'Pentru recunoștința că Dumnezeu a așezat doi oameni unul lângă altul.'}
 ];
-function spotifyEmbed(song){return `https://open.spotify.com/embed/search/${encodeURIComponent(song.query)}`}
+function youtubeSearchEmbed(query){return `https://www.youtube-nocookie.com/embed?listType=search&list=${encodeURIComponent(query)}&rel=0&modestbranding=1`}
+function defaultSongEmbed(song){return youtubeSearchEmbed(song.query)}
+function songFallbackUrl(song){return `https://www.youtube.com/results?search_query=${encodeURIComponent(song.query)}`}
 function songsForDay(d){const wanted=[d.song?.title];const rotation=[[0,1,2],[1,3,0],[2,4,3],[3,0,5],[4,1,2]];const ids=rotation[(d.id-1)%rotation.length];const picks=ids.map(i=>MUSIC_LIBRARY[i]);const main=MUSIC_LIBRARY.find(x=>x.title===wanted[0]);return [...new Map([main,...picks].filter(Boolean).map(x=>[x.id,x])).values()].slice(0,3)}
 
 
@@ -102,17 +104,23 @@ function renderStage(){selected=(answer().selected||[]).slice();photoData=state.
  if(stage===6)root.innerHTML=sealScreen();bindStage()}
 
 function playableEmbed(url,query=''){
- try{const u=new URL(url);if(u.hostname.includes('spotify.com')){const p=u.pathname.replace(/^\/embed/,'');return `https://open.spotify.com/embed${p}`}
- if(u.hostname.includes('youtu.be'))return `https://www.youtube-nocookie.com/embed/${u.pathname.slice(1)}`;
- if(u.hostname.includes('youtube.com')){const id=u.searchParams.get('v');if(id)return `https://www.youtube-nocookie.com/embed/${id}`}
+ try{
+  const u=new URL(url);
+  if(u.hostname.includes('open.spotify.com')){
+   const parts=u.pathname.split('/').filter(Boolean).filter(x=>x!=='embed');
+   if(parts.length>=2&&['track','album','playlist','episode','show'].includes(parts[0])) return `https://open.spotify.com/embed/${parts[0]}/${parts[1]}`;
+  }
+  if(u.hostname.includes('youtu.be')){const id=u.pathname.split('/').filter(Boolean)[0];if(id)return `https://www.youtube-nocookie.com/embed/${id}?rel=0`}
+  if(u.hostname.includes('youtube.com')){const id=u.searchParams.get('v');if(id)return `https://www.youtube-nocookie.com/embed/${id}?rel=0`}
+  if(u.hostname.includes('soundcloud.com'))return `https://w.soundcloud.com/player/?url=${encodeURIComponent(url)}&auto_play=false&hide_related=true&show_comments=false&show_user=true&show_reposts=false&visual=true`;
  }catch{}
- return `https://open.spotify.com/embed/search/${encodeURIComponent(query||url)}`
+ return youtubeSearchEmbed(query||url)
 }
 function availableSongLetter(){return state.songLetters.find(x=>x.openDate<=dateParis()&&!x.used)}
 function musicStage(d){
  const gifted=availableSongLetter(),choices=songsForDay(d),saved=answer().songChoice||choices[0]?.id,active=choices.find(x=>x.id===saved)||choices[0];
  const giftedHTML=gifted?`<div class="gift-song"><div class="gift-ribbon">O PIESĂ ALEASĂ PENTRU TINE</div><h4>${esc(gifted.title||'Piesa de ieri')}</h4><p>${esc(gifted.note||`Trimisă de ${gifted.fromName||'celălalt'}`)}</p><div class="inline-player tall"><iframe src="${playableEmbed(gifted.url,gifted.title)}" title="${esc(gifted.title)}" allow="autoplay; encrypted-media; picture-in-picture" loading="lazy"></iframe></div><button class="secondary" id="useGiftSong">Am ascultat piesa aleasă pentru mine ❤️</button></div>`:'';
- return card('Ascultăm și ne trimitem muzică',`${giftedHTML}<div class="music-picker">${choices.map(x=>`<button class="music-choice ${x.id===active.id?'selected':''}" data-song="${x.id}"><span>♫</span><b>${esc(x.title)}</b><small>${esc(x.artist)}</small></button>`).join('')}</div><div class="inline-player tall"><iframe title="${esc(active.title)}" src="${spotifyEmbed(active)}" allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture" loading="lazy"></iframe></div><div class="song-thought"><b>${esc(active.title)}</b><p>${esc(active.note)}</p></div><textarea id="musicNote" class="textarea" placeholder="Ce ai simțit sau ce cuvânt a rămas cu tine?">${esc(answer().music||'')}</textarea><details class="song-proposal"><summary>🎁 Propune o piesă pentru mâine (opțional)</summary><input id="songTitleTomorrow" class="input" placeholder="Titlul piesei"><input id="songUrlTomorrow" class="input" placeholder="Lipește link Spotify sau YouTube"><textarea id="songNoteTomorrow" class="textarea compact" placeholder="De ce ai ales-o pentru mine?"></textarea></details><button class="primary" id="heard">Păstrez gândul și merg mai departe ❤️</button>`)
+ return card('Ascultăm și ne trimitem muzică',`${giftedHTML}<div class="music-picker">${choices.map(x=>`<button class="music-choice ${x.id===active.id?'selected':''}" data-song="${x.id}"><span>♫</span><b>${esc(x.title)}</b><small>${esc(x.artist)}</small></button>`).join('')}</div><div class="inline-player tall"><iframe title="${esc(active.title)}" src="${defaultSongEmbed(active)}" allow="autoplay; encrypted-media; picture-in-picture" referrerpolicy="strict-origin-when-cross-origin" loading="lazy"></iframe></div><a class="player-fallback" href="${songFallbackUrl(active)}" target="_blank" rel="noopener">Playerul nu pornește? Deschide piesa originală ↗</a><div class="song-thought"><b>${esc(active.title)}</b><p>${esc(active.note)}</p></div><textarea id="musicNote" class="textarea" placeholder="Ce ai simțit sau ce cuvânt a rămas cu tine?">${esc(answer().music||'')}</textarea><details class="song-proposal"><summary>🎁 Propune o piesă pentru mâine (opțional)</summary><input id="songTitleTomorrow" class="input" placeholder="Titlul piesei"><input id="songUrlTomorrow" class="input" placeholder="Lipește linkul exact Spotify, YouTube sau SoundCloud"><textarea id="songNoteTomorrow" class="textarea compact" placeholder="De ce ai ales-o pentru mine?"></textarea></details><button class="primary" id="heard">Păstrez gândul și merg mai departe ❤️</button>`)
 }
 function bindStage(){
  $('#go')?.addEventListener('click',advance);

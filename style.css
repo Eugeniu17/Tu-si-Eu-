@@ -114,3 +114,5 @@ main{width:min(920px,calc(100% - 22px));margin:auto}.hero{margin:18px 0 14px}
  .tomorrow-seal-card{padding:34px 16px 24px}.tomorrow-theatre{height:350px}.tomorrow-envelope{height:195px}.tomorrow-hearts{width:300px}.tomorrow-hearts span{font-size:76px}.th-left{left:3px}.th-right{right:3px}
  @keyframes tomLeft{to{transform:translateX(112px)}}@keyframes tomRight{to{transform:translateX(-112px)}}@keyframes tomStamp{from{top:0;opacity:1}to{top:195px;transform:translateX(-50%) scale(.82);opacity:0}}
 }
+
+.player-fallback{display:block;margin:10px auto 18px;text-align:center;color:#a54067;font-weight:700;text-decoration:none;font-size:.92rem}.player-fallback:active{opacity:.65}.inline-player iframe{background:#111}
