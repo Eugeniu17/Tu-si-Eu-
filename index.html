@@ -3,96 +3,32 @@
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
-  <meta name="theme-color" content="#f8efe2">
-  <meta name="description" content="Între noi — 15 pași între Paris și Menton.">
-  <title>Între noi — Paris · Menton ❤️</title>
-  <link rel="stylesheet" href="./style.css?v=20260803-v4">
+  <meta name="theme-color" content="#f8efe8">
+  <meta name="description" content="Între noi — 15 pași reali pentru Alina și Eugeniu.">
+  <title>Între noi ❤️</title>
+  <link rel="stylesheet" href="style.css?v=6">
 </head>
 <body>
-  <div class="ambient" aria-hidden="true">
-    <span class="ambient__orb ambient__orb--one"></span>
-    <span class="ambient__orb ambient__orb--two"></span>
-    <span class="ambient__grain"></span>
-  </div>
-
+  <div class="ambient" aria-hidden="true"><i></i><i></i><i></i><i></i></div>
   <header class="topbar">
-    <a class="brand" href="#" aria-label="Între noi">
-      <span class="brand__seal">♥</span>
-      <span><strong>Între noi</strong><small>Paris · Menton</small></span>
-    </a>
-    <button class="profile-pill" id="profileChip" type="button">Alege profilul</button>
+    <button class="brand" id="homeBtn" aria-label="Acasă">
+      <span class="brand-mark">♥</span>
+      <span><b>Între noi</b><small>PARIS · MENTON · ALEGEM ZILNIC</small></span>
+    </button>
+    <button class="profile" id="profileBtn">Alege profilul</button>
   </header>
-
-  <main class="shell">
-    <section class="hero" id="hero">
-      <div class="hero__copy">
-        <span class="kicker" id="heroKicker">15 pași unul spre celălalt</span>
-        <h1 id="heroTitle">Distanța nu este pauză.<br>Este drumul nostru.</h1>
-        <p id="heroLead">În fiecare zi deschidem o pagină, ne cunoaștem mai bine și devenim puțin câte puțin oamenii cu care ne dorim să construim o viață.</p>
-      </div>
-
-      <div class="postcard" id="journeyCard">
-        <div class="postcard__stamp" aria-hidden="true">PARIS<br><b>03·08</b></div>
-        <div class="postcard__sky" aria-hidden="true">
-          <span class="cloud cloud--one">☁</span><span class="cloud cloud--two">☁</span>
-          <span class="sun">☀</span>
-        </div>
-        <svg class="journey" viewBox="0 0 760 340" role="img" aria-label="Drumul dintre Paris și Menton">
-          <defs>
-            <linearGradient id="roadGradient" x1="0" x2="1">
-              <stop offset="0" stop-color="#5e91bc"/>
-              <stop offset=".5" stop-color="#c77b91"/>
-              <stop offset="1" stop-color="#e9875f"/>
-            </linearGradient>
-            <filter id="softGlow"><feGaussianBlur stdDeviation="5" result="b"/><feMerge><feMergeNode in="b"/><feMergeNode in="SourceGraphic"/></feMerge></filter>
-          </defs>
-          <path id="routePathBg" class="journey__road-bg" d="M104 268 C168 238 147 151 239 160 C342 170 330 91 438 112 C542 132 570 58 656 68"/>
-          <path id="routePathDone" class="journey__road-done" d="M104 268 C168 238 147 151 239 160 C342 170 330 91 438 112 C542 132 570 58 656 68"/>
-          <g class="landmark landmark--paris" transform="translate(66 236)">
-            <text class="landmark__icon" x="0" y="0">🗼</text>
-            <text class="landmark__name" x="0" y="54">Paris</text>
-            <text class="landmark__person" x="0" y="74">Eugeniu</text>
-          </g>
-          <g class="landmark landmark--middle" transform="translate(350 151)"><text class="landmark__icon" x="0" y="0">🏔️</text></g>
-          <g class="landmark landmark--menton" transform="translate(640 52)">
-            <text class="landmark__icon" x="0" y="0">🌴</text>
-            <text class="landmark__name" x="0" y="54">Menton</text>
-            <text class="landmark__person" x="0" y="74">Alina</text>
-          </g>
-          <g id="routeHeart" class="journey__heart" filter="url(#softGlow)"><text x="0" y="0">❤️</text></g>
-          <g id="routeSteps" class="journey__steps"></g>
-        </svg>
-        <div class="postcard__water" aria-hidden="true"><span>〰</span><span>〰</span><span>〰</span></div>
-        <div class="postcard__caption">
-          <strong id="journeyProgress">Ziua 1 din 15</strong>
-          <span id="journeyCountdown">Mai sunt 14 pași până la revedere.</span>
-        </div>
-      </div>
-
-      <div class="heart-status" id="heartStatus">
-        <div class="heart-pair" aria-label="Starea răspunsurilor">
-          <span class="half-heart half-heart--mine" id="myHalf">♥</span>
-          <span class="half-heart half-heart--theirs" id="theirHalf">♥</span>
-        </div>
-        <div><strong id="heartStatusTitle">Astăzi începem din nou.</strong><span id="heartStatusText">Când amândoi răspundem, cele două jumătăți se unesc și inima începe să bată.</span></div>
-      </div>
-    </section>
-
+  <main>
+    <section class="hero" id="hero"></section>
     <nav class="nav" aria-label="Navigare">
-      <button class="nav__item is-active" data-view="today"><span>✦</span>Astăzi</button>
-      <button class="nav__item" data-view="path"><span>⌁</span>Drumul</button>
-      <button class="nav__item" data-view="traces"><span>♡</span>Urmele noastre</button>
-      <button class="nav__item" data-view="tomorrow"><span>✉</span>Pentru mâine</button>
+      <button data-view="today" class="active"><span>✦</span>Astăzi</button>
+      <button data-view="journey"><span>⌁</span>Drumul</button>
+      <button data-view="album"><span>♡</span>Urmele noastre</button>
+      <button data-view="tomorrow"><span>✉</span>Pentru mâine</button>
     </nav>
-
-    <section class="view" id="view" aria-live="polite"></section>
+    <section id="app" aria-live="polite"></section>
   </main>
-
-  <dialog class="modal" id="profileDialog"><button class="modal__close" data-close="profileDialog" aria-label="Închide">×</button><div id="profileContent"></div></dialog>
-  <dialog class="modal" id="shareDialog"><button class="modal__close" data-close="shareDialog" aria-label="Închide">×</button><div id="shareContent"></div></dialog>
-  <dialog class="modal" id="letterDialog"><button class="modal__close" data-close="letterDialog" aria-label="Închide">×</button><div id="letterContent"></div></dialog>
-  <canvas id="resultCanvas" width="1080" height="1350" hidden></canvas>
-
-  <script src="./app.js?v=20260803-v4" type="module"></script>
+  <dialog id="dialog"><button class="close" id="closeDialog" aria-label="Închide">×</button><div id="dialogBody"></div></dialog>
+  <canvas id="shareCanvas" width="1080" height="1350" hidden></canvas>
+  <script type="module" src="app.js?v=6"></script>
 </body>
 </html>

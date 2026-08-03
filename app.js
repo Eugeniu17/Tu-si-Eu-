@@ -1,282 +1,107 @@
-const VERSION = "20260803-v4";
-const STORAGE_PREFIX = "intre-noi-v4";
-const MAILBOX_KEY = "intre-noi-mailbox-v4";
+const $=(s,r=document)=>r.querySelector(s), $$=(s,r=document)=>[...r.querySelectorAll(s)];
+const enc=o=>btoa(unescape(encodeURIComponent(JSON.stringify(o))));
+const dec=s=>JSON.parse(decodeURIComponent(escape(atob(s))));
+const esc=s=>String(s??'').replace(/[&<>"']/g,m=>({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#039;'}[m]));
 
-const $ = (s, root=document) => root.querySelector(s);
-const $$ = (s, root=document) => [...root.querySelectorAll(s)];
-const esc = value => { const d=document.createElement("div"); d.textContent=String(value ?? ""); return d.innerHTML; };
-const readJSON = (key,fallback) => { try { return JSON.parse(localStorage.getItem(key)) ?? fallback; } catch { return fallback; } };
+const [config,days]=await Promise.all([fetch('config.json?v=6').then(r=>r.json()),fetch('days.json?v=6').then(r=>r.json())]);
+const STORE='intre-noi-final-v6';
+const blank={profile:null,answers:{},steps:{},completed:{},otherDone:{},photos:{},tomorrow:[],openedMusic:{},sealed:{}};
+let state={...blank,...JSON.parse(localStorage.getItem(STORE)||'{}')};
+let profile=state.profile,currentDay=null,stage=0,view='today',selected=[],photoData='';
 
-const ui = {
-  view: $("#view"), chip: $("#profileChip"), profileDialog: $("#profileDialog"), profileContent: $("#profileContent"),
-  shareDialog: $("#shareDialog"), shareContent: $("#shareContent"), letterDialog: $("#letterDialog"), letterContent: $("#letterContent"),
-  canvas: $("#resultCanvas"), routePath: $("#routePathDone"), routeHeart: $("#routeHeart"), routeSteps: $("#routeSteps"),
-  progress: $("#journeyProgress"), countdown: $("#journeyCountdown"), myHalf: $("#myHalf"), theirHalf: $("#theirHalf"),
-  heartPair: $(".heart-pair"), heartTitle: $("#heartStatusTitle"), heartText: $("#heartStatusText")
+const extra={
+1:{story:'Nu începem prin promisiuni mari. Începem printr-un pas mic, sincer și făcut astăzi.',build:'Scrie un lucru foarte concret prin care vei fi prezent(ă) astăzi, nu când veți locui împreună.',teaser:'Mâine vei vedea lumea prin ochii celuilalt.'},
+2:{story:'Parisul și Mentonul nu arată la fel. Tocmai de aceea astăzi vă împrumutați privirea unul altuia.',build:'Alege un moment al zilei și trimite fotografia cu o explicație scurtă: de ce ai ales tocmai acel cadru?',teaser:'Mâine nu veți vorbi doar despre ce ați făcut, ci despre cum sunteți cu adevărat.'},
+3:{story:'Uneori spunem „sunt bine” ca să nu complicăm ziua celuilalt. Astăzi alegem adevărul spus cu blândețe.',build:'Spune exact ce fel de sprijin ai nevoie și ce nu ai nevoie. Celălalt nu trebuie să ghicească.',teaser:'Mâine exersăm unul dintre cele mai rare daruri: să ascultăm fără să ne apărăm.'},
+4:{story:'A asculta nu înseamnă să aștepți pauza ca să răspunzi. Înseamnă să intri, pentru o clipă, în lumea celuilalt.',build:'După mesajul vocal al celuilalt, răspunde mai întâi cu „Am înțeles că...” și abia apoi spune ce simți tu.',teaser:'Mâine deschidem o ușă spre lucrurile pe care le purtăm în tăcere.'},
+5:{story:'O relație pentru toată viața începe când două persoane învață să nu lase una singură tot ce este greu.',build:'Alege un lucru pe care îl poți împărți deja: o grijă, o decizie, o rugăciune sau o responsabilitate.',teaser:'Mâine este ziua postului: nu o performanță, ci o întâlnire sinceră cu Dumnezeu și unul cu altul.'},
+6:{story:'Postul nu este un concurs de rezistență. Este o zi în care încetinim, spunem adevărul despre starea noastră și alegem să ne purtăm în rugăciune.',build:'Stabiliți împreună dacă postiți, până când, cum vă verificați starea și ce faceți dacă unul nu se simte bine.',teaser:'Mâine luați cu voi din biserică nu doar o idee, ci un pas de trăit.'},
+7:{story:'Duminica nu rămâne doar în biserică. Ceea ce auzim devine felul în care vorbim, iertăm și iubim.',build:'Alege o idee din predică și transform-o într-un gest pentru relația voastră în următoarele 24 de ore.',teaser:'Mâine vorbiți despre acel „acasă” care nu este o adresă.'},
+8:{story:'Acasă poate fi o voce, o privire, liniștea de a nu te apăra și siguranța că nu vei fi abandonat la primul obstacol.',build:'Creează astăzi pentru celălalt un moment de „acasă”: o voce calmă, un mesaj, timp sau o rugăciune.',teaser:'Mâine înlocuim „cândva” cu o zi, o oră și un gest real.'},
+9:{story:'Viitorul nu se construiește din „o să fac”. Se construiește din obiceiuri mici repetate înainte să fie comod.',build:'Alege un obicei pentru șapte zile, spune ora sau contextul în care îl faci și cum vei ști că l-ai respectat.',teaser:'Mâine priviți același cer și puneți un pas sub o dorință.'},
+10:{story:'Sub același cer, distanța se micșorează pentru câteva clipe. Dar o dorință devine serioasă doar când primește și un pas.',build:'Pentru dorința ta, scrie un pas pe care îl poți face în următoarele șapte zile.',teaser:'Mâine decideți cum vreți să rămâneți de aceeași parte chiar și când vă doare.'},
+11:{story:'Într-o relație lungă nu întrebarea este dacă vor exista conflicte, ci dacă veți lupta unul împotriva celuilalt sau împreună împotriva problemei.',build:'Formulați o regulă simplă de conflict și păstrați-o ca regulă comună.',teaser:'Mâine descoperiți prin ce gesturi se simte iubirea, nu doar cum se numește.'},
+12:{story:'Uneori iubim sincer, dar într-o limbă pe care celălalt nu o aude bine. Astăzi traduceți iubirea în gesturi concrete.',build:'Alege două gesturi ușor de repetat și spune cât de des ți-ar face bine.',teaser:'Mâine este al doilea post: privim ce a schimbat Dumnezeu, nu doar ce am cerut.'},
+13:{story:'Al doilea post nu repetă primul. El întreabă: ce s-a mișcat în inimă, ce a rămas greu și unde avem nevoie de har?',build:'Stabiliți din nou forma postului și un moment în care vă întrebați sincer: „Cum ești acum?”',teaser:'Mâine Alina se întoarce. Alegeți ce nu vreți să pierdeți când revine rutina.'},
+14:{story:'Drumul de întoarcere nu închide povestea. El verifică ce obiceiuri și ce adevăruri luați cu voi în viața normală.',build:'Alege trei lucruri din aceste zile și spune cum le păstrați după vacanță.',teaser:'Mâine este prima zi de lucru după vacanță și ultimul capitol al acestui drum.'},
+15:{story:'Finalul nu întreabă dacă a fost frumos. Întreabă cine ați devenit și ce alegeți să continuați.',build:'Scrie un angajament de 30 de zile: mic, măsurabil, realist și făcut cu Dumnezeu.',teaser:'Nu mai așteptăm următoarea pagină. Începem s-o trăim.'}
+};
+for(const d of days) Object.assign(d,extra[d.id]||{});
+const spotify={
+'Scopul Meu':'https://open.spotify.com/search/Scopul%20Meu%20Alin%20Emima%20Timofte',
+'Pentru tine':'https://open.spotify.com/search/Ramona%20Hanganu%20Pentru%20tine',
+'I Prayed for You':'https://www.youtube.com/results?search_query=I+Prayed+for+You+Christian+Wedding+Song+Faithful+Love+Story+Duet'
 };
 
-let config, days, profile = localStorage.getItem("intre-noi-profile-v4") || "";
-let state = emptyState(), currentView = "today", imported = null;
+function save(){localStorage.setItem(STORE,JSON.stringify(state))}
+function dateParis(add=0){const now=new Date(Date.now()+add*864e5);return new Intl.DateTimeFormat('en-CA',{timeZone:config.timeZone,year:'numeric',month:'2-digit',day:'2-digit'}).format(now)}
+function indexToday(){const d=dateParis();const i=days.findIndex(x=>x.date===d);if(i>=0)return i;return d<days[0].date?0:days.length-1}
+function available(d){return d.date<=dateParis()}
+function current(){const unlocked=days.filter(available);return unlocked.at(-1)||days[0]}
+function me(){return config.people[profile]||null}
+function otherKey(){return profile==='alina'?'eugeniu':'alina'}
+function other(){return config.people[otherKey()]}
 
-function emptyState(){ return {answers:{},completed:{},partnerCompleted:{},stage:{},prayers:{},tomorrow:[],sealed:{},introSeen:{}}; }
-function storageKey(){ return `${STORAGE_PREFIX}-${profile || "guest"}`; }
-function loadState(){ const saved=readJSON(storageKey(),{}); state={...emptyState(),...saved}; }
-function save(){ localStorage.setItem(storageKey(),JSON.stringify(state)); }
-function person(){ return config.people[profile]; }
-function otherId(){ return profile === "alina" ? "eugeniu" : "alina"; }
-function other(){ return config.people[otherId()]; }
-function parisToday(){ return new Intl.DateTimeFormat("en-CA",{timeZone:config.timeZone,year:"numeric",month:"2-digit",day:"2-digit"}).format(new Date()); }
-function todayIndex(){ const t=parisToday(); let i=days.findIndex(d=>d.date===t); if(i<0) i=t<days[0].date?0:days.length-1; return i; }
-function dayUnlocked(day){ return parisToday() >= day.date; }
-function currentDay(){ const unlocked=days.filter(dayUnlocked); return unlocked.at(-1) || days[0]; }
-function dayState(day){ return state.stage[day.id] || 0; }
-function setDayStage(day,n){ state.stage[day.id]=n; save(); }
-
-async function load(){
-  const [c,d]=await Promise.all([
-    fetch(`./config.json?v=${VERSION}`,{cache:"no-store"}), fetch(`./days.json?v=${VERSION}`,{cache:"no-store"})
-  ]);
-  if(!c.ok || !d.ok) throw new Error("Fișierele proiectului nu s-au încărcat.");
-  config=await c.json(); days=await d.json();
-  imported=importFromURL(); bind(); drawMap();
-  if(!profile) chooseProfile(); else boot();
+function init(){importHash();bindGlobal();if(!profile)chooseProfile();else openToday()}
+function bindGlobal(){
+ $('#profileBtn').onclick=chooseProfile;$('#homeBtn').onclick=openToday;$('#closeDialog').onclick=()=>$('#dialog').close();
+ $$('.nav button').forEach(b=>b.onclick=()=>switchView(b.dataset.view));
 }
-
-function bind(){
-  ui.chip.onclick=chooseProfile;
-  $$('[data-close]').forEach(b=>b.onclick=()=>$("#"+b.dataset.close).close());
-  $$(".nav__item").forEach(b=>b.onclick=()=>{
-    $$(".nav__item").forEach(x=>x.classList.remove("is-active")); b.classList.add("is-active"); currentView=b.dataset.view;
-    ({today:renderToday,path:renderPath,traces:renderTraces,tomorrow:renderTomorrow}[currentView]||renderToday)();
-  });
-}
-
 function chooseProfile(){
-  ui.profileContent.innerHTML=`
-    <span class="kicker">Alege partea ta de drum</span><h2>Cine deschide povestea?</h2>
-    <p style="color:var(--muted);line-height:1.6">Fiecare răspunde pe telefonul său. Alegerea și progresul rămân salvate aici.</p>
-    <div class="profile-options">
-      <button class="profile-option" data-profile="alina"><span>🦋</span><strong>Sunt Alina</strong><small>Menton</small></button>
-      <button class="profile-option" data-profile="eugeniu"><span>❤️</span><strong>Sunt Eugeniu</strong><small>Paris</small></button>
-    </div>`;
-  ui.profileDialog.showModal();
-  $$('[data-profile]',ui.profileContent).forEach(b=>b.onclick=()=>{
-    profile=b.dataset.profile; localStorage.setItem("intre-noi-profile-v4",profile); loadState(); ui.profileDialog.close(); boot();
-  });
+ $('#dialogBody').innerHTML=`<div class="kicker">POVESTEA ESTE PENTRU DOI</div><h2>Cine ești astăzi?</h2><p>Alegerea rămâne pe telefonul acesta.</p><div class="choices"><button class="choice" data-profile="alina">🦋 Sunt Alina · Menton</button><button class="choice" data-profile="eugeniu">❤️ Sunt Eugeniu · Paris</button></div>`;
+ $('#dialog').showModal();$$('[data-profile]').forEach(b=>b.onclick=()=>{profile=b.dataset.profile;state.profile=profile;save();$('#dialog').close();openToday()})
+}
+function switchView(v){view=v;$$('.nav button').forEach(x=>x.classList.toggle('active',x.dataset.view===v));if(v==='today')openToday();if(v==='journey')renderJourney();if(v==='album')renderAlbum();if(v==='tomorrow')renderTomorrow()}
+function openToday(){view='today';$$('.nav button').forEach(x=>x.classList.toggle('active',x.dataset.view==='today'));currentDay=current();stage=state.steps[currentDay.id]||0;photoData=state.photos[currentDay.id]||'';renderHero();renderChapter()}
+
+function renderHero(advance=0){const d=currentDay||current();const completed=Object.keys(state.completed).filter(k=>state.completed[k]).length;const progress=Math.max(1,Math.min(15,d.id+advance));const t=(progress-1)/14;const x=90+720*t,y=205-85*Math.sin(Math.PI*t)+20*Math.sin(3*Math.PI*t);const pathLen=860,done=pathLen*t;$('#profileBtn').textContent=me()?`${me().emoji} ${me().name}`:'Alege profilul';
+ $('#hero').innerHTML=`<div class="route-card"><div class="route-art"><div class="sun"></div><div class="cloud c1">☁️</div><div class="cloud c2">☁️</div><svg class="route-svg" viewBox="0 0 900 310" aria-label="Drumul Paris Menton"><path class="route-path" d="M90 220 C210 65 340 245 470 130 C590 25 690 190 810 95"/><path class="route-done" d="M90 220 C210 65 340 245 470 130 C590 25 690 190 810 95" pathLength="860" stroke-dasharray="${done} ${pathLen-done}"/><text x="55" y="258" class="landmark">🗼</text><text x="43" y="288" class="city-label">Paris · Eugeniu</text><text x="430" y="245" class="landmark">🏔️</text><text x="790" y="125" class="landmark">🌴</text><text x="742" y="67" class="city-label">Menton · Alina</text><text x="${x}" y="${y}" class="route-heart">❤️</text></svg><div class="water"></div></div><div class="route-copy"><div class="kicker">DRUMUL NOSTRU</div><h1>${d.id===15?'Nu este un final. Este o alegere.':`Ziua ${d.id}: încă un pas spre noi`}</h1><p>${d.story}</p><div class="progress">${days.map(x=>`<i class="${x.id<=progress?'done':''}"></i>`).join('')}</div><div class="progress-note"><span class="pill">${completed}/15 zile sigilate</span><span class="pill">${me()?.name||'—'} · ${me()?.city||'—'}</span><span class="pill">${Math.max(0,15-progress)} pași rămași</span></div></div></div>`
 }
 
-function boot(){
-  loadState(); ui.chip.textContent=`${person().emoji} ${person().name}`; updateJourney(); updateHeartStatus(); renderToday();
-  if(imported){ setTimeout(()=>showImported(imported),350); imported=null; }
+function renderChapter(){const d=currentDay;const labels=['Deschide','Muzică','Gest','Întrebare','Construim','Rugăciune','Sigiliu'];$('#app').innerHTML=`<article class="chapter"><header class="chapter-head"><div class="kicker">CAPITOLUL ${d.id}</div><div class="chapter-icon">${d.icon}</div><h2>${d.title}</h2><p>${d.story}</p></header><div class="step-map">${labels.map((l,i)=>`${i?'<span></span>':''}<button class="${i<stage?'done':i===stage?'current':''}" data-step="${i}" title="${l}">${i<stage?'✓':i+1}</button>`).join('')}</div><div class="stage" id="stage"></div></article>`;$$('[data-step]').forEach(b=>b.onclick=()=>{const n=+b.dataset.step;if(n<=stage){stage=n;renderStage()}});renderStage()}
+function advance(){stage=Math.min(6,stage+1);state.steps[currentDay.id]=Math.max(state.steps[currentDay.id]||0,stage);save();renderChapter();scrollTo({top:$('#app').offsetTop-92,behavior:'smooth'})}
+function card(title,html,intro=''){return `<div class="stage-card">${intro?`<div class="stage-intro">${intro}</div>`:''}<h3>${title}</h3>${html}</div>`}
+function answer(){return state.answers[currentDay.id]||{}}
+function setAns(k,v){state.answers[currentDay.id]={...answer(),[k]:v};save()}
+function renderStage(){selected=(answer().selected||[]).slice();photoData=state.photos[currentDay.id]||'';const d=currentDay,root=$('#stage');
+ if(stage===0)root.innerHTML=card('Deschide ziua',`${receivedLetter()}<p>Astăzi nu încercăm să fim perfecți. Încercăm să fim sinceri, atenți și prezenți.</p><button class="primary" id="go">Deschide capitolul</button>`,'<b>Un pas mic făcut astăzi valorează mai mult decât o promisiune mare pentru „cândva”.</b>');
+ if(stage===1)root.innerHTML=card('Ascultă și lasă cuvintele să ajungă la tine',`<a class="song-card" href="${d.song.url}" target="_blank" rel="noopener"><span class="vinyl">♥</span><span><small>Melodia capitolului</small><b>${esc(d.song.title)}</b><small>${esc(d.song.artist)}</small></span><em>▶</em></a><div class="music-actions"><a href="${spotify[d.song.title]||d.song.url}" target="_blank" rel="noopener">Deschide melodia</a><button id="heard">Am ascultat-o ❤️</button></div><p>Nu trebuie să ascultați în același minut. Important este ca fiecare să intre în zi cu aceeași melodie și să aleagă un vers sau o idee care l-a atins.</p><textarea id="musicNote" class="textarea" placeholder="Ce cuvânt sau ce idee din melodie a rămas cu tine?">${esc(answer().music||'')}</textarea>`);
+ if(stage===2)root.innerHTML=card('Un gest real, astăzi',`<p><b>${esc(d.action)}</b></p><p>${esc(d.build)}</p>${d.photo?photoUI(d.photo):''}<textarea id="actionText" class="textarea" placeholder="Ce fac concret, când și cum?">${esc(answer().action||'')}</textarea><button class="primary" id="saveAction">Am ales gestul și momentul</button>`,'<b>Nu „după vacanță”. Nu „când vom locui împreună”. Astăzi.</b>');
+ if(stage===3)root.innerHTML=card('Cunoaște-mă mai bine',`<p><b>${esc(d.question)}</b></p>${d.options?.length?`<div class="choices">${d.options.map(o=>`<button class="choice ${selected.includes(o)?'selected':''}" data-choice="${esc(o)}">${esc(o)}</button>`).join('')}</div>`:''}<textarea id="answerText" class="textarea" placeholder="Scrie sincer. Nu există răspunsul perfect.">${esc(answer().text||'')}</textarea><button class="primary" id="saveAnswer">Păstrează răspunsul</button>`);
+ if(stage===4)root.innerHTML=card('Transformăm răspunsul într-un pas',`<p>${esc(d.build)}</p><textarea id="buildText" class="textarea" placeholder="Pasul meu: ce fac, când îl fac și cum vei putea observa?">${esc(answer().build||'')}</textarea><button class="primary" id="saveBuild">Îmi asum pasul acesta</button>`,'<b>O relație pentru o viață se construiește din lucruri care pot fi văzute, nu doar auzite.</b>');
+ if(stage===5)root.innerHTML=card('Trei motive de rugăciune',`${fastingBlock(d)}<p>Scrieți și starea, și nevoia, și felul în care celălalt poate susține.</p><div class="prayers">${d.prayer.map((p,i)=>`<div class="prayer-row"><b>${i+1}. ${esc(p)}</b><textarea class="textarea" data-prayer="${i}" placeholder="Cum mă simt? Ce cer lui Dumnezeu? Cum mă poți susține?">${esc(answer().prayers?.[i]||'')}</textarea></div>`).join('')}</div><button class="primary" id="savePrayer">Păstrează motivele noastre</button>`);
+ if(stage===6)root.innerHTML=sealScreen();bindStage()}
+function bindStage(){
+ $('#go')?.addEventListener('click',advance);
+ $('#heard')?.addEventListener('click',()=>{setAns('music',$('#musicNote').value.trim()||'Am ascultat melodia.');state.openedMusic[currentDay.id]=true;save();advance()});
+ $('#saveAction')?.addEventListener('click',()=>{const v=$('#actionText').value.trim();if(!v)return alert('Scrie cum vei face gestul.');setAns('action',v);advance()});
+ $$('[data-choice]').forEach(b=>b.onclick=()=>{const v=b.dataset.choice;selected=selected.includes(v)?selected.filter(x=>x!==v):[...selected,v];b.classList.toggle('selected')});
+ $('#saveAnswer')?.addEventListener('click',()=>{const text=$('#answerText').value.trim();if(!text&&!selected.length)return alert('Alege sau scrie un răspuns.');state.answers[currentDay.id]={...answer(),selected,text};save();advance()});
+ $('#saveBuild')?.addEventListener('click',()=>{const v=$('#buildText').value.trim();if(!v)return alert('Scrie pasul concret.');setAns('build',v);advance()});
+ $('#savePrayer')?.addEventListener('click',()=>{const ps=$$('[data-prayer]').map(x=>x.value.trim());if(ps.some(x=>!x))return alert('Completați cele trei motive.');state.answers[currentDay.id]={...answer(),prayers:ps,fast:$('#fastChoice')?.value||''};save();advance()});
+ $('#photoInput')?.addEventListener('change',handlePhoto);$('#sealBtn')?.addEventListener('click',animateSeal);$('#shareResult')?.addEventListener('click',shareResult);$('#shareHeart')?.addEventListener('click',shareHeart);$('#tomorrowQuick')?.addEventListener('click',()=>switchView('tomorrow'))
 }
+function fastingBlock(d){if(![6,13].includes(d.id))return '';return `<div class="notice"><b>Postul nostru</b><p>Înainte să începeți, întrebați-vă sincer dacă puteți și vreți să postiți. Sănătatea nu este lipsă de credință. Puteți alege post alimentar, o perioadă mai scurtă sau un timp special de rugăciune.</p><select id="fastChoice" class="textarea" style="min-height:58px"><option value="">Alege forma zilei</option><option>Postim împreună</option><option>Unul postește, celălalt susține și se roagă</option><option>Alegem o perioadă mai scurtă</option><option>Alegem rugăciune și liniște fără post alimentar</option><option>Mai întâi discutăm starea noastră</option></select></div>`}
+function photoUI(label){return `<div class="photo-box"><b>📷 ${esc(label)}</b><p>Fă fotografia acum sau alege-o din telefon. Ea va apărea în rezultatul zilei și în album.</p><input id="photoInput" type="file" accept="image/*" capture="environment">${photoData?`<img class="photo-preview" src="${photoData}" alt="Fotografia zilei">`:''}</div>`}
+function handlePhoto(e){const f=e.target.files?.[0];if(!f)return;const r=new FileReader;r.onload=()=>{const img=new Image;img.onload=()=>{const c=document.createElement('canvas'),max=1200,scale=Math.min(1,max/img.width);c.width=Math.round(img.width*scale);c.height=Math.round(img.height*scale);c.getContext('2d').drawImage(img,0,0,c.width,c.height);state.photos[currentDay.id]=c.toDataURL('image/jpeg',.78);save();renderStage()};img.src=r.result};r.readAsDataURL(f)}
 
-function drawMap(){
-  const path=$("#routePathBg"); if(!path) return;
-  const length=path.getTotalLength(); ui.routeSteps.innerHTML="";
-  for(let i=0;i<15;i++){
-    const p=path.getPointAtLength(length*(i/14));
-    const c=document.createElementNS("http://www.w3.org/2000/svg","circle"); c.setAttribute("cx",p.x); c.setAttribute("cy",p.y); c.setAttribute("r",i===0||i===14?7:5); c.dataset.step=i; ui.routeSteps.appendChild(c);
-  }
-}
+function summaryHTML(){const a=answer();return `<div class="letter-preview"><h4>Ziua ${currentDay.id} · ${esc(currentDay.title)}</h4><ul><li><b>Melodia:</b> ${esc(a.music||'ascultată')}</li><li><b>Gestul:</b> ${esc(a.action||'—')}</li><li><b>Răspunsul:</b> ${esc([...(a.selected||[]),a.text].filter(Boolean).join(' · ')||'—')}</li><li><b>Pasul concret:</b> ${esc(a.build||'—')}</li><li><b>Rugăciunea:</b> ${(a.prayers||[]).filter(Boolean).length}/3 motive</li></ul></div>`}
+function sealScreen(){const mine=!!state.completed[currentDay.id],otherDone=!!state.otherDone[currentDay.id];if(!mine)return card('Ziua este gata. Acum o păstrăm.',`${summaryHTML()}<p>Privește încă o dată ce ai scris. Apoi răspunsurile vor coborî în plic, plicul se va închide și va primi o pecete.</p><div class="closing-scene"><div class="mail-stage" id="mailStage"><div class="mail-envelope"><div class="mail-paper"><b>${me().name} ❤️ ${other().name}</b><p>Un pas real, un răspuns sincer și trei motive de rugăciune.</p></div><div class="mail-flap"></div><div class="wax">♥</div></div></div><button class="primary" id="sealBtn">Gata — sigilează ziua</button></div>`);
+ return card('Plic sigilat',`<div class="closing-scene"><div class="mail-stage sealed"><div class="mail-envelope"><div class="mail-paper"><b>Ziua ${currentDay.id} este păstrată.</b><p>Răspunsul, gestul și rugăciunea au rămas în povestea voastră.</p></div><div class="mail-flap" style="transform:rotateX(180deg)"></div><div class="wax">♥</div></div></div><div class="love-message show">Te iubesc</div><div class="heart-status">${mine&&otherDone?'<div class="full-heart">❤️</div>':`<div class="half-heart left ready">❤️</div><div class="half-heart right ${otherDone?'ready':''}">❤️</div>`}</div><div class="status-copy">${otherDone?'Amândoi ați răspuns. Inima bate între Paris și Menton.':'Jumătatea ta este aprinsă. Trimite confirmarea; când celălalt o deschide, a doua jumătate se aprinde.'}</div><div class="final-map">${esc(currentDay.teaser)}</div><button class="primary" id="shareHeart">Trimite jumătatea inimii ❤️</button><button class="secondary" id="shareResult">Trimite rezultatul zilei</button><button class="secondary" id="tomorrowQuick">Lasă un plic pentru mâine ✉</button></div>`)}
+function animateSeal(){const s=$('#mailStage');s.classList.add('sealing');$('#sealBtn').disabled=true;setTimeout(()=>{state.completed[currentDay.id]=true;state.sealed[currentDay.id]=Date.now();save();renderHero(1);renderStage()},2100)}
 
-function updateJourney(){
-  if(!days) return; const idx=todayIndex(); const completed=Object.keys(state.completed).filter(k=>state.completed[k]).length;
-  const progress=Math.max(idx,completed?Math.min(completed,14):0); const path=$("#routePathBg"); const len=path.getTotalLength();
-  ui.routePath.style.strokeDasharray=`${len*progress/14} ${len}`;
-  const p=path.getPointAtLength(len*progress/14); ui.routeHeart.setAttribute("transform",`translate(${p.x-18} ${p.y+12})`);
-  $$("circle",ui.routeSteps).forEach((c,i)=>c.classList.toggle("is-done",i<=progress));
-  ui.progress.textContent=`Ziua ${Math.min(progress+1,15)} din 15`;
-  ui.countdown.textContent=progress>=14?"Astăzi distanța devine revedere.":`Mai sunt ${14-progress} pași până la revedere.`;
-}
+function receivedLetter(){const letter=state.tomorrow.find(x=>x.openDate<=dateParis()&&!x.read);if(!letter)return '<div class="notice">Dacă ai primit un plic de la celălalt, deschide linkul trimis. El va apărea aici la data potrivită.</div>';letter.read=true;save();return `<div class="sealed-letter"><b>💌 Un plic de la ${esc(letter.fromName||'celălalt')}</b><p>${esc(letter.text)}</p></div>`}
+function shareHeart(){const url=location.origin+location.pathname+'#sync='+encodeURIComponent(enc({type:'done',day:currentDay.id,from:profile}));share({title:'Jumătatea inimii mele',text:`Am terminat ziua ${currentDay.id}. Deschide linkul ca să aprinzi și jumătatea mea pe telefonul tău ❤️`,url})}
+function importHash(){try{if(location.hash.startsWith('#sync=')){const x=dec(decodeURIComponent(location.hash.slice(6)));if(x.type==='done')state.otherDone[x.day]=true}else if(location.hash.startsWith('#letter=')){const x=dec(decodeURIComponent(location.hash.slice(8)));if(!state.tomorrow.some(l=>l.id===x.id))state.tomorrow.push({...x,read:false})}save();if(location.hash)history.replaceState(null,'',location.pathname)}catch(e){console.warn(e)}}
+async function share(data){if(navigator.share)try{return await navigator.share(data)}catch{}const text=[data.text,data.url].filter(Boolean).join('\n');await navigator.clipboard?.writeText(text);prompt('Copiază și trimite:',text)}
 
-function updateHeartStatus(day=currentDay()){
-  const mine=!!state.completed[day.id], theirs=!!state.partnerCompleted[day.id];
-  ui.myHalf.classList.toggle("is-ready",mine); ui.theirHalf.classList.toggle("is-ready",theirs); ui.heartPair.classList.toggle("is-complete",mine&&theirs);
-  if(mine&&theirs){ ui.heartTitle.textContent="Amândoi am răspuns."; ui.heartText.textContent="Cele două jumătăți s-au unit. Inima noastră bate și drumul devine puțin mai scurt."; }
-  else if(mine){ ui.heartTitle.textContent="Partea ta este gata."; ui.heartText.textContent=`Jumătatea ta a inimii îl așteaptă pe ${other().name}. Trimite-i legătura de confirmare.`; }
-  else if(theirs){ ui.heartTitle.textContent=`${other().name} a răspuns deja.`; ui.heartText.textContent="Cealaltă jumătate te așteaptă. Acum este rândul tău."; }
-  else { ui.heartTitle.textContent="Astăzi începem din nou."; ui.heartText.textContent="Când amândoi răspundem, cele două jumătăți se unesc și inima începe să bată."; }
-}
+async function shareResult(){const a=answer(),text=`Ziua ${currentDay.id} — ${currentDay.title}\n\n🎵 ${a.music||'-'}\n\n❤️ Gestul meu:\n${a.action||'-'}\n\n💬 Răspunsul meu:\n${[...(a.selected||[]),a.text].filter(Boolean).join(' · ')||'-'}\n\n🌱 Pasul meu concret:\n${a.build||'-'}\n\n🙏 Cele trei motive:\n${(a.prayers||[]).map((x,i)=>`${i+1}. ${x}`).join('\n')}\n\nTe iubesc ❤️`;
+ const blob=await makeShareCard(text,state.photos[currentDay.id]);const file=new File([blob],`intre-noi-ziua-${currentDay.id}.jpg`,{type:'image/jpeg'});if(navigator.canShare?.({files:[file]}))try{return await navigator.share({title:`Ziua ${currentDay.id}`,text,files:[file]})}catch{}const aTag=document.createElement('a');aTag.href=URL.createObjectURL(blob);aTag.download=file.name;aTag.click();await navigator.clipboard?.writeText(text);alert('Imaginea a fost salvată, iar textul copiat. Trimite-le împreună în WhatsApp.')}
+async function makeShareCard(text,photo){const c=$('#shareCanvas'),ctx=c.getContext('2d');ctx.fillStyle='#f5e5d8';ctx.fillRect(0,0,c.width,c.height);ctx.fillStyle='#fffaf4';rounded(ctx,55,55,970,1240,48);ctx.fill();ctx.fillStyle='#a74e6c';ctx.font='bold 31px sans-serif';ctx.fillText(`ÎNTRE NOI · ZIUA ${currentDay.id}`,100,125);ctx.fillStyle='#30292f';ctx.font='bold 58px Georgia';let y=205;y=wrap(ctx,currentDay.title,100,y,860,68);if(photo){const img=await loadImg(photo);const h=390;ctx.save();rounded(ctx,100,y+20,880,h,32);ctx.clip();drawCover(ctx,img,100,y+20,880,h);ctx.restore();y+=440}ctx.fillStyle='#5f5357';ctx.font='29px sans-serif';wrap(ctx,text,100,y+15,860,42);ctx.fillStyle='#a74e6c';ctx.font='bold 33px Georgia';ctx.fillText('Paris · Menton · alegem zilnic ❤️',100,1270);return await new Promise(r=>c.toBlob(r,'image/jpeg',.91))}
+function rounded(ctx,x,y,w,h,r){ctx.beginPath();ctx.roundRect(x,y,w,h,r)}function drawCover(ctx,img,x,y,w,h){const s=Math.max(w/img.width,h/img.height),nw=img.width*s,nh=img.height*s;ctx.drawImage(img,x+(w-nw)/2,y+(h-nh)/2,nw,nh)}function wrap(ctx,text,x,y,w,lh){for(const p of text.split('\n')){let line='';for(const word of p.split(' ')){if(ctx.measureText(line+word).width>w){ctx.fillText(line,x,y);y+=lh;line=''}line+=word+' '}ctx.fillText(line,x,y);y+=lh}return y}function loadImg(src){return new Promise(r=>{const i=new Image;i.onload=()=>r(i);i.src=src})}
 
-function scene(day,content=""){
-  return `<article class="chapter stage"><div class="chapter__top"><span class="chapter__number">Capitolul ${day.id} · ${day.date.split("-").reverse().slice(0,2).join(".")}</span><div class="chapter__icon">${day.icon}</div><h2>${esc(day.title)}</h2><p class="chapter__lead">${esc(day.intro?.[profile]||day.prelude||"")}</p></div>${content}</article>`;
-}
+function renderJourney(){renderHero();$('#app').innerHTML=`<div class="days-grid">${days.map(d=>`<button class="tile ${available(d)?'':'locked'}" data-day="${d.id}" ${available(d)?'':'disabled'}><b>Ziua ${d.id}</b><h3>${d.icon} ${esc(d.title)}</h3><small>${state.completed[d.id]?'✓ Sigilată':available(d)?'Disponibilă':'Se deschide la data ei'}</small></button>`).join('')}</div>`;$$('[data-day]').forEach(b=>b.onclick=()=>{currentDay=days.find(d=>d.id==b.dataset.day);stage=state.steps[currentDay.id]||0;renderHero();renderChapter()})}
+function renderAlbum(){renderHero();const items=days.filter(d=>state.completed[d.id]);$('#app').innerHTML=items.length?`<div class="album-grid">${items.map(d=>`<div class="tile">${state.photos[d.id]?`<img src="${state.photos[d.id]}" alt="Ziua ${d.id}">`:`<div style="font-size:50px">${d.icon}</div>`}<b>Ziua ${d.id}</b><h3>${esc(d.title)}</h3><small>${esc(state.answers[d.id]?.text||state.answers[d.id]?.build||'Păstrată în poveste')}</small></div>`).join('')}</div>`:`<div class="panel"><h2>Albumul vostru începe cu primul plic sigilat</h2><p>Fotografiile rămân pe telefonul pe care au fost alese și intră în imaginea rezultatului.</p></div>`}
+function renderTomorrow(){renderHero();const unread=state.tomorrow.filter(x=>x.openDate<=dateParis());$('#app').innerHTML=`<div class="panel tomorrow-box"><div class="kicker">DIN ASTĂZI PENTRU MÂINE</div><h2>Lasă ceva care merită așteptat</h2><p>Poate fi o întrebare, o încurajare, o rugăciune sau o mică surpriză. Linkul ajunge astăzi, dar conținutul se deschide la data de mâine.</p>${unread.map(l=>`<div class="sealed-letter"><b>💌 ${esc(l.fromName||'Plic primit')}</b><p>${esc(l.text)}</p></div>`).join('')}<div class="choices"><button class="choice selected" data-kind="Întrebare">Întrebare</button><button class="choice" data-kind="Gând">Gând</button><button class="choice" data-kind="Rugăciune">Rugăciune</button><button class="choice" data-kind="Surpriză">Surpriză</button></div><textarea id="tomorrowText" class="textarea" placeholder="Ce vrei să găsească mâine?"></textarea><button class="primary" id="sendTomorrow">Sigilează și trimite plicul ✉</button></div>`;let kind='Întrebare';$$('[data-kind]').forEach(b=>b.onclick=()=>{$$('[data-kind]').forEach(x=>x.classList.remove('selected'));b.classList.add('selected');kind=b.dataset.kind});$('#sendTomorrow').onclick=()=>{const text=$('#tomorrowText').value.trim();if(!text)return alert('Scrie mesajul pentru mâine.');const payload={id:crypto.randomUUID?.()||Date.now(),type:'letter',kind,text,openDate:dateParis(1),from:profile,fromName:me().name};const url=location.origin+location.pathname+'#letter='+encodeURIComponent(enc(payload));share({title:'Un plic pentru mâine',text:`Ți-am lăsat un plic pentru mâine 💌`,url})}}
 
-function stagesFor(day){
-  const special=specialDay(day);
-  return [
-    ["Deschide ziua","O pagină nouă și, dacă există, plicul de ieri.","✦"],
-    ["Ascultă și simte",day.song?"Melodia zilei și o întrebare pentru inimă.":"O clipă liniștită înainte de răspuns.","♫"],
-    [special.title,special.subtitle,special.icon],
-    ["Cunoaște-mă mai bine","Răspunsul zilei, pas cu pas.","♡"],
-    ["Trei motive de rugăciune","Pentru tine, pentru noi și pentru cei dragi.","🙏"],
-    ["Sigilează plicul","Închidem ziua, unim inimile și așteptăm mâine.","✉"]
-  ];
-}
-
-function renderTrail(day,active){
-  const stages=stagesFor(day);
-  return `<div class="trail">${stages.map((s,i)=>`<button class="trail-step ${i<active?"is-done":i===active?"is-current":""}" ${i>active?"disabled":""} data-stage="${i}"><span class="trail-step__dot">${i<active?"✓":s[2]}</span><span><strong>${s[0]}</strong><small>${s[1]}</small></span><span class="trail-step__arrow">${i===active?"›":""}</span></button>`).join("")}</div>`;
-}
-
-function renderToday(){
-  if(!profile) return chooseProfile();
-  const day=currentDay(); updateJourney(); updateHeartStatus(day);
-  if(state.sealed[day.id]) return renderSealed(day);
-  const active=Math.min(dayState(day),5);
-  ui.view.innerHTML=scene(day,renderTrail(day,active)+`<div id="stageArea"></div>`);
-  renderStage(day,active);
-}
-
-function renderStage(day,stage){
-  const area=$("#stageArea"); if(!area) return;
-  const next=()=>{ const n=Math.min(stage+1,5); setDayStage(day,n); renderToday(); window.scrollTo({top:ui.view.offsetTop-100,behavior:"smooth"}); };
-  if(stage===0){
-    const letter=getAvailableLetter();
-    area.innerHTML=`<section class="stage-card"><span class="stage-card__label">Deschiderea zilei</span><h3>${letter?"Ai primit ceva de ieri 💌":"O nouă pagină ne așteaptă"}</h3><p>${letter?`Un plic de la ${esc(config.people[letter.from].name)} a așteptat această zi.`:"Nu ne grăbim. Astăzi facem un singur pas, dar îl facem cu inimă."}</p>${letter?`<button class="primary" id="openLetter">Deschide plicul</button>`:`<button class="primary" id="startDay">Deschide ziua</button>`}</section>`;
-    if(letter) $("#openLetter").onclick=()=>{ showLetter(letter); next(); }; else $("#startDay").onclick=next;
-  } else if(stage===1){
-    area.innerHTML=`<section class="stage-card"><span class="stage-card__label">O clipă pentru noi</span><h3>${day.song?"Melodia zilei":"Respirăm înainte să răspundem"}</h3><p>${day.song?"Ascult-o acum sau păstreaz-o pentru un moment liniștit. Important este gândul pe care îl trimitem unul spre celălalt.":"Închide ochii pentru câteva secunde și amintește-ți că, sub același cer, cineva se gândește la tine."}</p>${day.song?`<a class="song" href="${day.song[2]}" target="_blank" rel="noopener"><span class="song__disc">♥</span><span><strong>${esc(day.song[0])}</strong><small>${esc(day.song[1])}</small></span><span class="song__play">▶</span></a>`:""}<button class="primary" id="songDone" style="margin-top:16px">Continuă spre următorul pas</button></section>`;
-    $("#songDone").onclick=next;
-  } else if(stage===2){
-    renderSpecial(day,area,next);
-  } else if(stage===3){
-    renderQuestion(day,area,next);
-  } else if(stage===4){
-    renderPrayers(day,area,next);
-  } else {
-    renderSeal(day,area);
-  }
-}
-
-function specialDay(day){
-  const d=new Date(`${day.date}T12:00:00+02:00`).getDay();
-  if(day.id===14) return {title:"Revenirea acasă",subtitle:"Alina se întoarce și distanța începe să se închidă.",icon:"🏡",type:"return"};
-  if(day.id===15) return {title:"Prima zi după vacanță",subtitle:"Nu promitem doar viitorul. Alegem cum îl construim azi.",icon:"🌅",type:"work"};
-  if(d===6) return {title:"Post și rugăciune",subtitle:"Alegem împreună dacă păstrăm postul și ce punem înaintea lui Dumnezeu.",icon:"🕊",type:"fast"};
-  if(d===0) return {title:"Duminică împreună",subtitle:"Biserică, mulțumire și aceeași direcție.",icon:"⛪",type:"sunday"};
-  return {title:"Un gest de astăzi",subtitle:"Un lucru mic, real, pe care îl facem acum — nu cândva.",icon:"✦",type:"gesture"};
-}
-
-function renderSpecial(day,area,next){
-  const s=specialDay(day);
-  if(s.type==="fast"){
-    area.innerHTML=`<section class="stage-card"><span class="stage-card__label">Sâmbăta noastră</span><h3>Vrem să postim împreună?</h3><p>Răspunsul nu este o obligație. Îl alegem sincer și stabilim ce vrem să aducem înaintea lui Dumnezeu.</p><div class="answers"><button class="answer" data-fast="Da, postim împreună">Da, postim împreună 🕊</button><button class="answer" data-fast="Ne rugăm, dar alegem altă formă">Ne rugăm, dar alegem altă formă</button><button class="answer" data-fast="Vorbim mai întâi despre cum facem">Vorbim mai întâi despre cum facem</button></div><textarea class="textarea" id="fastNote" placeholder="Cum vrem să organizăm sâmbăta aceasta?"></textarea><button class="continue" id="specialNext">Păstrez alegerea</button></section>`;
-    let choice=""; $$('[data-fast]',area).forEach(b=>b.onclick=()=>{choice=b.dataset.fast;$$('[data-fast]',area).forEach(x=>x.classList.remove('is-selected'));b.classList.add('is-selected');$("#specialNext").classList.add('is-visible')});
-    $("#specialNext").onclick=()=>{state.answers[`${day.id}-special`]={choice,note:$("#fastNote").value.trim()};save();next()};
-  } else if(s.type==="sunday"){
-    area.innerHTML=`<section class="stage-card"><span class="stage-card__label">Duminica noastră</span><h3>Pentru ce Îi mulțumim astăzi lui Dumnezeu?</h3><p>Chiar dacă suntem în două locuri, putem merge în aceeași direcție.</p><textarea class="textarea" id="specialText" placeholder="O mulțumire, un verset sau un gând din biserică…"></textarea><button class="continue" id="specialNext">Păstrez acest gând</button></section>`;
-    $("#specialText").oninput=e=>$("#specialNext").classList.toggle('is-visible',!!e.target.value.trim()); $("#specialNext").onclick=()=>{state.answers[`${day.id}-special`]=$("#specialText").value.trim();save();next()};
-  } else {
-    const prompts=s.type==="return"?["Îi spun ce mi-a lipsit cel mai mult","Pregătesc un gest mic pentru revenirea ei","Îi las timp să se odihnească și rămân aproape"]:s.type==="work"?["O încurajez fără să o sufoc","Întreb concret cum o pot ajuta","Păstrez seara liniștită pentru noi"]:["Trimit un mesaj scurt și sincer","Fac o fotografie cu ceva ce mi-a amintit de noi","Mă rog două minute pentru celălalt","Ascult fără să pregătesc imediat răspunsul"];
-    area.innerHTML=`<section class="stage-card"><span class="stage-card__label">Nu mai târziu. Astăzi.</span><h3>${esc(s.title)}</h3><p>${esc(s.subtitle)}</p><div class="answers">${prompts.map(x=>`<button class="answer" data-gesture="${esc(x)}">${esc(x)}</button>`).join("")}</div><button class="continue" id="specialNext">Aleg acest gest</button></section>`;
-    let val=""; $$('[data-gesture]',area).forEach(b=>b.onclick=()=>{val=b.dataset.gesture;$$('[data-gesture]',area).forEach(x=>x.classList.remove('is-selected'));b.classList.add('is-selected');$("#specialNext").classList.add('is-visible')});
-    $("#specialNext").onclick=()=>{state.answers[`${day.id}-special`]=val;save();next()};
-  }
-}
-
-function renderQuestion(day,area,next){
-  const q=day.question?.[profile] || "Ce ai vrea să-mi spui astăzi?"; const opts=day.options?.[profile] || [];
-  area.innerHTML=`<section class="stage-card"><span class="stage-card__label">Cunoaște-mă mai bine</span><h3>${esc(q)}</h3><p>Nu căutăm răspunsul perfect. Căutăm răspunsul sincer.</p>${opts.length?`<div class="answers">${opts.map(o=>`<button class="answer" data-answer="${esc(o)}">${esc(o)}</button>`).join("")}</div>`:""}<textarea class="textarea" id="answerText" placeholder="${opts.length?"Poți adăuga ceva în cuvintele tale…":"Scrie sincer, în ritmul tău…"}"></textarea><button class="continue" id="questionNext">Păstrez răspunsul</button></section>`;
-  const selected=[]; const multi=!!day.multi;
-  const refresh=()=>$("#questionNext").classList.toggle('is-visible',selected.length>0 || !!$("#answerText").value.trim());
-  $$('[data-answer]',area).forEach(b=>b.onclick=()=>{
-    const v=b.dataset.answer;
-    if(multi){ b.classList.toggle('is-selected'); const i=selected.indexOf(v); i>=0?selected.splice(i,1):selected.push(v); }
-    else { $$('[data-answer]',area).forEach(x=>x.classList.remove('is-selected')); b.classList.add('is-selected'); selected.splice(0,selected.length,v); }
-    refresh();
-  });
-  $("#answerText").oninput=refresh;
-  $("#questionNext").onclick=()=>{ const text=$("#answerText").value.trim(); const parts=[...selected]; if(text)parts.push(text); state.answers[day.id]={question:q,answer:parts.join(" • "),date:new Date().toISOString()}; save(); next(); };
-}
-
-function renderPrayers(day,area,next){
-  const saved=state.prayers[day.id] || ["","",""];
-  area.innerHTML=`<section class="stage-card"><span class="stage-card__label">Trei motive de rugăciune</span><h3>Ce punem astăzi înaintea lui Dumnezeu?</h3><p>Un motiv pentru tine, unul pentru noi și unul pentru familiile noastre, biserică sau ziua de mâine.</p><div class="prayer-grid">
-    <label class="prayer-item"><span>1</span><input id="p1" value="${esc(saved[0])}" placeholder="Pentru mine / starea mea…"></label>
-    <label class="prayer-item"><span>2</span><input id="p2" value="${esc(saved[1])}" placeholder="Pentru noi / relația noastră…"></label>
-    <label class="prayer-item"><span>3</span><input id="p3" value="${esc(saved[2])}" placeholder="Pentru familie, biserică sau mâine…"></label>
-  </div><button class="continue" id="prayerNext">Păstrez cele trei motive</button></section>`;
-  const refresh=()=>$("#prayerNext").classList.toggle('is-visible',[1,2,3].every(i=>$("#p"+i).value.trim()));
-  [1,2,3].forEach(i=>$("#p"+i).oninput=refresh); refresh();
-  $("#prayerNext").onclick=()=>{state.prayers[day.id]=[1,2,3].map(i=>$("#p"+i).value.trim());save();next()};
-}
-
-function renderSeal(day,area){
-  const r=state.answers[day.id];
-  area.innerHTML=`<section class="stage-card envelope-stage"><span class="stage-card__label">Ziua este gata</span><h3>Adunăm toate răspunsurile într-un singur plic.</h3><p>După sigilare, jumătatea ta de inimă se aprinde. Când primești confirmarea celuilalt, cele două jumătăți se unesc.</p><div class="envelope" id="envelope"><div class="envelope__body"></div><div class="envelope__paper"><strong>${esc(person().name)} ❤️ ${esc(other().name)}</strong><p>${esc(r?.answer||"")}<br><br>🙏 ${(state.prayers[day.id]||[]).map(esc).join(" · ")}</p></div><div class="envelope__flap"></div><button class="envelope__seal" aria-label="Sigilează">♥</button></div><div class="sealed-message"><strong>Te iubesc.</strong><p>Așteptăm următoarea zi și continuăm să devenim, pas cu pas, oamenii cu care vrem să construim o viață.</p></div><button class="seal-button" id="sealDay">Gata — sigilează ziua</button></section>`;
-  $("#sealDay").onclick=()=>{
-    $("#envelope").classList.add("is-sealed"); $("#sealDay").disabled=true;
-    setTimeout(()=>{ state.completed[day.id]=true; state.sealed[day.id]=true; save(); updateJourney(); updateHeartStatus(day); celebrate(); setTimeout(()=>renderSealed(day),900); },1700);
-  };
-}
-
-function renderSealed(day){
-  const both=state.completed[day.id]&&state.partnerCompleted[day.id];
-  ui.view.innerHTML=scene(day,`<section class="stage-card envelope-stage"><span class="stage-card__label">Plic sigilat</span><div class="envelope is-sealed"><div class="envelope__body"></div><div class="envelope__paper"><strong>Ziua ${day.id} este păstrată.</strong><p>Răspunsul, gestul și cele trei motive de rugăciune au rămas în povestea noastră.</p></div><div class="envelope__flap"></div><div class="envelope__seal">♥</div></div><div class="sealed-message"><strong>${both?"Inima noastră bate ❤️":"Jumătatea ta este gata"}</strong><p>${both?"Amândoi am răspuns. Astăzi suntem puțin mai aproape.":`Trimite-i lui ${other().name} confirmarea. Când o deschide, a doua jumătate se va aprinde.`}</p></div><div class="map-reveal"><strong>Am mai făcut un pas.</strong><p>${day.teaser||"Mâine deschidem o altă pagină."}</p></div><div class="result-actions"><button class="primary" id="shareCompletion">Trimite jumătatea inimii ❤️</button><button class="secondary" id="shareResult">Trimite răspunsul zilei</button><button class="secondary" id="leaveTomorrow">Lasă un plic pentru mâine ✉</button></div></section>`);
-  $("#shareCompletion").onclick=()=>shareCompletion(day); $("#shareResult").onclick=()=>shareResult(day); $("#leaveTomorrow").onclick=()=>{ $('[data-view="tomorrow"]').click(); };
-}
-
-function encode(obj){ return btoa(unescape(encodeURIComponent(JSON.stringify(obj)))).replace(/\+/g,"-").replace(/\//g,"_").replace(/=+$/g,""); }
-function decode(s){ s=s.replace(/-/g,"+").replace(/_/g,"/"); while(s.length%4)s+="="; return JSON.parse(decodeURIComponent(escape(atob(s)))); }
-function shareUrl(payload,param="sync"){ const u=new URL(location.origin+location.pathname); u.searchParams.set(param,encode(payload)); return u.toString(); }
-
-async function shareCompletion(day){
-  const payload={type:"completion",day:day.id,from:profile,to:otherId(),created:new Date().toISOString()};
-  const text=`Am terminat Ziua ${day.id} din „Între noi”. Deschide legătura ca jumătățile inimii noastre să se unească ❤️\n${shareUrl(payload)}`;
-  await nativeShare("Jumătatea inimii mele ❤️",text);
-}
-async function shareResult(day){
-  const r=state.answers[day.id]; const prayers=state.prayers[day.id]||[];
-  const text=`ÎNTRE NOI ❤️\nZiua ${day.id} — ${day.title}\n\n${r?.question||""}\n${r?.answer||""}\n\n🙏 Motivele mele:\n1. ${prayers[0]||""}\n2. ${prayers[1]||""}\n3. ${prayers[2]||""}`;
-  await nativeShare("Între noi ❤️",text);
-}
-async function nativeShare(title,text){ try{ if(navigator.share) await navigator.share({title,text}); else {await navigator.clipboard.writeText(text);alert("Textul a fost copiat")}}catch(e){if(e?.name!=="AbortError")console.warn(e)} }
-
-function renderPath(){
-  ui.view.innerHTML=`<article class="chapter"><div class="chapter__top"><span class="chapter__number">Drumul nostru</span><div class="chapter__icon">⌁</div><h2>15 capitole. Un singur sens.</h2><p class="chapter__lead">Fiecare zi se deschide de la 00:00. Poți intra dimineața la 05:00, în pauza de prânz sau seara.</p></div><div class="days-grid">${days.map(d=>`<button class="day-card ${!dayUnlocked(d)?"is-locked":""} ${state.completed[d.id]?"is-done":""}" data-day="${d.id}" ${!dayUnlocked(d)?"disabled":""}><span class="day-card__num">ZIUA ${d.id}</span><span class="day-card__icon">${d.icon}</span><strong>${esc(d.title)}</strong><small>${state.completed[d.id]?"Păstrată împreună ✓":dayUnlocked(d)?"Poate fi deschisă":"Se deschide la data ei 🔒"}</small></button>`).join("")}</div></article>`;
-  $$('[data-day]',ui.view).forEach(b=>b.onclick=()=>{ const d=days.find(x=>x.id===Number(b.dataset.day)); if(d.id===currentDay().id){ $('[data-view="today"]').click(); } else showPastDay(d); });
-}
-function showPastDay(day){ const r=state.answers[day.id]; ui.letterContent.innerHTML=`<span class="kicker">Ziua ${day.id}</span><h2>${esc(day.title)}</h2>${r?`<div class="status-card"><h3>${esc(r.question)}</h3><p>${esc(r.answer)}</p></div>`:"<p>Această pagină nu a fost completată pe telefonul acesta.</p>"}`;ui.letterDialog.showModal(); }
-function renderTraces(){
-  const completed=days.filter(d=>state.completed[d.id]);
-  ui.view.innerHTML=`<article class="chapter"><div class="chapter__top"><span class="chapter__number">Urmele noastre</span><div class="chapter__icon">♡</div><h2>Ceea ce am construit deja</h2><p class="chapter__lead">Nu promisiuni pentru cândva, ci pași făcuți cu adevărat.</p></div><div class="trace-list">${completed.length?completed.map(d=>`<div class="trace"><h3>${d.icon} Ziua ${d.id} · ${esc(d.title)}</h3><p>${esc(state.answers[d.id]?.answer||"")}</p></div>`).join(""):`<div class="status-card"><h3>Prima urmă apare după sigilarea zilei.</h3><p>Aici se va forma jurnalul vostru.</p></div>`}</div></article>`;
-}
-
-function renderTomorrow(){
-  ui.view.innerHTML=`<article class="chapter"><div class="chapter__top"><span class="chapter__number">Din astăzi pentru mâine</span><div class="chapter__icon">✉</div><h2>Lasă ceva care merită așteptat</h2><p class="chapter__lead">Plicul se deschide după 00:00, deci poate fi citit și la 05:00 dimineața.</p></div><section class="stage-card"><div class="type-tabs"><button class="type-tab is-active" data-kind="question">Întrebare</button><button class="type-tab" data-kind="thought">Gând</button><button class="type-tab" data-kind="surprise">Surpriză</button></div><textarea class="textarea" id="tomorrowText" placeholder="Scrie ceva care să-i facă plăcere să deschidă ziua de mâine…"></textarea><button class="continue" id="createTomorrow">Sigilează pentru mâine</button><div class="feedback" id="tomorrowFeedback"></div></section></article>`;
-  let kind="question"; $$('[data-kind]',ui.view).forEach(b=>b.onclick=()=>{$$('[data-kind]',ui.view).forEach(x=>x.classList.remove('is-active'));b.classList.add('is-active');kind=b.dataset.kind});
-  $("#tomorrowText").oninput=e=>$("#createTomorrow").classList.toggle('is-visible',!!e.target.value.trim());
-  $("#createTomorrow").onclick=()=>createTomorrow(kind,$("#tomorrowText").value.trim());
-}
-function nextDate(){ const d=new Date(`${parisToday()}T12:00:00+02:00`); d.setDate(d.getDate()+1); return d.toISOString().slice(0,10); }
-async function createTomorrow(kind,text){
-  const payload={type:"letter",from:profile,to:otherId(),kind,text,openDate:nextDate(),created:new Date().toISOString()};
-  const message=`Ți-am lăsat un plic în „Între noi”. Se deschide mâine după 00:00 💌\n${shareUrl(payload,"letter")}`;
-  $("#tomorrowFeedback").className="feedback is-visible"; $("#tomorrowFeedback").innerHTML="Plicul a fost sigilat. Acum trebuie doar trimis. ❤️";
-  await nativeShare("Pentru mâine 💌",message);
-}
-
-function importFromURL(){
-  const u=new URL(location.href); let raw=u.searchParams.get("sync"),param="sync"; if(!raw){raw=u.searchParams.get("letter");param="letter"} if(!raw)return null;
-  try{ const payload=decode(raw); u.searchParams.delete(param); history.replaceState({},"",u); return payload; }catch{return null;}
-}
-function showImported(payload){
-  if(payload.to!==profile){ ui.letterContent.innerHTML=`<h2>Acest plic este pentru ${esc(config.people[payload.to]?.name||"celălalt profil")}</h2><p>Schimbă profilul pe telefonul potrivit.</p>`; ui.letterDialog.showModal(); return; }
-  if(payload.type==="completion"){
-    state.partnerCompleted[payload.day]=true; save(); updateHeartStatus(days.find(d=>d.id===payload.day));
-    ui.letterContent.innerHTML=`<span class="kicker">Două jumătăți</span><h2>${esc(config.people[payload.from].name)} a terminat Ziua ${payload.day} ❤️</h2><div class="heart-pair is-complete" style="margin:25px auto"><span class="half-heart half-heart--mine is-ready">♥</span><span class="half-heart half-heart--theirs is-ready">♥</span></div><p>Confirmarea a ajuns. Dacă ai răspuns și tu, inima voastră este acum întreagă.</p>`; ui.letterDialog.showModal(); renderToday();
-  } else {
-    const box=readJSON(MAILBOX_KEY,[]); if(!box.some(x=>x.created===payload.created)){box.push(payload);localStorage.setItem(MAILBOX_KEY,JSON.stringify(box));}
-    showLetter(payload);
-  }
-}
-function getAvailableLetter(){ const box=readJSON(MAILBOX_KEY,[]); return box.find(x=>x.to===profile && x.openDate<=parisToday() && !x.opened); }
-function showLetter(letter){
-  if(letter.openDate>parisToday()){ ui.letterContent.innerHTML=`<h2>Plicul încă doarme 🔒</h2><p>Se deschide în data de ${letter.openDate.split('-').reverse().join('.')} după 00:00.</p>`; }
-  else { ui.letterContent.innerHTML=`<span class="kicker">De la ${esc(config.people[letter.from].name)}</span><h2>${letter.kind==="question"?"O întrebare pentru tine":letter.kind==="surprise"?"O mică surpriză":"Un gând păstrat pentru azi"}</h2><div class="status-card"><p style="font-family:Georgia,serif;font-size:22px;color:var(--ink)">${esc(letter.text)}</p></div>`; const box=readJSON(MAILBOX_KEY,[]); const f=box.find(x=>x.created===letter.created); if(f)f.opened=true;localStorage.setItem(MAILBOX_KEY,JSON.stringify(box)); }
-  ui.letterDialog.showModal();
-}
-function celebrate(){ const burst=document.createElement('div');burst.style.cssText='position:fixed;inset:0;z-index:9999;pointer-events:none;overflow:hidden';burst.innerHTML=Array.from({length:20},(_,i)=>`<span style="position:absolute;left:${10+Math.random()*80}%;top:55%;font-size:${18+Math.random()*18}px;animation:stageIn .7s ease forwards;transform:translateY(${Math.random()*-250}px)">${i%2?'♥':'✦'}</span>`).join('');document.body.appendChild(burst);setTimeout(()=>burst.remove(),1200); }
-
-load().catch(error=>{ console.error(error); ui.view.innerHTML=`<article class="chapter"><h2>Site-ul nu s-a încărcat</h2><p>${esc(error.message)}</p><p>Verifică dacă index.html, style.css, app.js, config.json și days.json sunt în același loc.</p></article>`; });
+init();

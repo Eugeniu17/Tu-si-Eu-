@@ -2,18 +2,19 @@
   "startDate": "2026-08-03",
   "endDate": "2026-08-17",
   "timeZone": "Europe/Paris",
+  "version": "6.0-final",
   "people": {
     "alina": {
       "name": "Alina",
       "city": "Menton",
       "emoji": "🦋",
-      "color": "#ff6d9f"
+      "color": "#d96b8d"
     },
     "eugeniu": {
       "name": "Eugeniu",
       "city": "Paris",
       "emoji": "❤️",
-      "color": "#6db9ff"
+      "color": "#5b86b8"
     }
   }
 }
