@@ -44,7 +44,13 @@
     },
     "thought": "Distanța nu ne cere să fim mai puțin apropiați. Ne cere să fim mai atenți.",
     "multi": true,
-    "allowCustom": true
+    "allowCustom": true,
+    "song": null,
+    "effect": "start",
+    "keepsake": "Primul pas",
+    "prayer": "Doamne, îți mulțumim pentru începutul acestui drum. Păzește sinceritatea dintre noi.",
+    "teaser": "Mâine, primul mesaj lăsat astăzi va deveni o fereastră spre inima celuilalt.",
+    "prelude": "Prima pagină a fost deja scrisă de noi."
   },
   {
     "id": 2,
@@ -63,7 +69,17 @@
     },
     "type": "text",
     "thought": "Nu vrem doar să știm unde a fost celălalt. Vrem să vedem ziua prin ochii lui.",
-    "allowCustom": true
+    "allowCustom": true,
+    "song": [
+      "Scopul Meu",
+      "Alin și Emima Timofte",
+      "https://www.youtube.com/results?search_query=Scopul+Meu+Alin+Emima+Timofte"
+    ],
+    "effect": "window",
+    "keepsake": "Curiozitatea",
+    "prayer": "Doamne, ajută-ne să ne cunoaștem cu răbdare și fără măști.",
+    "teaser": "Mâine nu vei trimite doar un răspuns. Vei trimite o stare.",
+    "prelude": "Ieri am pornit. Astăzi deschidem o fereastră spre lumea celuilalt."
   },
   {
     "id": 3,
@@ -106,7 +122,17 @@
     },
     "thought": "Uneori un singur cuvânt poate traversa mai repede distanța decât o scrisoare întreagă.",
     "multi": true,
-    "allowCustom": true
+    "allowCustom": true,
+    "song": [
+      "Pentru tine",
+      "Ramona Hanganu",
+      "https://www.youtube.com/results?search_query=Ramona+Hanganu+Pentru+tine"
+    ],
+    "effect": "aurora",
+    "keepsake": "Prezența",
+    "prayer": "Doamne, fă ca fiecare mesaj al nostru să aducă pace, nu presiune.",
+    "teaser": "Mâine, o îmbrățișare va trebui ținută puțin mai mult decât crezi.",
+    "prelude": "Uneori o singură stare spune mai mult decât o pagină întreagă."
   },
   {
     "id": 4,
@@ -147,7 +173,17 @@
     },
     "thought": "Iubirea nu înseamnă să ghicești mereu corect. Înseamnă să vrei să înveți.",
     "multi": true,
-    "allowCustom": true
+    "allowCustom": true,
+    "song": [
+      "I Prayed for You",
+      "Christian Wedding Song",
+      "https://www.youtube.com/results?search_query=I+Prayed+for+You+Christian+Wedding+Song"
+    ],
+    "effect": "embrace",
+    "keepsake": "Tandrețea",
+    "prayer": "Doamne, învață-ne să fim sprijin unul pentru celălalt chiar și de la distanță.",
+    "teaser": "Mâine vei vedea o parte pe care ceilalți poate nu o observă.",
+    "prelude": "Astăzi, distanța primește o îmbrățișare."
   },
   {
     "id": 5,
@@ -166,7 +202,17 @@
     },
     "type": "text",
     "thought": "A cunoaște un om înseamnă și a avea răbdare cu lucrurile pe care nu le arată imediat.",
-    "allowCustom": true
+    "allowCustom": true,
+    "song": [
+      "Scopul Meu",
+      "Alin și Emima Timofte",
+      "https://www.youtube.com/results?search_query=Scopul+Meu+Alin+Emima+Timofte"
+    ],
+    "effect": "polaroid",
+    "keepsake": "Înțelegerea",
+    "prayer": "Doamne, ajută-ne să vedem nu doar puterea, ci și oboseala celuilalt.",
+    "teaser": "Mâine începe să se formeze un cuvânt care ține orice relație în picioare.",
+    "prelude": "Astăzi privim dincolo de ceea ce se vede ușor."
   },
   {
     "id": 6,
@@ -205,7 +251,17 @@
     },
     "thought": "Sinceritatea nu face relația mereu comodă. O face reală.",
     "multi": true,
-    "allowCustom": true
+    "allowCustom": true,
+    "song": [
+      "Pentru tine",
+      "Ramona Hanganu",
+      "https://www.youtube.com/results?search_query=Ramona+Hanganu+Pentru+tine"
+    ],
+    "effect": "puzzle",
+    "keepsake": "Sinceritatea",
+    "prayer": "Doamne, păzește-ne de jumătăți de adevăr și dă-ne curajul sincerității.",
+    "teaser": "Mâine site-ul va încerca să afle cui îi este mai dor. Site-ul este naiv.",
+    "prelude": "O piesă mică poate ține împreună tot puzzle-ul."
   },
   {
     "id": 7,
@@ -236,7 +292,17 @@
     },
     "thought": "Analiza oficială: amândoi prezentați simptome serioase de dor.",
     "multi": false,
-    "allowCustom": true
+    "allowCustom": true,
+    "song": [
+      "I Prayed for You",
+      "Christian Wedding Song",
+      "https://www.youtube.com/results?search_query=I+Prayed+for+You+Christian+Wedding+Song"
+    ],
+    "effect": "hearts",
+    "keepsake": "Dorul",
+    "prayer": "Doamne, transformă dorul nostru în recunoștință și apropiere.",
+    "teaser": "Mâine vom descoperi ce lucruri simple ne lipsesc cel mai mult.",
+    "prelude": "Astăzi măsurăm ceva ce, probabil, nu încape în numere."
   },
   {
     "id": 8,
@@ -277,7 +343,17 @@
     },
     "thought": "Poate adevărata bogăție a apropierii este făcută din lucrurile care par mici.",
     "multi": true,
-    "allowCustom": true
+    "allowCustom": true,
+    "song": [
+      "Scopul Meu",
+      "Alin și Emima Timofte",
+      "https://www.youtube.com/results?search_query=Scopul+Meu+Alin+Emima+Timofte"
+    ],
+    "effect": "memory",
+    "keepsake": "Lucrurile simple",
+    "prayer": "Doamne, ajută-ne să nu pierdem frumusețea gesturilor mici.",
+    "teaser": "Mâine vom construi un pod. Nu din beton — slavă Domnului, Eugeniu ar fi adus și trusa.",
+    "prelude": "Astăzi păstrăm lucrurile mici care fac iubirea mare."
   },
   {
     "id": 9,
@@ -296,7 +372,17 @@
     },
     "type": "text",
     "thought": "O echipă nu înseamnă că unul îl salvează mereu pe celălalt. Înseamnă că nimeni nu mai rămâne singur în fața vieții.",
-    "allowCustom": true
+    "allowCustom": true,
+    "song": [
+      "Pentru tine",
+      "Ramona Hanganu",
+      "https://www.youtube.com/results?search_query=Ramona+Hanganu+Pentru+tine"
+    ],
+    "effect": "bridge",
+    "keepsake": "Echipa",
+    "prayer": "Doamne, întărește podul dintre noi prin respect, comunicare și rugăciune.",
+    "teaser": "Mâine cerul va avea nevoie de ajutorul nostru ca să se aprindă.",
+    "prelude": "Astăzi nu așteptăm ca distanța să dispară. Construim peste ea."
   },
   {
     "id": 10,
@@ -315,7 +401,17 @@
     },
     "type": "text",
     "thought": "Poate nu vom vedea aceeași stea. Dar vom privi aceeași noapte.",
-    "allowCustom": true
+    "allowCustom": true,
+    "song": [
+      "I Prayed for You",
+      "Christian Wedding Song",
+      "https://www.youtube.com/results?search_query=I+Prayed+for+You+Christian+Wedding+Song"
+    ],
+    "effect": "constellation",
+    "keepsake": "Speranța",
+    "prayer": "Doamne, amintește-ne că privim același cer și suntem păziți de aceeași mână.",
+    "teaser": "Mâine cerul poate dărui o stea căzătoare. Unele dorințe sunt deja rugăciuni.",
+    "prelude": "În seara aceasta, aprindem împreună o bucată de cer."
   },
   {
     "id": 11,
@@ -334,7 +430,17 @@
     },
     "type": "text",
     "thought": "Cerul nu a micșorat kilometrii. Dar pentru o noapte i-a făcut să pară mai puțin importanți.",
-    "allowCustom": true
+    "allowCustom": true,
+    "song": [
+      "Scopul Meu",
+      "Alin și Emima Timofte",
+      "https://www.youtube.com/results?search_query=Scopul+Meu+Alin+Emima+Timofte"
+    ],
+    "effect": "meteor",
+    "keepsake": "Minunea",
+    "prayer": "Doamne, dă-ne ochi pentru minunile mici și inimă pentru darurile Tale.",
+    "teaser": "Mâine lăsăm jos câteva lucruri pe care nu trebuie să le purtăm singuri.",
+    "prelude": "Unele clipe durează o secundă și rămân ani întregi."
   },
   {
     "id": 12,
@@ -353,7 +459,17 @@
     },
     "type": "text",
     "thought": "Poate «acasă» începe când sufletul nu mai trebuie să fie permanent în gardă.",
-    "allowCustom": true
+    "allowCustom": true,
+    "song": [
+      "Pentru tine",
+      "Ramona Hanganu",
+      "https://www.youtube.com/results?search_query=Ramona+Hanganu+Pentru+tine"
+    ],
+    "effect": "release",
+    "keepsake": "Pacea",
+    "prayer": "Doamne, ia grijile pe care le purtăm și dă-ne pace unul pentru celălalt.",
+    "teaser": "Mâine un cuvânt va dispărea și altul va rămâne.",
+    "prelude": "Astăzi nu rezolvăm totul. Astăzi lăsăm câteva poveri jos."
   },
   {
     "id": 13,
@@ -392,7 +508,17 @@
     },
     "thought": "Sentimentul ne apropie. Alegerea ne ajută să rămânem și să construim.",
     "multi": true,
-    "allowCustom": true
+    "allowCustom": true,
+    "song": [
+      "I Prayed for You",
+      "Christian Wedding Song",
+      "https://www.youtube.com/results?search_query=I+Prayed+for+You+Christian+Wedding+Song"
+    ],
+    "effect": "choice",
+    "keepsake": "Alegerea",
+    "prayer": "Doamne, învață-ne să ne alegem cu maturitate, răbdare și credincioșie.",
+    "teaser": "Mâine privim spre viitor, dar fără să fugim de prezent.",
+    "prelude": "Sentimentele se schimbă. Alegerea poate rămâne."
   },
   {
     "id": 14,
@@ -411,7 +537,17 @@
     },
     "type": "text",
     "thought": "Poate viitorul se construiește din seri obișnuite în care doi oameni încă se aleg.",
-    "allowCustom": true
+    "allowCustom": true,
+    "song": [
+      "Scopul Meu",
+      "Alin și Emima Timofte",
+      "https://www.youtube.com/results?search_query=Scopul+Meu+Alin+Emima+Timofte"
+    ],
+    "effect": "future",
+    "keepsake": "Viitorul",
+    "prayer": "Doamne, așază viitorul nostru după voia Ta și păstrează-ne inimile liniștite.",
+    "teaser": "Mâine toate piesele se vor așeza. Nu este sfârșitul — este revederea.",
+    "prelude": "Astăzi privim înainte fără să grăbim nimic."
   },
   {
     "id": 15,
@@ -430,6 +566,16 @@
     },
     "type": "text",
     "thought": "Nu au fost doar cincisprezece zile între noi. Au fost cincisprezece pași pe care i-am făcut unul spre celălalt.",
-    "allowCustom": true
+    "allowCustom": true,
+    "song": [
+      "Pentru tine",
+      "Ramona Hanganu",
+      "https://www.youtube.com/results?search_query=Ramona+Hanganu+Pentru+tine"
+    ],
+    "effect": "finale",
+    "keepsake": "Acasă",
+    "prayer": "Doamne, îți mulțumim pentru fiecare zi și pentru felul în care ne-ai păstrat aproape.",
+    "teaser": "Aceasta nu a fost ultima pagină. A fost primul nostru capitol scris împreună.",
+    "prelude": "Am ajuns. Nu la sfârșit, ci din nou unul lângă celălalt."
   }
 ]

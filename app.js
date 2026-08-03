@@ -25,10 +25,10 @@ let state = emptyState();
 let pendingLetter = null;
 let currentView = "today";
 
-function emptyState(){return {answers:{},completed:{},interaction:{},tomorrow:[]}}
+function emptyState(){return {answers:{},completed:{},interaction:{},tomorrow:[],introSeen:{},keepsakes:{}}}
 function storageKey(){return `${STORAGE_PREFIX}-${profile || "guest"}`}
 function readJSON(key,fallback){try{return JSON.parse(localStorage.getItem(key))||fallback}catch{return fallback}}
-function loadState(){state=readJSON(storageKey(),emptyState())}
+function loadState(){const saved=readJSON(storageKey(),{});state={...emptyState(),...saved,answers:saved.answers||{},completed:saved.completed||{},interaction:saved.interaction||{},tomorrow:saved.tomorrow||[],introSeen:saved.introSeen||{},keepsakes:saved.keepsakes||{}}}
 function save(){localStorage.setItem(storageKey(),JSON.stringify(state))}
 function esc(v){const d=document.createElement("div");d.textContent=String(v??"");return d.innerHTML}
 function person(){return config.people[profile]}
@@ -36,7 +36,7 @@ function otherId(){return profile==="alina"?"eugeniu":"alina"}
 function other(){return config.people[otherId()]}
 
 async function load(){
-  const [c,d]=await Promise.all([fetch("./config.json?v=20260803-dialog-v4",{cache:"no-store"}),fetch("./days.json?v=20260803-dialog-v4",{cache:"no-store"})]);
+  const [c,d]=await Promise.all([fetch("./config.json?v=20260803-journey-v2",{cache:"no-store"}),fetch("./days.json?v=20260803-journey-v2",{cache:"no-store"})]);
   if(!c.ok) throw new Error(`config.json: HTTP ${c.status}`);
   if(!d.ok) throw new Error(`days.json: HTTP ${d.status}`);
   config=await c.json(); days=await d.json();
@@ -74,20 +74,42 @@ function bind(){
     ({today:renderToday,path:renderPath,traces:renderTraces,tomorrow:renderTomorrow})[currentView]();
   });
 }
-function nowParts(){
-  return Object.fromEntries(new Intl.DateTimeFormat("en-CA",{timeZone:config.timeZone,year:"numeric",month:"2-digit",day:"2-digit",hour:"2-digit",hourCycle:"h23"}).formatToParts(new Date()).map(p=>[p.type,p.value]));
+function nowParts(date=new Date()){
+  return Object.fromEntries(new Intl.DateTimeFormat("en-CA",{timeZone:config.timeZone,year:"numeric",month:"2-digit",day:"2-digit",hour:"2-digit",hourCycle:"h23"}).formatToParts(date).map(p=>[p.type,p.value]));
 }
-function today(){const p=nowParts();return `${p.year}-${p.month}-${p.day}`}
+function calendarDate(offsetDays=0){
+  const now=new Date(Date.now()+offsetDays*86400000),p=nowParts(now);
+  return `${p.year}-${p.month}-${p.day}`;
+}
+function today(){
+  const p=nowParts();
+  if(Number(p.hour)<8) return calendarDate(-1);
+  return `${p.year}-${p.month}-${p.day}`;
+}
 function currentIndex(){
   if(today()<config.startDate)return -1;if(today()>config.endDate)return days.length-1;
   return days.findIndex(d=>d.date===today())
 }
 function unlocked(day){return day.date<=today()}
 function updateHeader(){
-  const idx=Math.max(0,currentIndex()),pct=Math.min(43,idx/(days.length-1)*43);
-  el.left.style.left=`${pct}%`;el.right.style.right=`${pct}%`;
+  const idx=Math.max(0,currentIndex()),pct=Math.max(0,Math.min(1,idx/(days.length-1)));
+  const oldPct=Math.min(43,pct*43);
+  el.left.style.left=`${oldPct}%`;el.right.style.right=`${oldPct}%`;
   const done=Object.keys(state.completed).length;
   el.pills.innerHTML=`<span>${done}/${days.length} zile păstrate</span><span>${profile?person().name:"Profil neales"}</span><span>${mailbox().length} mesaje primite</span>`;
+  updateJourneyMap(idx,pct);
+}
+function updateJourneyMap(idx,pct){
+  const path=document.querySelector("#journeyPath"),heart=document.querySelector("#journeyHeart");
+  if(path&&heart){
+    const length=path.getTotalLength(),point=path.getPointAtLength(length*pct);
+    heart.setAttribute("transform",`translate(${point.x} ${point.y})`);
+    path.style.strokeDasharray=`${Math.max(1,length*pct)} ${length}`;
+  }
+  const progress=document.querySelector("#journeyProgress"),countdown=document.querySelector("#journeyCountdown");
+  if(progress) progress.textContent=idx===0?"Primul pas este deja al nostru.":idx>=days.length-1?"Am ajuns din nou unul lângă celălalt. ❤️":`Ziua ${idx+1} din ${days.length}: suntem mai aproape decât ieri.`;
+  if(countdown){const left=Math.max(0,days.length-1-idx);countdown.textContent=left===0?"Drumul nu se încheie aici. De aici continuă împreună.":left===1?"Mai este un singur pas până la revedere.":`Mai sunt ${left} pași până când distanța devine îmbrățișare.`}
+  document.body.dataset.chapter=String(idx+1);
 }
 function scene(day,body){return `<article class="scene"><div class="scene__eyebrow">${day.chapter}</div><div class="scene__icon">${day.icon}</div><h2>${day.title}</h2><p class="scene__lead">${day.intro[profile]}</p>${body}</article>`}
 function renderToday(){
@@ -98,7 +120,18 @@ function renderToday(){
 function renderDay(day){
   if(!unlocked(day)){el.view.innerHTML=scene(day,`<div class="quote">Ziua aceasta se va deschide la data ei. 🔒</div>`);return}
   if(state.completed[day.id])return renderCompleted(day);
+  if(day.id>1 && !state.introSeen[day.id]) return renderPrelude(day);
   renderInteraction(day)
+}
+function renderPrelude(day){
+  const ready=mailbox().filter(m=>m.openDate<=today());
+  const letter=ready.length?ready[ready.length-1]:null;
+  const song=day.song;
+  const letterHtml=letter?`<button class="sealed-letter" id="openPreludeLetter"><span>💌</span><strong>Ai primit ceva de ieri</strong><small>Apasă ca să deschizi plicul</small></button>`:`<div class="sealed-letter sealed-letter--empty"><span>✨</span><strong>O nouă pagină s-a deschis</strong><small>Ce ai trimis ieri rămâne parte din drumul nostru.</small></div>`;
+  const songHtml=song?`<a class="song-card" href="${esc(song[2])}" target="_blank" rel="noopener"><span class="song-card__disc">♫</span><span><small>Melodia capitolului</small><strong>${esc(song[0])}</strong><em>${esc(song[1])}</em></span><b>▶</b></a>`:"";
+  el.view.innerHTML=`<article class="scene prelude scene-effect--${esc(day.effect||"stars")}"><div class="chapter-number">CAPITOLUL ${day.id}</div><div class="scene__icon">${day.icon}</div><h2>${esc(day.title)}</h2><p class="scene__lead">${esc(day.prelude||day.intro[profile])}</p>${letterHtml}${songHtml}<div class="keepsake"><span>Astăzi păstrăm</span><strong>${esc(day.keepsake||"Un pas")}</strong></div><button class="continue is-visible" id="beginChapter">Deschide capitolul ❤️</button></article>`;
+  const letterButton=document.querySelector("#openPreludeLetter");if(letterButton)letterButton.onclick=()=>showImportedLetter(letter);
+  document.querySelector("#beginChapter").onclick=()=>{state.introSeen[day.id]=true;save();renderInteraction(day)};
 }
 function renderInteraction(day){
   const type=day.interaction;
@@ -169,7 +202,7 @@ function interactionSymbols(day){
 }
 function interactionBridge(day){
   const p=["Comunicare","Rugăciune","Respect","Răbdare","Responsabilitate"];let n=0;
-  el.view.innerHTML=scene(day,`<div class="interactive-box"><p>Alege trei scânduri pentru podul vostru.</p><div class="answers">${p.map(x=>`<button class="answer" data-b="${x}">${x}</button>`).join("")}</div></div>`);
+  el.view.innerHTML=scene(day,`<div class="interactive-box"><p>Alege trei scânduri pentru podul nostru.</p><div class="answers">${p.map(x=>`<button class="answer" data-b="${x}">${x}</button>`).join("")}</div></div>`);
   document.querySelectorAll("[data-b]").forEach(b=>b.onclick=()=>{if(b.classList.contains("is-selected"))return;b.classList.add("is-selected");n++;if(n>=3)setTimeout(()=>showQuestion(day),500)})
 }
 function interactionStars(day){
@@ -239,11 +272,14 @@ function showQuestion(day){
 }
 function complete(day,answer){
   state.answers[day.id]={answer,question:day.question[profile],profile,thought:day.thought,date:new Date().toISOString()};
-  state.completed[day.id]=true;save();updateHeader();renderCompleted(day)
+  state.completed[day.id]=true;state.keepsakes[day.id]=day.keepsake||day.title;save();updateHeader();celebrate(day);renderCompleted(day)
+}
+function celebrate(day){
+  const burst=document.createElement("div");burst.className="celebration";burst.innerHTML=Array.from({length:18},(_,i)=>`<span style="--i:${i}">${i%3===0?"❤️":i%3===1?"✨":"✦"}</span>`).join("");document.body.appendChild(burst);setTimeout(()=>burst.remove(),1800);
 }
 function renderCompleted(day){
   const r=state.answers[day.id];
-  el.view.innerHTML=scene(day,`<div class="feedback is-visible"><span class="feedback__emoji">✨</span>${esc(day.thought)}</div><div class="quote"><strong>Întrebarea mea:</strong><br>${esc(r.question)}<br><br><strong>Răspunsul meu:</strong><br>${esc(r.answer)}</div><div class="result-panel"><h3>Partea mea de drum este gata</h3><p>Creează o imagine și trimite-o celuilalt prin WhatsApp. Apoi comparați răspunsurile fără să căutați cine a răspuns „mai bine”.</p><div class="action-grid"><button class="primary" id="makeCard">Creează imaginea ❤️</button><button id="shareText">Trimite textul</button></div></div><div class="result-panel"><h3>Lasă ceva pentru mâine</h3><p>Poți lăsa o întrebare, un gând sau o mică surpriză. Vei primi o legătură specială pentru ${other().name}.</p><div class="action-grid"><button id="goTomorrow">Scrie pentru mâine 💌</button><button id="openInbox">Deschide ce am primit</button></div></div>`);
+  el.view.innerHTML=scene(day,`<div class="feedback is-visible"><span class="feedback__emoji">✨</span>${esc(day.thought)}</div><div class="quote"><strong>Întrebarea mea:</strong><br>${esc(r.question)}<br><br><strong>Răspunsul meu:</strong><br>${esc(r.answer)}</div><div class="result-panel"><h3>Partea mea de drum este gata</h3><p>Creează o imagine și trimite-o celuilalt prin WhatsApp. Apoi comparați răspunsurile fără să căutați cine a răspuns „mai bine”.</p><div class="action-grid"><button class="primary" id="makeCard">Creează imaginea ❤️</button><button id="shareText">Trimite textul</button></div></div><div class="result-panel ritual-panel"><h3>🙏 Rugăciunea capitolului</h3><p>${esc(day.prayer||"Doamne, păzește-ne și apropie-ne inimile.")}</p></div><div class="result-panel teaser-panel"><h3>🌙 Până mâine…</h3><p>${esc(day.teaser||"Mâine vom face încă un pas.")}</p></div><div class="result-panel"><h3>Lasă ceva pentru mâine</h3><p>Poți lăsa o întrebare, un gând sau o mică surpriză. Vei primi o legătură specială pentru ${other().name}.</p><div class="action-grid"><button id="goTomorrow">Scrie pentru mâine 💌</button><button id="openInbox">Deschide ce am primit</button></div></div>`);
   document.querySelector("#makeCard").onclick=()=>makeCard(day,r);
   document.querySelector("#shareText").onclick=()=>shareText(day,r);
   document.querySelector("#goTomorrow").onclick=()=>{document.querySelector('[data-view="tomorrow"]').click()};
@@ -354,7 +390,9 @@ function renderTraces(){
   el.view.innerHTML=done.length?`<div class="trace-list">${done.map(d=>{const r=state.answers[d.id];return `<article class="trace"><h3>Ziua ${d.id} · ${d.title}</h3><p><strong>Întrebare:</strong> ${esc(r.question)}</p><p><strong>Răspuns:</strong> ${esc(r.answer)}</p><p>${esc(d.thought)}</p></article>`}).join("")}</div>`:`<article class="scene"><div class="scene__icon">✨</div><h2>Prima urmă încă nu a apărut</h2><p class="scene__lead">După primul răspuns, el va rămâne aici.</p></article>`
 }
 function createSky(){
-  const sky=document.querySelector("#sky"),chars=["✦","✧","·","♡"];setInterval(()=>{const s=document.createElement("span");s.className="star";s.textContent=chars[Math.floor(Math.random()*chars.length)];s.style.left=Math.random()*100+"vw";s.style.fontSize=10+Math.random()*20+"px";s.style.animationDuration=8+Math.random()*8+"s";sky.appendChild(s);setTimeout(()=>s.remove(),17000)},750)
+  const sky=document.querySelector("#sky"),chars=["✦","✧","·","♡","🦋"];
+  setInterval(()=>{const s=document.createElement("span");s.className="star";s.textContent=chars[Math.floor(Math.random()*chars.length)];s.style.left=Math.random()*100+"vw";s.style.fontSize=10+Math.random()*20+"px";s.style.animationDuration=8+Math.random()*8+"s";sky.appendChild(s);setTimeout(()=>s.remove(),17000)},900);
+  setInterval(()=>{const m=document.createElement("span");m.className="shooting-star";m.textContent="✦";m.style.top=8+Math.random()*35+"vh";sky.appendChild(m);setTimeout(()=>m.remove(),1800)},14000);
 }
 load().catch(error=>{
   console.error("Între noi — eroare de pornire",error);

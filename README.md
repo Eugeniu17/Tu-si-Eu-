@@ -1,18 +1,3 @@
-# Între noi — versiunea finală pentru GitHub Pages
+# Între noi — Journey 2.0
 
-În repository toate fișierele trebuie să fie **unul lângă altul**, fără foldere:
-
-```text
-index.html
-style.css
-app.js
-config.json
-days.json
-.nojekyll
-README.md
-VERIFICARE.md
-```
-
-GitHub Pages: `Settings → Pages → Deploy from a branch → main → /(root)`.
-
-Nu încărca arhiva ZIP în repository. Deschide arhiva și încarcă fișierele din ea.
+Versiune pentru Eugeniu și Alina. Ziua 1 și cheile localStorage sunt păstrate. Capitolele 2–15 includ hartă animată, preludii, melodii, plicuri, interacțiuni, rugăciuni și teasere. Ziua nouă se deschide la ora 08:00 în fusul Europe/Paris.
