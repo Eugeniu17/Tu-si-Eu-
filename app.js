@@ -36,7 +36,7 @@ function otherId(){return profile==="alina"?"eugeniu":"alina"}
 function other(){return config.people[otherId()]}
 
 async function load(){
-  const [c,d]=await Promise.all([fetch("data/config.json"),fetch("data/days.json")]);
+  const [c,d]=await Promise.all([fetch("config.json"),fetch("days.json")]);
   config=await c.json(); days=await d.json();
   pendingLetter=importLetterFromURL();
   bind();
