@@ -1,7 +1,7 @@
-# Verificare V13
+# Verificare V15
 
-- Muzica noastră apare în navigare.
-- Zilele 1, 4, 7, 10, 13 și 15 au o felicitare muzicală opțională.
-- Piesele pot fi căutate pe Spotify, YouTube și Apple Music.
-- Se poate trimite un link exact cu o mărturisire pentru mâine.
-- Nicio piesă nu este obligatorie.
+1. Alege profilul.
+2. În ziua 1, deschide o piesă, revino și scrie ce ai simțit.
+3. Verifică faptul că atmosfera zilei apare numai după discuția despre muzică.
+4. Parcurge gestul, întrebarea, alegerea și rugăciunea liberă.
+5. Verifică pe iPhone că textul nu acoperă scena de răsărit.

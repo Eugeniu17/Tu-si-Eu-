@@ -3,13 +3,13 @@
     "id": 1,
     "date": "2026-08-03",
     "title": "Adevărul de la început",
-    "icon": "🕯️",
+    "icon": "🌅",
     "theme": "covenant",
-    "magic": "candles",
-    "magicLabel": "Legământ",
+    "magic": "first-light",
+    "magicLabel": "Început viu",
     "scripture": "Doamne, învață-ne să iubim nu doar prin cuvinte, ci prin adevăr și faptă.",
-    "story": "Începem fără roluri și fără promisiuni spectaculoase. Îl punem pe Dumnezeu în centru și alegem să spunem adevărul cu blândețe.",
-    "action": "Trimite un mesaj simplu: cum ești astăzi și ce ai nevoie să păstrăm între noi în aceste două săptămâni.",
+    "story": "Începem cu lumină, bucurie și adevăr. Paris și Menton deschid două ferestre spre aceeași poveste, iar Dumnezeu rămâne în centru.",
+    "action": "După ce ascultați piesa și vorbiți despre ce a rămas în inimă, spuneți un lucru sincer pe care vreți să-l protejați în relația voastră.",
     "question": "Ce ai vrea să pot auzi de la tine fără să te judec, să te grăbesc sau să încerc imediat să repar?",
     "options": [
       "Să mă asculți până la capăt",
@@ -21,9 +21,10 @@
     ],
     "photo": null,
     "prayer": [
-      "Pentru sinceritate și pace în inimile noastre",
-      "Pentru o iubire curată, răbdătoare și atentă",
-      "Pentru voia lui Dumnezeu, familii și biserică"
+      "Pentru sinceritate și blândețe între noi",
+      "Ca Dumnezeu să ne învețe să ne iubim prin fapte",
+      "Pentru pace și bucurie în aceste două săptămâni",
+      "Pentru călăuzire în fiecare pas al relației"
     ],
     "teaser": "Mâine ne împrumutăm privirea unul altuia.",
     "build": "Astăzi aleg să ascult un lucru până la capăt înainte să răspund.",
@@ -33,7 +34,8 @@
       "artist": "Alin și Emima Timofte",
       "note": "O piesă pentru început: ascultați-o în liniște și păstrați un vers care vă vorbește despre Dumnezeu și despre voi.",
       "moment": "La începutul zilei, înainte de răspunsuri."
-    }
+    },
+    "prayerIntro": "În fiecare seară aveți un singur spațiu comun. Scrieți liber pentru ce vreți să vă rugați; sugestiile sunt doar puncte de pornire."
   },
   {
     "id": 2,
@@ -56,7 +58,8 @@
     ],
     "teaser": "Mâine nu spunem doar ce am făcut, ci cum suntem cu adevărat.",
     "build": "Învăț să observ lumea ta fără să mut imediat conversația la mine.",
-    "secretPrompt": "Ceva frumos ce observ la tine, dar spun prea rar, este…"
+    "secretPrompt": "Ceva frumos ce observ la tine, dar spun prea rar, este…",
+    "prayerIntro": "În fiecare seară aveți un singur spațiu comun. Scrieți liber pentru ce vreți să vă rugați; sugestiile sunt doar puncte de pornire."
   },
   {
     "id": 3,
@@ -86,7 +89,8 @@
     ],
     "teaser": "Mâine exersăm darul rar de a asculta fără să ne apărăm.",
     "build": "Nu ghicesc nevoia ta. Întreb: „Cum pot fi aproape astăzi?”",
-    "secretPrompt": "Când spun „sunt bine”, uneori în mine este de fapt…"
+    "secretPrompt": "Când spun „sunt bine”, uneori în mine este de fapt…",
+    "prayerIntro": "În fiecare seară aveți un singur spațiu comun. Scrieți liber pentru ce vreți să vă rugați; sugestiile sunt doar puncte de pornire."
   },
   {
     "id": 4,
@@ -115,7 +119,8 @@
       "artist": "alegeți împreună versiunea care vă place",
       "note": "Uneori o piesă spune mai bine recunoștința pentru omul pentru care te-ai rugat.",
       "moment": "După exercițiul de ascultare."
-    }
+    },
+    "prayerIntro": "În fiecare seară aveți un singur spațiu comun. Scrieți liber pentru ce vreți să vă rugați; sugestiile sunt doar puncte de pornire."
   },
   {
     "id": 5,
@@ -138,7 +143,8 @@
     ],
     "teaser": "Mâine postim nu ca să impresionăm, ci ca să ne așezăm înaintea lui Dumnezeu.",
     "build": "Aleg o grijă pe care o pot purta astăzi prin rugăciune, ascultare sau ajutor concret.",
-    "secretPrompt": "Mi-a fost greu să-ți cer asta, dar am nevoie de…"
+    "secretPrompt": "Mi-a fost greu să-ți cer asta, dar am nevoie de…",
+    "prayerIntro": "În fiecare seară aveți un singur spațiu comun. Scrieți liber pentru ce vreți să vă rugați; sugestiile sunt doar puncte de pornire."
   },
   {
     "id": 6,
@@ -168,7 +174,8 @@
     "teaser": "Mâine luăm din biserică un adevăr pe care îl trăim, nu doar îl notăm.",
     "build": "Stabilim un moment real când ne întrebăm: „Cum ești? Cum te pot susține?”",
     "secretPrompt": "O rugăciune pe care încă mi-e greu să o spun cu voce tare este…",
-    "special": "fast"
+    "special": "fast",
+    "prayerIntro": "În fiecare seară aveți un singur spațiu comun. Scrieți liber pentru ce vreți să vă rugați; sugestiile sunt doar puncte de pornire."
   },
   {
     "id": 7,
@@ -198,7 +205,8 @@
       "artist": "Ramona Hanganu",
       "note": "Ascultați-o după biserică sau seara, fără grabă. Alegeți un vers care poate deveni un gest.",
       "moment": "După ce fiecare spune ce l-a atins la biserică."
-    }
+    },
+    "prayerIntro": "În fiecare seară aveți un singur spațiu comun. Scrieți liber pentru ce vreți să vă rugați; sugestiile sunt doar puncte de pornire."
   },
   {
     "id": 8,
@@ -228,7 +236,8 @@
     ],
     "teaser": "Mâine construim un pod din gesturi, nu din promisiuni.",
     "build": "Aleg un gest care îți arată astăzi că ești în siguranță cu mine.",
-    "secretPrompt": "Un lucru care mă face să mă simt „acasă” lângă tine este…"
+    "secretPrompt": "Un lucru care mă face să mă simt „acasă” lângă tine este…",
+    "prayerIntro": "În fiecare seară aveți un singur spațiu comun. Scrieți liber pentru ce vreți să vă rugați; sugestiile sunt doar puncte de pornire."
   },
   {
     "id": 9,
@@ -258,7 +267,8 @@
     ],
     "teaser": "Mâine cerul ne amintește că speranța poate fi împărtășită fără presiune.",
     "build": "Scriu gestul, ora aproximativă și cum vei putea observa că l-am făcut.",
-    "secretPrompt": "Un gest mic de la tine care înseamnă enorm pentru mine este…"
+    "secretPrompt": "Un gest mic de la tine care înseamnă enorm pentru mine este…",
+    "prayerIntro": "În fiecare seară aveți un singur spațiu comun. Scrieți liber pentru ce vreți să vă rugați; sugestiile sunt doar puncte de pornire."
   },
   {
     "id": 10,
@@ -288,7 +298,8 @@
       "artist": "alegeți versiunea preferată",
       "note": "Sub același cer, muzica poate purta o speranță fără să o transforme într-o presiune.",
       "moment": "Seara, privind cerul sau marea."
-    }
+    },
+    "prayerIntro": "În fiecare seară aveți un singur spațiu comun. Scrieți liber pentru ce vreți să vă rugați; sugestiile sunt doar puncte de pornire."
   },
   {
     "id": 11,
@@ -318,7 +329,8 @@
     ],
     "teaser": "Mâine descoperim în ce limbă se aude iubirea cel mai clar.",
     "build": "Aleg o frază de siguranță pentru conflicte: „Sunt cu tine, chiar dacă acum nu sunt de acord.”",
-    "secretPrompt": "Într-un conflict, frica pe care o ascund cel mai des este…"
+    "secretPrompt": "Într-un conflict, frica pe care o ascund cel mai des este…",
+    "prayerIntro": "În fiecare seară aveți un singur spațiu comun. Scrieți liber pentru ce vreți să vă rugați; sugestiile sunt doar puncte de pornire."
   },
   {
     "id": 12,
@@ -348,7 +360,8 @@
     ],
     "teaser": "Mâine, la al doilea post, privim ce a schimbat Dumnezeu în noi.",
     "build": "Aleg un gest din limbajul tău și îl fac astăzi, nu „cândva”.",
-    "secretPrompt": "Mă simt cel mai iubit(ă) de tine atunci când…"
+    "secretPrompt": "Mă simt cel mai iubit(ă) de tine atunci când…",
+    "prayerIntro": "În fiecare seară aveți un singur spațiu comun. Scrieți liber pentru ce vreți să vă rugați; sugestiile sunt doar puncte de pornire."
   },
   {
     "id": 13,
@@ -385,7 +398,8 @@
       "artist": "alegeți versiunea preferată",
       "note": "În ziua celui de-al doilea post, ascultați doar dacă vă ajută să vă opriți și să-I mulțumiți lui Dumnezeu.",
       "moment": "După rugăciune, opțional."
-    }
+    },
+    "prayerIntro": "În fiecare seară aveți un singur spațiu comun. Scrieți liber pentru ce vreți să vă rugați; sugestiile sunt doar puncte de pornire."
   },
   {
     "id": 14,
@@ -415,7 +429,8 @@
     ],
     "teaser": "Mâine, după ce ne-am cunoscut mai bine, putem vorbi cu maturitate despre ce vrem să construim.",
     "build": "Alegem trei obiceiuri și stabilim când le verificăm prima dată.",
-    "secretPrompt": "Ce nu vreau să pierdem niciodată din felul în care suntem acum este…"
+    "secretPrompt": "Ce nu vreau să pierdem niciodată din felul în care suntem acum este…",
+    "prayerIntro": "În fiecare seară aveți un singur spațiu comun. Scrieți liber pentru ce vreți să vă rugați; sugestiile sunt doar puncte de pornire."
   },
   {
     "id": 15,
@@ -452,6 +467,7 @@
       "artist": "aleasă de Alina și Eugeniu",
       "note": "Nu este aleasă de site. O alegeți voi din playlistul construit în aceste zile.",
       "moment": "La întâlnirea celor două inimi."
-    }
+    },
+    "prayerIntro": "În fiecare seară aveți un singur spațiu comun. Scrieți liber pentru ce vreți să vă rugați; sugestiile sunt doar puncte de pornire."
   }
 ]

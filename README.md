@@ -1,3 +1,6 @@
-# Între noi — Cinematic Faith V13
+# Între noi — V15 Romantic Flow
 
-Versiunea V13 adaugă o secțiune muzicală vizibilă, felicitări muzicale pentru mâine și muzică tematică doar în zilele potrivite. Progresul V12 este păstrat.
+- Rugăciune liberă în fiecare dintre cele 15 seri, într-un singur câmp.
+- Zilele cu muzică: ascultare → discuție → atmosferă → gest → întrebare → alegere → rugăciune → sigiliu.
+- Prima zi are răsărit, Paris, Menton și două inimi care pornesc una spre alta; nu mai folosește scena cu lumânări.
+- Muzica este opțională și se deschide prin Spotify, YouTube sau Apple Music.
