@@ -50,7 +50,15 @@
     "keepsake": "Primul pas",
     "prayer": "Doamne, îți mulțumim pentru începutul acestui drum. Păzește sinceritatea dintre noi.",
     "teaser": "Mâine, primul mesaj lăsat astăzi va deveni o fereastră spre inima celuilalt.",
-    "prelude": "Prima pagină a fost deja scrisă de noi."
+    "prelude": "Prima pagină a fost deja scrisă de noi.",
+    "openingTitle": "Începem din nou, mai frumos",
+    "openingText": "Astăzi nu promitem cine vom fi cândva. Facem primul pas spre omul cu care merită construită o viață.",
+    "prayerPrompts": [
+      "Pentru tine: ce ai nevoie să primești astăzi de la Dumnezeu?",
+      "Pentru noi: ce vrei să crească între noi?",
+      "Pentru familie, biserică și ziua de mâine: ce punem împreună în rugăciune?"
+    ],
+    "sealText": "Ziua aceasta este acum parte din povestea noastră."
   },
   {
     "id": 2,
@@ -79,7 +87,15 @@
     "keepsake": "Curiozitatea",
     "prayer": "Doamne, ajută-ne să ne cunoaștem cu răbdare și fără măști.",
     "teaser": "Mâine nu vei trimite doar un răspuns. Vei trimite o stare.",
-    "prelude": "Ieri am pornit. Astăzi deschidem o fereastră spre lumea celuilalt."
+    "prelude": "Ieri am pornit. Astăzi deschidem o fereastră spre lumea celuilalt.",
+    "openingTitle": "O fereastră adevărată",
+    "openingText": "Nu ne arătăm doar zilele perfecte. Ne arătăm lumea reală, cu bucurii, oboseală și lucruri mici.",
+    "prayerPrompts": [
+      "Pentru tine: ce ai nevoie să primești astăzi de la Dumnezeu?",
+      "Pentru noi: ce vrei să crească între noi?",
+      "Pentru familie, biserică și ziua de mâine: ce punem împreună în rugăciune?"
+    ],
+    "sealText": "Răspunsul tău a pornit spre inima celuilalt."
   },
   {
     "id": 3,
@@ -132,7 +148,15 @@
     "keepsake": "Prezența",
     "prayer": "Doamne, fă ca fiecare mesaj al nostru să aducă pace, nu presiune.",
     "teaser": "Mâine, o îmbrățișare va trebui ținută puțin mai mult decât crezi.",
-    "prelude": "Uneori o singură stare spune mai mult decât o pagină întreagă."
+    "prelude": "Uneori o singură stare spune mai mult decât o pagină întreagă.",
+    "openingTitle": "O stare care traversează Franța",
+    "openingText": "Uneori apropierea începe cu o stare trimisă sincer, nu cu o frază perfectă.",
+    "prayerPrompts": [
+      "Pentru tine: ce ai nevoie să primești astăzi de la Dumnezeu?",
+      "Pentru noi: ce vrei să crească între noi?",
+      "Pentru familie, biserică și ziua de mâine: ce punem împreună în rugăciune?"
+    ],
+    "sealText": "Nu am trecut doar printr-o zi. Am devenit puțin mai aproape."
   },
   {
     "id": 4,
@@ -183,7 +207,15 @@
     "keepsake": "Tandrețea",
     "prayer": "Doamne, învață-ne să fim sprijin unul pentru celălalt chiar și de la distanță.",
     "teaser": "Mâine vei vedea o parte pe care ceilalți poate nu o observă.",
-    "prelude": "Astăzi, distanța primește o îmbrățișare."
+    "prelude": "Astăzi, distanța primește o îmbrățișare.",
+    "openingTitle": "Învățăm să fim adăpost",
+    "openingText": "Apropierea nu înseamnă doar dor; înseamnă să învățăm cum să-l liniștim pe celălalt.",
+    "prayerPrompts": [
+      "Pentru tine: ce ai nevoie să primești astăzi de la Dumnezeu?",
+      "Pentru noi: ce vrei să crească între noi?",
+      "Pentru familie, biserică și ziua de mâine: ce punem împreună în rugăciune?"
+    ],
+    "sealText": "Ziua aceasta este acum parte din povestea noastră."
   },
   {
     "id": 5,
@@ -212,7 +244,15 @@
     "keepsake": "Înțelegerea",
     "prayer": "Doamne, ajută-ne să vedem nu doar puterea, ci și oboseala celuilalt.",
     "teaser": "Mâine începe să se formeze un cuvânt care ține orice relație în picioare.",
-    "prelude": "Astăzi privim dincolo de ceea ce se vede ușor."
+    "prelude": "Astăzi privim dincolo de ceea ce se vede ușor.",
+    "openingTitle": "Ce nu vede toată lumea",
+    "openingText": "Astăzi deschidem o cameră mai tăcută a inimii: partea pe care nu o arătăm oricui.",
+    "prayerPrompts": [
+      "Pentru tine: ce ai nevoie să primești astăzi de la Dumnezeu?",
+      "Pentru noi: ce vrei să crească între noi?",
+      "Pentru familie, biserică și ziua de mâine: ce punem împreună în rugăciune?"
+    ],
+    "sealText": "Răspunsul tău a pornit spre inima celuilalt."
   },
   {
     "id": 6,
@@ -261,7 +301,15 @@
     "keepsake": "Sinceritatea",
     "prayer": "Doamne, păzește-ne de jumătăți de adevăr și dă-ne curajul sincerității.",
     "teaser": "Mâine site-ul va încerca să afle cui îi este mai dor. Site-ul este naiv.",
-    "prelude": "O piesă mică poate ține împreună tot puzzle-ul."
+    "prelude": "O piesă mică poate ține împreună tot puzzle-ul.",
+    "openingTitle": "Sâmbătă — post și rugăciune",
+    "openingText": "Astăzi ne oprim puțin din zgomot și aducem înaintea lui Dumnezeu trei motive concrete.",
+    "prayerPrompts": [
+      "Pentru tine: ce ai nevoie să primești astăzi de la Dumnezeu?",
+      "Pentru noi: ce vrei să crească între noi?",
+      "Pentru postul și rugăciunea noastră: care sunt cele trei motive pe care le aducem înaintea lui Dumnezeu?"
+    ],
+    "sealText": "Nu am trecut doar printr-o zi. Am devenit puțin mai aproape."
   },
   {
     "id": 7,
@@ -302,7 +350,15 @@
     "keepsake": "Dorul",
     "prayer": "Doamne, transformă dorul nostru în recunoștință și apropiere.",
     "teaser": "Mâine vom descoperi ce lucruri simple ne lipsesc cel mai mult.",
-    "prelude": "Astăzi măsurăm ceva ce, probabil, nu încape în numere."
+    "prelude": "Astăzi măsurăm ceva ce, probabil, nu încape în numere.",
+    "openingTitle": "Duminică — biserică și recunoștință",
+    "openingText": "Chiar în două orașe, ne putem îndrepta inimile în aceeași direcție.",
+    "prayerPrompts": [
+      "Pentru tine: ce ai nevoie să primești astăzi de la Dumnezeu?",
+      "Pentru noi: ce vrei să crească între noi?",
+      "Pentru biserică, familiile noastre și călăuzirea lui Dumnezeu: ce punem astăzi în rugăciune?"
+    ],
+    "sealText": "Ziua aceasta este acum parte din povestea noastră."
   },
   {
     "id": 8,
@@ -353,7 +409,15 @@
     "keepsake": "Lucrurile simple",
     "prayer": "Doamne, ajută-ne să nu pierdem frumusețea gesturilor mici.",
     "teaser": "Mâine vom construi un pod. Nu din beton — slavă Domnului, Eugeniu ar fi adus și trusa.",
-    "prelude": "Astăzi păstrăm lucrurile mici care fac iubirea mare."
+    "prelude": "Astăzi păstrăm lucrurile mici care fac iubirea mare.",
+    "openingTitle": "Lucrurile simple care devin acasă",
+    "openingText": "Nu căutăm doar momente spectaculoase. Descoperim ce gesturi mici ne fac să ne simțim acasă unul cu altul.",
+    "prayerPrompts": [
+      "Pentru tine: ce ai nevoie să primești astăzi de la Dumnezeu?",
+      "Pentru noi: ce vrei să crească între noi?",
+      "Pentru familie, biserică și ziua de mâine: ce punem împreună în rugăciune?"
+    ],
+    "sealText": "Răspunsul tău a pornit spre inima celuilalt."
   },
   {
     "id": 9,
@@ -382,7 +446,15 @@
     "keepsake": "Echipa",
     "prayer": "Doamne, întărește podul dintre noi prin respect, comunicare și rugăciune.",
     "teaser": "Mâine cerul va avea nevoie de ajutorul nostru ca să se aprindă.",
-    "prelude": "Astăzi nu așteptăm ca distanța să dispară. Construim peste ea."
+    "prelude": "Astăzi nu așteptăm ca distanța să dispară. Construim peste ea.",
+    "openingTitle": "Construim podul, nu doar îl desenăm",
+    "openingText": "Astăzi alegem materiale reale: comunicare, responsabilitate, răbdare și credință.",
+    "prayerPrompts": [
+      "Pentru tine: ce ai nevoie să primești astăzi de la Dumnezeu?",
+      "Pentru noi: ce vrei să crească între noi?",
+      "Pentru familie, biserică și ziua de mâine: ce punem împreună în rugăciune?"
+    ],
+    "sealText": "Nu am trecut doar printr-o zi. Am devenit puțin mai aproape."
   },
   {
     "id": 10,
@@ -411,7 +483,15 @@
     "keepsake": "Speranța",
     "prayer": "Doamne, amintește-ne că privim același cer și suntem păziți de aceeași mână.",
     "teaser": "Mâine cerul poate dărui o stea căzătoare. Unele dorințe sunt deja rugăciuni.",
-    "prelude": "În seara aceasta, aprindem împreună o bucată de cer."
+    "prelude": "În seara aceasta, aprindem împreună o bucată de cer.",
+    "openingTitle": "Cerul ne amintește că suntem sub aceeași lumină",
+    "openingText": "Paris și Menton sunt departe pe hartă, dar nu există două ceruri.",
+    "prayerPrompts": [
+      "Pentru tine: ce ai nevoie să primești astăzi de la Dumnezeu?",
+      "Pentru noi: ce vrei să crească între noi?",
+      "Pentru familie, biserică și ziua de mâine: ce punem împreună în rugăciune?"
+    ],
+    "sealText": "Ziua aceasta este acum parte din povestea noastră."
   },
   {
     "id": 11,
@@ -440,7 +520,15 @@
     "keepsake": "Minunea",
     "prayer": "Doamne, dă-ne ochi pentru minunile mici și inimă pentru darurile Tale.",
     "teaser": "Mâine lăsăm jos câteva lucruri pe care nu trebuie să le purtăm singuri.",
-    "prelude": "Unele clipe durează o secundă și rămân ani întregi."
+    "prelude": "Unele clipe durează o secundă și rămân ani întregi.",
+    "openingTitle": "Noaptea Perseidelor",
+    "openingText": "O stea nu rezolvă distanța, dar poate păstra o dorință până când ne revedem.",
+    "prayerPrompts": [
+      "Pentru tine: ce ai nevoie să primești astăzi de la Dumnezeu?",
+      "Pentru noi: ce vrei să crească între noi?",
+      "Pentru familie, biserică și ziua de mâine: ce punem împreună în rugăciune?"
+    ],
+    "sealText": "Răspunsul tău a pornit spre inima celuilalt."
   },
   {
     "id": 12,
@@ -469,7 +557,15 @@
     "keepsake": "Pacea",
     "prayer": "Doamne, ia grijile pe care le purtăm și dă-ne pace unul pentru celălalt.",
     "teaser": "Mâine un cuvânt va dispărea și altul va rămâne.",
-    "prelude": "Astăzi nu rezolvăm totul. Astăzi lăsăm câteva poveri jos."
+    "prelude": "Astăzi nu rezolvăm totul. Astăzi lăsăm câteva poveri jos.",
+    "openingTitle": "Lăsăm grijile jos",
+    "openingText": "Nu vrem să ajungem unul la altul purtând toate fricile singuri. Învățăm să le spunem și să le împărțim.",
+    "prayerPrompts": [
+      "Pentru tine: ce ai nevoie să primești astăzi de la Dumnezeu?",
+      "Pentru noi: ce vrei să crească între noi?",
+      "Pentru familie, biserică și ziua de mâine: ce punem împreună în rugăciune?"
+    ],
+    "sealText": "Nu am trecut doar printr-o zi. Am devenit puțin mai aproape."
   },
   {
     "id": 13,
@@ -518,7 +614,15 @@
     "keepsake": "Alegerea",
     "prayer": "Doamne, învață-ne să ne alegem cu maturitate, răbdare și credincioșie.",
     "teaser": "Mâine privim spre viitor, dar fără să fugim de prezent.",
-    "prelude": "Sentimentele se schimbă. Alegerea poate rămâne."
+    "prelude": "Sentimentele se schimbă. Alegerea poate rămâne.",
+    "openingTitle": "Sâmbătă — alegerea devine faptă",
+    "openingText": "Iubirea nu ia zi liberă, dar poate lua timp pentru post, rugăciune și un gest concret.",
+    "prayerPrompts": [
+      "Pentru tine: ce ai nevoie să primești astăzi de la Dumnezeu?",
+      "Pentru noi: ce vrei să crească între noi?",
+      "Pentru postul și rugăciunea noastră: care sunt cele trei motive pe care le aducem înaintea lui Dumnezeu?"
+    ],
+    "sealText": "Ziua aceasta este acum parte din povestea noastră."
   },
   {
     "id": 14,
@@ -547,7 +651,15 @@
     "keepsake": "Viitorul",
     "prayer": "Doamne, așază viitorul nostru după voia Ta și păstrează-ne inimile liniștite.",
     "teaser": "Mâine toate piesele se vor așeza. Nu este sfârșitul — este revederea.",
-    "prelude": "Astăzi privim înainte fără să grăbim nimic."
+    "prelude": "Astăzi privim înainte fără să grăbim nimic.",
+    "openingTitle": "Duminică — drumul spre casă",
+    "openingText": "Astăzi Alina se întoarce. Distanța se schimbă, dar ceea ce am construit rămâne.",
+    "prayerPrompts": [
+      "Pentru Alina pe drumul de întoarcere: ce cerem lui Dumnezeu pentru pace, odihnă și protecție?",
+      "Pentru noi: ce vrei să crească între noi?",
+      "Pentru biserică, familiile noastre și călăuzirea lui Dumnezeu: ce punem astăzi în rugăciune?"
+    ],
+    "sealText": "Răspunsul tău a pornit spre inima celuilalt."
   },
   {
     "id": 15,
@@ -576,6 +688,14 @@
     "keepsake": "Acasă",
     "prayer": "Doamne, îți mulțumim pentru fiecare zi și pentru felul în care ne-ai păstrat aproape.",
     "teaser": "Aceasta nu a fost ultima pagină. A fost primul nostru capitol scris împreună.",
-    "prelude": "Am ajuns. Nu la sfârșit, ci din nou unul lângă celălalt."
+    "prelude": "Am ajuns. Nu la sfârșit, ci din nou unul lângă celălalt.",
+    "openingTitle": "Prima zi după vacanță",
+    "openingText": "Nu încheiem doar un proiect. Luăm cu noi obiceiurile bune: grijă, rugăciune, sinceritate și alegerea zilnică.",
+    "prayerPrompts": [
+      "Pentru prima zi de muncă după vacanță: ce pace, putere și bucurie cerem pentru Alina?",
+      "Pentru noi: ce vrei să crească între noi?",
+      "Pentru familie, biserică și ziua de mâine: ce punem împreună în rugăciune?"
+    ],
+    "sealText": "Nu am trecut doar printr-o zi. Am devenit puțin mai aproape."
   }
 ]

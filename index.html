@@ -9,7 +9,7 @@
   <meta http-equiv="Expires" content="0">
   <meta name="description" content="Între noi — o călătorie zilnică pentru Alina și Eugeniu.">
   <title>Între noi ❤️</title>
-  <link rel="stylesheet" href="./style.css?v=20260803-journey-v2">
+  <link rel="stylesheet" href="./style.css?v=20260803-journey-v3">
   <style>
     /* Stil minim de siguranță: pagina nu mai apare albă chiar dacă browserul păstrează un cache vechi. */
     html,body{min-height:100%;margin:0;background:#070b16;color:#fff;font-family:-apple-system,BlinkMacSystemFont,"Segoe UI",sans-serif}
@@ -53,23 +53,26 @@
         </div>
       </div>
 
-      <div class="journey-map" aria-label="Drumul dintre Paris și Menton">
-        <div class="journey-map__glow journey-map__glow--paris"></div>
-        <div class="journey-map__glow journey-map__glow--menton"></div>
-        <svg class="journey-map__svg" viewBox="0 0 760 230" role="img" aria-label="O inimă se apropie în fiecare zi">
-          <path class="journey-map__path-shadow" d="M85 185 C185 175 145 80 285 105 C415 130 400 45 545 70 C640 85 645 45 685 42"/>
-          <path class="journey-map__path" id="journeyPath" d="M85 185 C185 175 145 80 285 105 C415 130 400 45 545 70 C640 85 645 45 685 42"/>
-          <circle class="journey-map__stop" cx="85" cy="185" r="8"/>
-          <circle class="journey-map__stop journey-map__stop--end" cx="685" cy="42" r="8"/>
-          <text class="journey-map__label" x="42" y="220">Paris</text>
-          <text class="journey-map__label journey-map__label--end" x="620" y="28">Menton</text>
-          <text class="journey-map__sub" x="42" y="202">Eugeniu</text>
-          <text class="journey-map__sub journey-map__sub--end" x="620" y="52">Alina</text>
-          <g id="journeyHeart" class="journey-map__heart"><text x="0" y="0">❤️</text></g>
+      <div class="journey-map journey-postcard" aria-label="Drumul nostru dintre Paris și Menton">
+        <div class="postcard-sky"><span class="postcard-sun">☀️</span><span class="postcard-cloud c1">☁️</span><span class="postcard-cloud c2">☁️</span></div>
+        <div class="postcard-land"><span class="postcard-eiffel">🗼</span><span class="postcard-mountains">⛰️</span><span class="postcard-sea">〰 〰 〰</span><span class="postcard-palm">🌴</span></div>
+        <svg class="journey-map__svg" viewBox="0 0 760 280" role="img" aria-label="Două inimi se apropie în fiecare zi">
+          <defs>
+            <linearGradient id="journeyGradient" x1="0" y1="0" x2="1" y2="0"><stop offset="0" stop-color="#6db9ff"/><stop offset=".52" stop-color="#ffd278"/><stop offset="1" stop-color="#ff6d9f"/></linearGradient>
+          </defs>
+          <path class="journey-map__path-shadow" d="M90 225 C165 205 145 120 250 133 C365 148 386 78 500 93 C605 108 615 52 686 55"/>
+          <path class="journey-map__path" id="journeyPath" d="M90 225 C165 205 145 120 250 133 C365 148 386 78 500 93 C605 108 615 52 686 55"/>
+          <g class="map-pin map-pin--start" transform="translate(90 225)"><circle r="25"/><text x="0" y="9">📍</text></g>
+          <g class="map-pin map-pin--end" transform="translate(686 55)"><circle r="25"/><text x="0" y="9">📍</text></g>
+          <text class="journey-map__label" x="35" y="265">Paris · Eugeniu</text>
+          <text class="journey-map__label journey-map__label--end" x="590" y="30">Menton · Alina</text>
+          <g id="journeyHeart" class="journey-map__heart"><circle r="25" class="heart-halo"/><text x="-18" y="13">❤️</text></g>
+          <g id="journeyTrain" class="journey-train"><text x="0" y="0">🚆</text></g>
         </svg>
+        <div class="journey-dots" id="journeyDots"></div>
         <div class="journey-map__caption">
-          <strong id="journeyProgress">Primul pas este deja al nostru.</strong>
-          <span id="journeyCountdown">În fiecare zi, distanța devine puțin mai mică.</span>
+          <strong id="journeyProgress">Astăzi facem primul pas.</strong>
+          <span id="journeyCountdown">Nu numărăm doar zilele. Construim apropierea.</span>
         </div>
       </div>
 
@@ -123,6 +126,6 @@
       box.textContent="Datele zilei nu s-au încărcat. Verifică dacă index.html, style.css, app.js, config.json și days.json sunt în același loc.";
     });
   </script>
-  <script src="./app.js?v=20260803-journey-v2" type="module"></script>
+  <script src="./app.js?v=20260803-journey-v3" type="module"></script>
 </body>
 </html>
