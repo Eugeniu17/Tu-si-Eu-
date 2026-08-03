@@ -1,9 +1,7 @@
-# Verificare V12
-- profil separat pe fiecare telefon
-- zile calendaristice 3–17 august
-- fiecare zi are atmosferă proprie
-- fotografia este opțională
-- muzica este doar propusă prin link exact, nu impusă zilnic
-- plicuri: întrebare, gând, rugăciune, taină, verset, surpriză, piesă
-- inimile se întâlnesc la mijloc în final
-- progresul se păstrează local în browser
+# Verificare V13
+
+- Muzica noastră apare în navigare.
+- Zilele 1, 4, 7, 10, 13 și 15 au o felicitare muzicală opțională.
+- Piesele pot fi căutate pe Spotify, YouTube și Apple Music.
+- Se poate trimite un link exact cu o mărturisire pentru mâine.
+- Nicio piesă nu este obligatorie.

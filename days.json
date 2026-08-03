@@ -27,7 +27,13 @@
     ],
     "teaser": "Mâine ne împrumutăm privirea unul altuia.",
     "build": "Astăzi aleg să ascult un lucru până la capăt înainte să răspund.",
-    "secretPrompt": "Un adevăr mic pe care mi-a fost greu să ți-l spun este…"
+    "secretPrompt": "Un adevăr mic pe care mi-a fost greu să ți-l spun este…",
+    "music": {
+      "title": "Scopul Meu",
+      "artist": "Alin și Emima Timofte",
+      "note": "O piesă pentru început: ascultați-o în liniște și păstrați un vers care vă vorbește despre Dumnezeu și despre voi.",
+      "moment": "La începutul zilei, înainte de răspunsuri."
+    }
   },
   {
     "id": 2,
@@ -103,7 +109,13 @@
     ],
     "teaser": "Mâine deschidem ușa spre ceea ce purtăm în tăcere.",
     "build": "Astăzi repet ce am înțeles înainte să ofer sfaturi.",
-    "secretPrompt": "Ceva ce mi-e teamă că ai putea înțelege greșit despre mine este…"
+    "secretPrompt": "Ceva ce mi-e teamă că ai putea înțelege greșit despre mine este…",
+    "music": {
+      "title": "I Prayed for You",
+      "artist": "alegeți împreună versiunea care vă place",
+      "note": "Uneori o piesă spune mai bine recunoștința pentru omul pentru care te-ai rugat.",
+      "moment": "După exercițiul de ascultare."
+    }
   },
   {
     "id": 5,
@@ -180,7 +192,13 @@
     "teaser": "Mâine descoperim ce înseamnă „acasă” înainte să vorbim despre o casă.",
     "build": "Aleg o propoziție din mesajul de azi și o transform într-o faptă.",
     "secretPrompt": "Ce aș vrea să construim spiritual împreună, dar încă nu știu cum să spun, este…",
-    "special": "sunday"
+    "special": "sunday",
+    "music": {
+      "title": "Pentru tine",
+      "artist": "Ramona Hanganu",
+      "note": "Ascultați-o după biserică sau seara, fără grabă. Alegeți un vers care poate deveni un gest.",
+      "moment": "După ce fiecare spune ce l-a atins la biserică."
+    }
   },
   {
     "id": 8,
@@ -264,7 +282,13 @@
     "teaser": "Mâine învățăm să dezlegăm un nod fără să ne rănim.",
     "build": "Transform speranța într-o rugăciune, nu într-o obligație pentru tine.",
     "secretPrompt": "Dacă aș vedea o stea căzătoare, dorința pe care mi-e rușine să o spun ar fi…",
-    "musicMoment": true
+    "musicMoment": true,
+    "music": {
+      "title": "Te-am cerut în rugăciune",
+      "artist": "alegeți versiunea preferată",
+      "note": "Sub același cer, muzica poate purta o speranță fără să o transforme într-o presiune.",
+      "moment": "Seara, privind cerul sau marea."
+    }
   },
   {
     "id": 11,
@@ -355,7 +379,13 @@
     "teaser": "Mâine ne întoarcem spre ritmul obișnuit și alegem ce nu vrem să pierdem.",
     "build": "Spun o schimbare observabilă și un mod concret prin care o voi continua.",
     "secretPrompt": "Un lucru pentru care Îi mulțumesc lui Dumnezeu în legătură cu tine este…",
-    "special": "fast"
+    "special": "fast",
+    "music": {
+      "title": "Dumnezeu mi te-a dat",
+      "artist": "alegeți versiunea preferată",
+      "note": "În ziua celui de-al doilea post, ascultați doar dacă vă ajută să vă opriți și să-I mulțumiți lui Dumnezeu.",
+      "moment": "După rugăciune, opțional."
+    }
   },
   {
     "id": 14,
@@ -416,6 +446,12 @@
     "teaser": "Harta se încheie, dar alegerea de a-L urma pe Dumnezeu și de a ne cunoaște continuă.",
     "build": "Alegem un pas comun pentru 30 de zile, o dată și un mod sincer de evaluare.",
     "secretPrompt": "După aceste zile, lucrul pe care îl pot spune cu mai mult curaj despre noi este…",
-    "musicMoment": true
+    "musicMoment": true,
+    "music": {
+      "title": "Piesa noastră de final",
+      "artist": "aleasă de Alina și Eugeniu",
+      "note": "Nu este aleasă de site. O alegeți voi din playlistul construit în aceste zile.",
+      "moment": "La întâlnirea celor două inimi."
+    }
   }
 ]

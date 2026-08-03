@@ -3,8 +3,8 @@ const enc=o=>btoa(unescape(encodeURIComponent(JSON.stringify(o))));
 const dec=s=>JSON.parse(decodeURIComponent(escape(atob(s))));
 const esc=s=>String(s??'').replace(/[&<>"']/g,m=>({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#039;'}[m]));
 
-const [config,days]=await Promise.all([fetch('config.json?v=12').then(r=>r.json()),fetch('days.json?v=12').then(r=>r.json())]);
-const STORE='intre-noi-cinematic-v12';
+const [config,days]=await Promise.all([fetch('config.json?v=13').then(r=>r.json()),fetch('days.json?v=13').then(r=>r.json())]);
+const STORE='intre-noi-cinematic-v12'; // păstrăm progresul V12
 const blank={profile:null,answers:{},steps:{},completed:{},otherDone:{},photos:{},photoModes:{},photoEffects:{},photoRotations:{},tomorrow:[],openedMusic:{},sealed:{},songLetters:[],celebrated:{},magic:{},sharedSecrets:[]};
 let state={...blank,...JSON.parse(localStorage.getItem(STORE)||'{}')};
 let profile=state.profile,currentDay=null,stage=0,view='today',selected=[],photoData='';
@@ -27,7 +27,7 @@ function chooseProfile(){
  $('#dialogBody').innerHTML=`<div class="kicker">POVESTEA ESTE PENTRU DOI</div><h2>Cine ești astăzi?</h2><p>Alegerea rămâne pe telefonul acesta.</p><div class="choices"><button class="choice" data-profile="alina">🦋 Sunt Alina · Menton</button><button class="choice" data-profile="eugeniu">❤️ Sunt Eugeniu · Paris</button></div>`;
  $('#dialog').showModal();$$('[data-profile]').forEach(b=>b.onclick=()=>{profile=b.dataset.profile;state.profile=profile;save();$('#dialog').close();openToday()})
 }
-function switchView(v){view=v;$$('.nav button').forEach(x=>x.classList.toggle('active',x.dataset.view===v));if(v==='today')openToday();if(v==='journey')renderJourney();if(v==='album')renderAlbum();if(v==='tomorrow')renderTomorrow()}
+function switchView(v){view=v;$$('.nav button').forEach(x=>x.classList.toggle('active',x.dataset.view===v));if(v==='today')openToday();if(v==='journey')renderJourney();if(v==='album')renderAlbum();if(v==='music')renderMusic();if(v==='tomorrow')renderTomorrow()}
 function openToday(){view='today';$$('.nav button').forEach(x=>x.classList.toggle('active',x.dataset.view==='today'));currentDay=current();stage=state.steps[currentDay.id]||0;photoData=state.photos[currentDay.id]||'';renderHero();renderChapter()}
 
 function renderHero(advance=0){
@@ -83,10 +83,38 @@ function playableEmbed(url){
  if(u.hostname.includes('youtube.com')){const id=u.searchParams.get('v');if(id)return `https://www.youtube-nocookie.com/embed/${id}?rel=0`}
  if(u.hostname.includes('soundcloud.com'))return `https://w.soundcloud.com/player/?url=${encodeURIComponent(url)}&auto_play=false&hide_related=true`;}catch{}return ''
 }
+
+function searchLinks(title,artist=''){
+ const q=encodeURIComponent([title,artist].filter(Boolean).join(' '));
+ return {
+  spotify:`https://open.spotify.com/search/${q}`,
+  youtube:`https://www.youtube.com/results?search_query=${q}`,
+  apple:`https://music.apple.com/fr/search?term=${q}`
+ };
+}
+function musicServiceButtons(title,artist,url=''){
+ const l=searchLinks(title,artist);
+ return `<div class="music-services">
+  ${url?`<a href="${esc(url)}" target="_blank" rel="noopener" class="service direct">▶ Deschide linkul ales</a>`:''}
+  <a href="${l.spotify}" target="_blank" rel="noopener" class="service spotify">Spotify</a>
+  <a href="${l.youtube}" target="_blank" rel="noopener" class="service youtube">YouTube</a>
+  <a href="${l.apple}" target="_blank" rel="noopener" class="service apple">Apple Music</a>
+ </div>`;
+}
+function dailyMusicCard(d){
+ if(!d.music)return '';
+ const m=d.music;
+ return `<section class="daily-music-card">
+  <div class="record-wrap"><div class="record"><i></i></div><span>♫</span></div>
+  <div class="daily-music-copy"><div class="kicker">MUZICA ACESTEI ZILE · OPȚIONAL</div><h4>${esc(m.title)}</h4><p class="artist">${esc(m.artist||'')}</p><p>${esc(m.note||'')}</p><small>${esc(m.moment||'Ascult-o când ai liniște.')}</small>${musicServiceButtons(m.title,m.artist)}
+  <details class="song-confession"><summary>🤍 Las muzica să spună ce mi-e greu să spun</summary><textarea id="dailySongConfession" class="textarea compact" placeholder="Ce ai vrea să înțeleagă din această piesă?">${esc(answer().dailySongConfession||'')}</textarea><button class="secondary" id="saveDailySongConfession">Păstrează gândul</button></details></div>
+ </section>`;
+}
+
 function availableSongLetter(){return state.songLetters.find(x=>x.openDate<=dateParis()&&!x.used)}
 function magicStage(d){
  const gifted=availableSongLetter(),saved=answer().magicDone;
- const gift=gifted?`<div class="gift-song"><div class="gift-ribbon">O PIESĂ LĂSATĂ ÎN TAINĂ</div><h4>${esc(gifted.title||'Pentru tine')}</h4><p>${esc(gifted.note||'Ascult-o când ai liniște.')}</p>${playableEmbed(gifted.url)?`<div class="inline-player"><iframe src="${playableEmbed(gifted.url)}" allow="autoplay; encrypted-media; picture-in-picture" loading="lazy"></iframe></div>`:`<a class="primary link-button" href="${esc(gifted.url)}" target="_blank" rel="noopener">Ascultă piesa ↗</a>`}<button class="secondary" id="useGiftSong">Am primit-o în inimă ❤️</button></div>`:'';
+ const gift=gifted?`<div class="gift-song"><div class="gift-ribbon">O PIESĂ LĂSATĂ ÎN TAINĂ</div><h4>${esc(gifted.title||'Pentru tine')}</h4><p>${esc(gifted.note||'Ascult-o când ai liniște.')}</p>${musicServiceButtons(gifted.title||'Pentru tine',gifted.artist||'',gifted.url)}<button class="secondary" id="useGiftSong">Am primit-o în inimă ❤️</button></div>`:'';
  const scenes={
   candles:`<div class="magic-scene candles-scene"><div class="candle c-left"><i></i></div><div class="candle c-right"><i></i></div><div class="center-light">✦</div><p>Aprindeți, fiecare pe telefonul lui, o lumină pentru adevăr și rugăciune.</p></div>`,
   window:`<div class="magic-scene window-scene"><div class="window-pane paris"><span>Paris</span><b>🗼</b></div><div class="window-pane menton"><span>Menton</span><b>🌊</b></div><div class="window-thread">♡</div><p>Două ferestre. Aceeași curiozitate: „Arată-mi cum vezi tu lumea.”</p></div>`,
@@ -104,7 +132,7 @@ function magicStage(d){
   suitcase:`<div class="magic-scene suitcase-scene"><div class="suitcase"><span id="packedWords"></span></div><div class="pack-choices">${['Rugăciune','Sinceritate','Timp','Tandrețe','Ascultare','Fapte'].map(x=>`<button data-pack="${x}">${x}</button>`).join('')}</div></div>`,
   'final-hearts':`<div class="magic-scene final-magic"><div class="final-road"><span class="final-half left">♥</span><span class="final-half right">♥</span><div class="final-whole">♥</div></div><p>Nu ne întâlnim pentru că știm deja totul, ci pentru că am făcut pași adevărați și Îl rugăm pe Dumnezeu să ne conducă mai departe.</p>${gift}<details class="song-proposal"><summary>🎵 Alegeți împreună piesa care închide acest capitol (opțional)</summary><input id="magicSongTitle" class="input" placeholder="Titlul piesei"><input id="magicSongUrl" class="input" placeholder="Link exact"><textarea id="magicSongNote" class="textarea compact" placeholder="De ce este piesa voastră pentru final?"></textarea></details></div>`
  };
- return card(d.magicLabel||'Atmosfera zilei',`${gift}${scenes[d.magic]||scenes.window}<textarea id="magicNote" class="textarea compact" placeholder="Ce ai simțit în acest moment?">${esc(answer().magicNote||'')}</textarea><button class="primary" id="magicDone">${saved?'Moment păstrat ✓':'Păstrez momentul și merg mai departe'}</button>`,`<b>Astăzi are propria atmosferă. Nu trebuie să grăbești nimic.</b>`)
+ return card(d.magicLabel||'Atmosfera zilei',`${dailyMusicCard(d)}${gift}${scenes[d.magic]||scenes.window}<textarea id="magicNote" class="textarea compact" placeholder="Ce ai simțit în acest moment?">${esc(answer().magicNote||'')}</textarea><button class="primary" id="magicDone">${saved?'Moment păstrat ✓':'Păstrez momentul și merg mai departe'}</button>`,`<b>Astăzi are propria atmosferă. Nu trebuie să grăbești nimic.</b>`)
 }
 function bindStage(){
  $('#go')?.addEventListener('click',advance);
@@ -112,6 +140,7 @@ function bindStage(){
  $('#openReceivedLetter')?.addEventListener('click',openReceivedLetter);
  $$('[data-song]').forEach(b=>b.onclick=()=>{setAns('songChoice',b.dataset.song);renderStage()});
  $('#useGiftSong')?.addEventListener('click',()=>{const g=availableSongLetter();if(g){g.used=true;save();renderStage()}});
+ $('#saveDailySongConfession')?.addEventListener('click',()=>{setAns('dailySongConfession',$('#dailySongConfession').value.trim());alert('Gândul a fost păstrat în ziua aceasta 🤍')});
  $('#heard')?.addEventListener('click',()=>{setAns('music',$('#musicNote').value.trim()||'Am ascultat melodia.');const title=$('#songTitleTomorrow')?.value.trim(),url=$('#songUrlTomorrow')?.value.trim(),note=$('#songNoteTomorrow')?.value.trim();if(title&&url)setAns('songProposal',{title,url,note});state.openedMusic[currentDay.id]=true;save();advance()});
  $('#saveAction')?.addEventListener('click',()=>{const v=$('#actionText').value.trim();if(!v)return alert('Scrie cum vei face gestul.');setAns('action',v);advance()});
  $$('[data-choice]').forEach(b=>b.onclick=()=>{const v=b.dataset.choice;selected=selected.includes(v)?selected.filter(x=>x!==v):[...selected,v];b.classList.toggle('selected')});
@@ -194,9 +223,31 @@ function drawCoverRotated(ctx,img,x,y,w,h,deg=0){ctx.save();ctx.translate(x+w/2,
 
 function renderJourney(){renderHero();$('#app').innerHTML=`<div class="days-grid">${days.map(d=>`<button class="tile ${available(d)?'':'locked'}" data-day="${d.id}" ${available(d)?'':'disabled'}><b>Ziua ${d.id}</b><h3>${d.icon} ${esc(d.title)}</h3><small>${state.completed[d.id]?'✓ Sigilată':available(d)?'Disponibilă':'Se deschide la data ei'}</small></button>`).join('')}</div>`;$$('[data-day]').forEach(b=>b.onclick=()=>{currentDay=days.find(d=>d.id==b.dataset.day);stage=state.steps[currentDay.id]||0;renderHero();renderChapter()})}
 function renderAlbum(){renderHero();const items=days.filter(d=>state.completed[d.id]);$('#app').innerHTML=items.length?`<div class="album-grid">${items.map(d=>`<div class="tile">${state.photos[d.id]?`<img src="${state.photos[d.id]}" alt="Ziua ${d.id}">`:`<div style="font-size:50px">${d.icon}</div>`}<b>Ziua ${d.id}</b><h3>${esc(d.title)}</h3><small>${esc(state.answers[d.id]?.text||state.answers[d.id]?.build||'Păstrată în poveste')}</small></div>`).join('')}</div>`:`<div class="panel"><h2>Albumul vostru începe cu primul plic sigilat</h2><p>Fotografiile rămân pe telefonul pe care au fost alese și intră în imaginea rezultatului.</p></div>`}
+
+function renderMusic(){
+ renderHero();
+ const catalog=[
+  {title:'Scopul Meu',artist:'Alin și Emima Timofte',why:'Piesa de început a drumului vostru.'},
+  {title:'Pentru tine',artist:'Ramona Hanganu',why:'Pentru cuvintele pe care uneori le spune mai bine muzica.'},
+  {title:'I Prayed for You',artist:'alegeți versiunea preferată',why:'Despre rugăciune, așteptare și recunoștință.'},
+  {title:'Te-am cerut în rugăciune',artist:'alegeți versiunea preferată',why:'Pentru o seară liniștită și o mărturisire fără grabă.'},
+  {title:'Dumnezeu mi te-a dat',artist:'alegeți versiunea preferată',why:'Pentru mulțumire, nu pentru promisiuni grăbite.'}
+ ];
+ const received=state.songLetters.filter(x=>x.openDate<=dateParis());
+ $('#app').innerHTML=`<div class="music-page">
+  <section class="music-hero panel"><div class="record-big"><i></i></div><div><div class="kicker">PLAYLIST-UL NOSTRU</div><h2>Uneori o melodie spune ceea ce încă nu știm să spunem</h2><p>Aici puteți asculta, căuta și trimite o piesă cu o explicație personală. Site-ul nu forțează muzica în fiecare zi.</p></div></section>
+  <section class="music-catalog">${catalog.map(x=>`<article class="music-tile"><span class="music-note">♫</span><h3>${esc(x.title)}</h3><b>${esc(x.artist)}</b><p>${esc(x.why)}</p>${musicServiceButtons(x.title,x.artist)}<button class="secondary choose-song" data-title="${esc(x.title)}" data-artist="${esc(x.artist)}">O las pentru mâine</button></article>`).join('')}</section>
+  ${received.length?`<section class="panel"><div class="kicker">PRIMITE DE LA CELĂLALT</div><h2>Piese lăsate în plic</h2>${received.map(x=>`<div class="received-song-row"><div><b>${esc(x.title)}</b><p>${esc(x.note||'Fără explicație — lasă muzica să vorbească.')}</p></div>${musicServiceButtons(x.title,x.artist||'',x.url)}</div>`).join('')}</section>`:''}
+  <section class="panel song-maker"><div class="kicker">O PIESĂ ÎN LOCUL CUVINTELOR</div><h2>Lasă-i ceva ce îți este greu să spui direct</h2><input id="musicMakeTitle" class="input" placeholder="Titlul piesei"><input id="musicMakeArtist" class="input" placeholder="Artistul (opțional)"><input id="musicMakeUrl" class="input" placeholder="Link Spotify / YouTube / Apple Music / SoundCloud"><textarea id="musicMakeNote" class="textarea" placeholder="De ce tocmai această piesă? Ce ai vrea să înțeleagă? De exemplu: «Ascultă refrenul. Acolo este ceva ce încă mi-e rușine să spun.»"></textarea><div class="choices listening-time"><button class="choice selected" data-listen="când ai liniște">Când ai liniște</button><button class="choice" data-listen="înainte de culcare">Înainte de culcare</button><button class="choice" data-listen="când vezi marea sau cerul">La mare / sub cer</button><button class="choice" data-listen="după rugăciune">După rugăciune</button></div><button class="primary" id="sendMusicLetter">Sigilează piesa pentru mâine ♫</button></section>
+ </div>`;
+ let listen='când ai liniște';$$('[data-listen]').forEach(b=>b.onclick=()=>{$$('[data-listen]').forEach(x=>x.classList.remove('selected'));b.classList.add('selected');listen=b.dataset.listen});
+ $$('.choose-song').forEach(b=>b.onclick=()=>{$('#musicMakeTitle').value=b.dataset.title;$('#musicMakeArtist').value=b.dataset.artist;$('#musicMakeUrl').focus();scrollTo({top:$('.song-maker').offsetTop-90,behavior:'smooth'})});
+ $('#sendMusicLetter').onclick=()=>{const title=$('#musicMakeTitle').value.trim(),artist=$('#musicMakeArtist').value.trim(),url=$('#musicMakeUrl').value.trim(),note=$('#musicMakeNote').value.trim();if(!title||!url)return alert('Scrie titlul și lipește linkul exact al piesei.');const fullNote=[note,`Ascult-o ${listen}.`].filter(Boolean).join(' ');const payload={id:crypto.randomUUID?.()||Date.now(),type:'song',title,artist,url,note:fullNote,openDate:dateParis(1),from:profile,fromName:me().name};const link=location.origin+location.pathname+'#song='+encodeURIComponent(enc(payload));animateTomorrowSeal({title:'O piesă pentru mâine',text:`Ți-am lăsat o melodie care spune ceva ce poate nu reușesc încă să spun direct: ${title} ♫`,url:link},title)};
+}
+
 function renderTomorrow(){
  renderHero();const unread=state.tomorrow.filter(x=>x.openDate<=dateParis()),proposal=answer()?.songProposal;
- $('#app').innerHTML=`<div class="panel tomorrow-box"><div class="kicker">DIN ASTĂZI PENTRU MÂINE</div><h2>Lasă ceva care merită așteptat</h2><p>Mesajul sau piesa ajunge printr-un link, dar se deschide mâine. Așa fiecare zi poate începe cu ceva ales personal de celălalt.</p>${unread.map(l=>`<div class="sealed-letter"><b>💌 ${esc(l.fromName||'Plic primit')}</b><p>${esc(l.text)}</p></div>`).join('')}<div class="choices tomorrow-kinds"><button class="choice selected" data-kind="Întrebare">Întrebare</button><button class="choice" data-kind="Gând">Gând</button><button class="choice" data-kind="Rugăciune">Rugăciune</button><button class="choice" data-kind="Taină">🤍 Ce mi-e greu să spun</button><button class="choice" data-kind="Verset">📖 Verset</button><button class="choice" data-kind="Surpriză">Surpriză</button><button class="choice" data-kind="Piesă">🎵 Piesă</button></div><div id="normalTomorrow"><textarea id="tomorrowText" class="textarea" placeholder="Ce vrei să găsească mâine în plic? Poți spune ceva ce în chat ți-ar fi greu să scrii."></textarea></div><div id="songTomorrow" class="hidden"><input id="tomorrowSongTitle" class="input" placeholder="Titlul piesei" value="${esc(proposal?.title||'')}"><input id="tomorrowSongUrl" class="input" placeholder="Link Spotify sau YouTube" value="${esc(proposal?.url||'')}"><textarea id="tomorrowSongNote" class="textarea compact" placeholder="De ce ai ales această piesă?">${esc(proposal?.note||'')}</textarea><div class="notice">Piesa se va deschide mâine într-un player direct în site, fără să fie nevoie să părăsească povestea.</div></div><button class="primary" id="sendTomorrow">Sigilează și trimite pentru mâine ✉</button></div>`;
+ $('#app').innerHTML=`<div class="panel tomorrow-box"><div class="kicker">DIN ASTĂZI PENTRU MÂINE</div><h2>Lasă ceva care merită așteptat</h2><p>Mesajul sau piesa ajunge printr-un link, dar se deschide mâine. Așa fiecare zi poate începe cu ceva ales personal de celălalt.</p>${unread.map(l=>`<div class="sealed-letter"><b>💌 ${esc(l.fromName||'Plic primit')}</b><p>${esc(l.text)}</p></div>`).join('')}<div class="choices tomorrow-kinds"><button class="choice selected" data-kind="Întrebare">Întrebare</button><button class="choice" data-kind="Gând">Gând</button><button class="choice" data-kind="Rugăciune">Rugăciune</button><button class="choice" data-kind="Taină">🤍 Ce mi-e greu să spun</button><button class="choice" data-kind="Verset">📖 Verset</button><button class="choice" data-kind="Surpriză">Surpriză</button><button class="choice" data-kind="Piesă">🎵 Piesă</button></div><div id="normalTomorrow"><textarea id="tomorrowText" class="textarea" placeholder="Ce vrei să găsească mâine în plic? Poți spune ceva ce în chat ți-ar fi greu să scrii."></textarea></div><div id="songTomorrow" class="hidden"><input id="tomorrowSongTitle" class="input" placeholder="Titlul piesei" value="${esc(proposal?.title||'')}"><input id="tomorrowSongUrl" class="input" placeholder="Link Spotify sau YouTube" value="${esc(proposal?.url||'')}"><textarea id="tomorrowSongNote" class="textarea compact" placeholder="De ce ai ales această piesă?">${esc(proposal?.note||'')}</textarea><div class="notice">Mâine va apărea o felicitare muzicală cu linkul ales și butoane Spotify, YouTube și Apple Music. Astfel nu depindem de playere blocate.</div></div><button class="primary" id="sendTomorrow">Sigilează și trimite pentru mâine ✉</button></div>`;
  let kind='Întrebare';$$('[data-kind]').forEach(b=>b.onclick=()=>{$$('[data-kind]').forEach(x=>x.classList.remove('selected'));b.classList.add('selected');kind=b.dataset.kind;$('#normalTomorrow').classList.toggle('hidden',kind==='Piesă');$('#songTomorrow').classList.toggle('hidden',kind!=='Piesă')});
  $('#sendTomorrow').onclick=()=>{if(kind==='Piesă'){const title=$('#tomorrowSongTitle').value.trim(),url=$('#tomorrowSongUrl').value.trim(),note=$('#tomorrowSongNote').value.trim();if(!title||!url)return alert('Scrie titlul și lipește linkul piesei.');const payload={id:crypto.randomUUID?.()||Date.now(),type:'song',title,url,note,openDate:dateParis(1),from:profile,fromName:me().name};const link=location.origin+location.pathname+'#song='+encodeURIComponent(enc(payload));return animateTomorrowSeal({title:'O piesă pentru mâine',text:`Ți-am ales o piesă pentru mâine 🎵`,url:link},title)}const text=$('#tomorrowText').value.trim();if(!text)return alert('Scrie mesajul pentru mâine.');const payload={id:crypto.randomUUID?.()||Date.now(),type:'letter',kind,text,openDate:dateParis(1),from:profile,fromName:me().name};const url=location.origin+location.pathname+'#letter='+encodeURIComponent(enc(payload));animateTomorrowSeal({title:'Un plic pentru mâine',text:`Ți-am lăsat un plic pentru mâine 💌`,url},kind)}
 }

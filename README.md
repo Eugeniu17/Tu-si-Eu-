@@ -1,5 +1,3 @@
-# Între noi — Cinematic Faith Edition V12
+# Între noi — Cinematic Faith V13
 
-15 capitole pentru Alina și Eugeniu: Dumnezeu în centru, conversații deschise, fapte reale, două zile de post, duminici, Perseide, plicuri secrete, muzică propusă de voi și două inimi care se întâlnesc la mijloc.
-
-Publicare: încărcați toate fișierele din rădăcina arhivei în GitHub Pages.
+Versiunea V13 adaugă o secțiune muzicală vizibilă, felicitări muzicale pentru mâine și muzică tematică doar în zilele potrivite. Progresul V12 este păstrat.
