@@ -1,20 +1,20 @@
 {
-  "startDate": "2026-08-03",
-  "endDate": "2026-08-17",
+  "title": "Între noi",
+  "subtitle": "14 capitole · 4–17 august 2026",
   "timeZone": "Europe/Paris",
-  "version": "13.0-music-letters",
   "people": {
-    "alina": {
-      "name": "Alina",
-      "city": "Menton",
-      "emoji": "🦋",
-      "color": "#d96b8d"
-    },
     "eugeniu": {
       "name": "Eugeniu",
       "city": "Paris",
-      "emoji": "❤️",
-      "color": "#5b86b8"
+      "emoji": "❤️"
+    },
+    "alina": {
+      "name": "Alina",
+      "city": "Menton",
+      "emoji": "💗"
     }
-  }
+  },
+  "startDate": "2026-08-04",
+  "endDate": "2026-08-17",
+  "version": "2.0"
 }

@@ -1,0 +1,419 @@
+[
+  {
+    "id": 1,
+    "date": "2026-08-04",
+    "title": "Scrisorile care țin aprinsă o lumină",
+    "subtitle": "Despre dor, detalii mici și felul în care rămânem aproape",
+    "icon": "✉️",
+    "theme": "coral",
+    "hook": "Într-un jurnal de război, o zi de foc a fost rezumată în câteva cuvinte. Ziua următoare, un singur lucru a meritat aceeași greutate: „a venit poșta de acasă”.",
+    "story": [
+      "În arhivele Bibliotecii Congresului se păstrează sute de scrisori trimise în vreme de război. Nu sunt toate spectaculoase. Tocmai asta le face atât de puternice. Oamenii scriau despre frig, mâncare, o stradă cunoscută, o glumă, o rugăciune, o zi care trecuse greu. În mijlocul pericolului, detaliile obișnuite deveneau o punte către viața de acasă.",
+      "Soldatul James Rudolph Sorenson a notat în jurnalul său, într-o zi din 1918, că bateria lui fusese atacată. A doua zi a scris foarte puțin: au tras, apoi a venit poșta de acasă. Mai târziu, el și soția lui, Betty, au schimbat peste patru sute de scrisori. Nu fiecare scrisoare a salvat lumea. Dar fiecare spunea: «Încă mă întorc spre tine.»",
+      "Voi nu sunteți despărțiți de război, ci de câteva sute de kilometri și de un concediu care, paradoxal, face dorul mai clar. Aveți însă un dar pe care mulți oameni din acele scrisori nu l-au avut: vă puteți auzi astăzi. Nu lăsați această ușurință să facă mesajele mai superficiale. Uneori, o propoziție sinceră valorează mai mult decât cincizeci de reacții cu inimioare."
+    ],
+    "wisdom": "Iubirea la distanță nu se hrănește doar din declarații mari, ci din detalii care spun: „Te văd. Îmi pasă cum a fost ziua ta.”",
+    "scripture": "„Purtați-vă sarcinile unii altora și veți împlini astfel legea lui Hristos.” — Galateni 6:2",
+    "conversation": "Care este un lucru mic din ziua ta pe care ai vrea să-l cunosc mai bine, ca să simți că sunt cu adevărat aproape?",
+    "prompts": [
+      "Ce te-a obosit astăzi?",
+      "Ce te-a făcut să zâmbești?",
+      "Ce ai fi vrut să vezi împreună cu mine?"
+    ],
+    "action": "Trimite-i astăzi un mesaj vocal de maximum un minut în care nu explici planuri, ci îi povestești un singur moment real din ziua ta.",
+    "prayer": "Pentru ce vrem să ne rugăm împreună în seara aceasta?",
+    "source": {
+      "name": "Library of Congress — Please Write Often: Wartime Correspondence",
+      "url": "https://www.loc.gov/collections/veterans-history-project-collection/serving-our-voices/creative-expressions-of-service/please-write-often-wartime-correspondence/"
+    }
+  },
+  {
+    "id": 2,
+    "date": "2026-08-05",
+    "title": "Grădina care a păstrat un nume",
+    "subtitle": "Menton, memorie și iubirea care lasă ceva viu în urmă",
+    "icon": "🌿",
+    "theme": "garden",
+    "hook": "În Menton există o grădină care poartă numele unei femei. Numele ei a rămas pe ziduri, printre palmieri și măslini, cu mult după ce povestea lor s-a încheiat.",
+    "story": [
+      "La început, Val Rahmeh era un domeniu agricol cu măslini, lămâi și viță-de-vie pe terasele dealului. În 1921, generalul britanic Percy Radcliffe și soția lui, Rahmeh, au cumpărat locul și au început să-l transforme. Au adăugat terenuri, au amenajat terase, au plantat și au construit încet un spațiu care să-i reprezinte.",
+      "Rahmeh a murit în 1924. Câțiva ani mai târziu, domeniul a primit numele ei: Val Rahmeh. Nu ca un monument rece, ci ca o grădină. Un loc care continua să crească. Mai târziu, alți oameni au îngrijit domeniul, au adăugat plante rare și l-au salvat de la dezvoltarea imobiliară. Astăzi, grădina adăpostește o colecție extraordinară și păstrează încă urmele tuturor celor care au iubit-o și au îngrijit-o.",
+      "Poate că acesta este unul dintre cele mai frumoase lucruri despre iubire: nu doar că ne face să simțim ceva, ci ne învață să cultivăm ceva. Un obicei, o pace, o formă de grijă, o credință mai matură. Relația voastră nu trebuie să lase în urmă un monument. Dar ar trebui să lase în voi ceva mai viu decât a găsit."
+    ],
+    "wisdom": "Dragostea matură nu întreabă doar „ce simțim?”, ci și „ce crește în noi pentru că ne iubim?”.",
+    "scripture": "„Orice mlădiță care aduce rod, El o curăță, ca să aducă și mai mult rod.” — Ioan 15:2",
+    "conversation": "Ce ai vrea să crească în tine datorită relației noastre — nu în ea, ci în tine?",
+    "prompts": [
+      "Mai multă răbdare",
+      "Mai mult curaj",
+      "Mai multă blândețe",
+      "Mai multă disciplină spirituală"
+    ],
+    "action": "Alege un lucru mic pe care îl vei „cultiva” astăzi: o întrebare mai atentă, un ton mai blând sau o rugăciune mai sinceră.",
+    "prayer": "Ce vrem să-I cerem lui Dumnezeu să crească în noi?",
+    "source": {
+      "name": "Jardin botanique Val Rahmeh-Menton — History of the Garden",
+      "url": "https://www.jardinbotaniquevalrahmehmenton.fr/en/history-of-the-garden"
+    }
+  },
+  {
+    "id": 3,
+    "date": "2026-08-06",
+    "title": "Harta pe care nimeni nu o vede",
+    "subtitle": "Cum rămâi curios față de omul pe care îl iubești",
+    "icon": "🧭",
+    "theme": "sky",
+    "hook": "Cele mai multe cupluri nu se îndepărtează pentru că nu mai au întrebări. Se îndepărtează când cred că știu deja toate răspunsurile.",
+    "story": [
+      "Cercetătorii John și Julie Gottman au urmărit cupluri timp de decenii și au observat un lucru simplu: partenerii care rămân apropiați continuă să-și actualizeze „harta iubirii” — cunoașterea lumii interioare a celuilalt. Nu doar numele prietenilor sau mâncarea preferată, ci fricile de acum, speranțele noi, presiunile de la muncă, ce îi dă pace și ce îl face să se închidă.",
+      "Omul de lângă tine nu rămâne identic. O vacanță îl schimbă puțin. O conversație cu Dumnezeu îl schimbă. O zi grea îl schimbă. De aceea, iubirea nu poate trăi doar din informațiile strânse la început. Curiozitatea este o formă de fidelitate: refuzi să reduci persoana iubită la versiunea ei de ieri.",
+      "Astăzi nu încercați să impresionați. Încercați să descoperiți ceva adevărat. Poate fi ceva mic. Ce gândește acum despre odihnă? Ce o face să se simtă în siguranță? Ce vrea să schimbe când se întoarce? Uneori o întrebare bună deschide o cameră în care nu a intrat nimeni de mult."
+    ],
+    "wisdom": "Să cunoști pe cineva nu este o realizare terminată. Este o alegere repetată.",
+    "scripture": "„Fiecare să fie grabnic la ascultare, încet la vorbire.” — Iacov 1:19",
+    "conversation": "Ce s-a schimbat în tine în ultimele luni și simți că încă nu am înțeles pe deplin?",
+    "prompts": [
+      "Un vis nou",
+      "O teamă nouă",
+      "Felul în care văd viitorul",
+      "Ce am nevoie acum de la tine"
+    ],
+    "action": "În timpul conversației de azi, pune o întrebare de continuare înainte să vorbești despre tine.",
+    "prayer": "Pentru ce parte din lumea interioară a celuilalt vrem să ne rugăm?",
+    "source": {
+      "name": "The Gottman Institute — How to Build Love Maps",
+      "url": "https://www.gottman.com/blog/how-to-build-love-maps/"
+    }
+  },
+  {
+    "id": 4,
+    "date": "2026-08-07",
+    "title": "O capelă născută din recunoștință",
+    "subtitle": "Când grija primită se transformă în dăruire",
+    "icon": "🪟",
+    "theme": "light",
+    "hook": "Henri Matisse avea peste șaptezeci de ani când o asistentă i-a citit, l-a îngrijit și i-a ținut companie. Câțiva ani mai târziu, el a răspuns într-un fel la care nimeni nu se aștepta.",
+    "story": [
+      "În 1941, după o operație grea, Henri Matisse a început o lungă recuperare la Nisa. Monique Bourgeois, studentă la asistență medicală, a fost angajată să-l îngrijească noaptea. Îi citea și purtau conversații lungi. Mai târziu, Monique a intrat într-o comunitate dominicană și a devenit sora Jacques-Marie.",
+      "Comunitatea avea drept capelă un garaj vechi și degradat. Când Matisse a aflat și a văzut o schiță de vitraliu făcută de sora Jacques-Marie, a spus că va construi capela și se va ocupa de vitralii. A urmat o muncă de ani: arhitectură, ceramică, vitralii, mobilier, veșminte liturgice. Pentru un artist aflat la finalul vieții, a fost una dintre cele mai cuprinzătoare lucrări ale sale.",
+      "Povestea nu este despre a plăti o datorie. Grija adevărată nu ține contabilitate. Dar recunoștința matură caută o formă. Uneori este un proiect imens. De cele mai multe ori este ceva mult mai simplu: să observi ce a făcut celălalt pentru tine și să nu lași binele lui să treacă ne-numit."
+    ],
+    "wisdom": "Recunoștința devine iubire vizibilă atunci când primește o formă.",
+    "scripture": "„Iubiți-vă unii pe alții cu o dragoste frățească. În cinste, fiecare să dea întâietate altuia.” — Romani 12:10",
+    "conversation": "Ce ai făcut pentru mine în ultima vreme și poate nu ți-am arătat suficient că am observat?",
+    "prompts": [
+      "O grijă practică",
+      "O rugăciune",
+      "Răbdare într-un moment greu",
+      "Felul în care m-ai încurajat"
+    ],
+    "action": "Mulțumește astăzi pentru un lucru concret. Fără „ești minunată” în general; numește gestul și efectul lui asupra ta.",
+    "prayer": "Pentru ce dar primit prin celălalt Îi mulțumim lui Dumnezeu?",
+    "source": {
+      "name": "Chapelle Matisse — Repères chronologiques",
+      "url": "https://www.chapellematisse.com/FR/reperes-chronologiques-matisse-soeur-jacques-marie.php"
+    }
+  },
+  {
+    "id": 5,
+    "date": "2026-08-08",
+    "title": "Postul care nu pune presiune",
+    "subtitle": "Să-L căutăm pe Dumnezeu fără să ne măsurăm unul pe altul",
+    "icon": "🙏",
+    "theme": "quiet",
+    "hook": "În Biblie, postul nu este prezentat ca un spectacol al puterii spirituale. El scoate la lumină ce ne conduce inima atunci când renunțăm pentru o vreme la confort.",
+    "story": [
+      "Isaia 58 descrie un popor care postește și totuși rămâne aspru, certăreț și indiferent la povara altora. Dumnezeu nu respinge dorința lor de a-L căuta, dar le arată că apropierea de El trebuie să se vadă în felul în care îi tratează pe oameni: dezlegarea nedreptății, împărțirea pâinii, grija pentru cel vulnerabil.",
+      "Pentru un cuplu, o zi de post poate deveni ușor o comparație: cine rezistă mai bine, cine se roagă mai mult, cine este „mai serios”. Dar dacă postul vă face mai puțin blânzi, atunci mijlocul a început să eclipseze scopul. Dumnezeu nu vă cheamă să vă impresionați unul pe altul, ci să vă așezați împreună înaintea Lui.",
+      "Astăzi, sănătatea, energia și limitele fiecăruia trebuie tratate cu respect. Puteți alege o formă potrivită: post alimentar, o perioadă mai scurtă, renunțarea la zgomotul telefonului, timp de rugăciune. Important este ca ziua să vă facă mai sinceri, mai miloși și mai uniți în Dumnezeu."
+    ],
+    "wisdom": "O disciplină spirituală este sănătoasă când ne apropie de Dumnezeu și ne face mai blânzi cu omul de lângă noi.",
+    "scripture": "„Oare acesta este postul plăcut Mie?... Împarte-ți pâinea cu cel flămând.” — Isaia 58:5–7",
+    "conversation": "Cum ești fizic și sufletește astăzi și ce formă de post sau rugăciune te-ar ajuta cu adevărat?",
+    "prompts": [
+      "Am energie și vreau să postesc",
+      "Am nevoie de o formă mai blândă",
+      "Am nevoie de susținere",
+      "Vreau mai ales timp de rugăciune"
+    ],
+    "action": "Stabiliți un moment exact în care vă întrebați: „Cum ești? Cum te pot susține?”",
+    "prayer": "Scrieți liber motivele voastre pentru postul și rugăciunea de astăzi.",
+    "source": {
+      "name": "Biblia — Isaia 58",
+      "url": "https://www.biblegateway.com/passage/?search=Isaia%2058&version=NTLR"
+    }
+  },
+  {
+    "id": 6,
+    "date": "2026-08-09",
+    "title": "Doi oameni care au lucrat umăr la umăr",
+    "subtitle": "Priscila și Acuila: credință, ospitalitate și misiune împreună",
+    "icon": "⛪",
+    "theme": "sunday",
+    "hook": "În Noul Testament apare un cuplu care nu este cunoscut printr-o scenă romantică, ci prin felul în care și-a deschis casa, a slujit și a crescut împreună în adevăr.",
+    "story": [
+      "Priscila și Acuila au fost obligați să plece din Roma și au ajuns la Corint. Acolo l-au întâlnit pe Pavel. Aveau aceeași meserie și au lucrat împreună. Mai târziu au călătorit, au găzduit o biserică în casa lor și l-au ajutat pe Apolo să înțeleagă mai exact calea lui Dumnezeu.",
+      "Biblia îi menționează aproape întotdeauna împreună. Nu pentru că erau identici, ci pentru că viețile lor aveau o direcție comună. Credința lor nu era o decorație pentru relație; ea le organiza casa, munca, prieteniile și disponibilitatea de a sluji.",
+      "Nu trebuie să decideți astăzi toate detaliile viitorului. Dar puteți observa dacă ceea ce construiți vă face mai disponibili pentru Dumnezeu sau doar mai absorbiți unul de altul. O iubire creștină sănătoasă nu închide lumea în doi oameni. Ea devine o casă cu ușa deschisă pentru bine."
+    ],
+    "wisdom": "Compatibilitatea nu înseamnă doar să vă placă aceleași lucruri, ci să puteți merge în aceeași direcție.",
+    "scripture": "„Bisericile din Asia vă trimit sănătate. Acuila și Priscila... vă trimit multă sănătate în Domnul.” — 1 Corinteni 16:19",
+    "conversation": "În ce fel ai vrea ca relația noastră să-I slujească lui Dumnezeu și să facă bine altor oameni?",
+    "prompts": [
+      "Ospitalitate",
+      "Rugăciune pentru alții",
+      "Slujire în biserică",
+      "Sprijin practic",
+      "Generozitate"
+    ],
+    "action": "Alegeți o persoană sau o nevoie pentru care să vă rugați împreună astăzi.",
+    "prayer": "Ce direcție comună vrem să-I încredințăm lui Dumnezeu?",
+    "source": {
+      "name": "Biblia — Faptele Apostolilor 18",
+      "url": "https://www.biblegateway.com/passage/?search=Faptele%2018&version=NTLR"
+    }
+  },
+  {
+    "id": 7,
+    "date": "2026-08-10",
+    "title": "Să nu încetăm să ne alegem",
+    "subtitle": "Ruth și Billy Graham: chemare comună, dor și umor în anii lungi",
+    "icon": "🤍",
+    "theme": "paper",
+    "hook": "Ruth Bell Graham s-a rugat pentru viitorul ei soț înainte să-l cunoască. Când l-a întâlnit pe Billy, întrebarea ei nu a fost doar dacă îl iubește, ci dacă pot merge împreună în chemarea lui Dumnezeu.",
+    "story": [
+      "Ruth Bell și Billy Graham s-au cunoscut la Wheaton College în 1941. Amândoi erau preocupați de Evanghelie și de felul în care viața lor putea fi pusă la dispoziția lui Dumnezeu. Căsnicia lor a avut multă iubire, dar și lungi perioade de absență, pentru că Billy călătorea frecvent pentru predicare.",
+      "Ruth nu și-a construit identitatea doar în jurul absenței lui. A crescut copiii, a scris, s-a rugat, a păstrat umorul și a vorbit sincer despre costul unei vieți de slujire. Povestea lor nu este un model de copiat mecanic; fiecare cuplu are limite și chemări diferite. Dar ea arată că dorul poate exista alături de sens, iar iubirea poate fi tandră fără să devină posesivă.",
+      "Și voi simțiți acum dorul. Nu trebuie să-l minimalizați. Dorul spune că prezența celuilalt contează. Dar poate deveni și o ocazie să întrebați: cine devenim fiecare în aceste zile? Ne apropiem de Dumnezeu? Învățăm să iubim fără să controlăm?"
+    ],
+    "wisdom": "A alege pe cineva nu înseamnă să-i ocupi întreaga viață, ci să-i protejezi chemarea și să rămâi aproape cu adevăr.",
+    "scripture": "„Doi sunt mai buni decât unul... dacă se întâmplă să cadă, se ridică unul pe altul.” — Eclesiastul 4:9–10",
+    "conversation": "Ce parte din chemarea, munca sau visurile tale ai nevoie să simți că eu o respect și o susțin?",
+    "prompts": [
+      "Munca mea",
+      "Slujirea mea",
+      "Odihna mea",
+      "Un vis personal",
+      "Relația mea cu Dumnezeu"
+    ],
+    "action": "Încurajează astăzi o parte din viața celuilalt care nu te are pe tine în centru.",
+    "prayer": "Pentru ce chemare sau responsabilitate a celuilalt vrem să ne rugăm?",
+    "source": {
+      "name": "Billy Graham Evangelistic Association — Marriage Encouragement From Ruth Bell Graham",
+      "url": "https://billygraham.org/articles/marriage-encouragement-from-ruth-bell-graham"
+    }
+  },
+  {
+    "id": 8,
+    "date": "2026-08-11",
+    "title": "Nu noi unul împotriva altuia",
+    "subtitle": "Cum se repară un moment înainte să devină o rană",
+    "icon": "🪢",
+    "theme": "ember",
+    "hook": "În cuplurile stabile nu lipsesc tensiunile. Diferența este că cineva încearcă, la un moment dat, să oprească spirala.",
+    "story": [
+      "Cercetările Institutului Gottman descriu „încercările de reparare”: un gest, o frază sau o pauză prin care unul dintre parteneri încearcă să reducă tensiunea. Poate fi: «Stai, nu vreau să ne rănim», «Hai să o luăm de la capăt», o atingere, un pic de umor sau recunoașterea unei părți de vină.",
+      "O încercare de reparare nu rezolvă automat problema. Ea schimbă însă poziția: de la «trebuie să câștig» la «vreau să ne păstrez». Ca să funcționeze, celălalt trebuie să o observe și să o primească. Uneori iubirea matură înseamnă să accepți mâna întinsă înainte să fii complet convins că ai fost înțeles.",
+      "Voi spuneți că puteți discuta orice. Este un dar rar. Protejați-l. Deschiderea nu înseamnă că fiecare discuție va fi ușoară, ci că adevărul nu va fi folosit ca armă. Înainte să aveți nevoie de o regulă, merită să o alegeți împreună."
+    ],
+    "wisdom": "Într-un conflict, victoria cea mai importantă este să nu vă transformați unul pe altul în dușmani.",
+    "scripture": "„Un răspuns blând potolește mânia.” — Proverbe 15:1",
+    "conversation": "Ce semn sau ce frază ai vrea să folosim când simțim că o conversație începe să ne rănească?",
+    "prompts": [
+      "Hai să facem o pauză",
+      "Sunt cu tine, chiar dacă nu sunt de acord",
+      "Ajută-mă să înțeleg",
+      "Putem reîncepe mai blând?"
+    ],
+    "action": "Alegeți o frază de reparare pe care amândoi promiteți să o respectați.",
+    "prayer": "Unde avem nevoie de blândețe, iertare sau înțelepciune?",
+    "source": {
+      "name": "The Gottman Institute — Repair Attempts",
+      "url": "https://www.gottman.com/blog/r-is-for-repair/"
+    }
+  },
+  {
+    "id": 9,
+    "date": "2026-08-12",
+    "title": "Sub același cer",
+    "subtitle": "Perseidele, speranțe și dorințe fără presiune",
+    "icon": "🌠",
+    "theme": "night",
+    "hook": "În nopțile Perseidelor, oamenii privesc în sus și așteaptă. Nu pot comanda o stea căzătoare. Pot doar să fie prezenți când lumina trece.",
+    "story": [
+      "Ploaia de meteori Perseide revine în fiecare an, când Pământul trece prin resturile lăsate de cometa Swift–Tuttle. Din două orașe diferite, cerul rămâne același. Poate că nu veți vedea exact aceeași dâră de lumină, dar amândoi veți privi în aceeași direcție.",
+      "Există o diferență între speranță și presiune. Speranța spune: «Mi-ar plăcea să construim asta, dacă Dumnezeu ne conduce.» Presiunea spune: «Dovedește-mi acum că se va întâmpla.» Relațiile care vor să dureze au nevoie de vise, dar și de libertatea de a le așeza înaintea lui Dumnezeu fără a forța timpul.",
+      "În seara aceasta, nu încercați să definiți întreaga viață. Spuneți o dorință cu mâna deschisă. Poate fi despre caracter, familie, slujire, o călătorie, felul în care vreți să vă simțiți unul lângă altul. Apoi transformați dorința în rugăciune."
+    ],
+    "wisdom": "Speranța apropie atunci când este oferită, nu impusă.",
+    "scripture": "„Încredințează-ți soarta în mâna Domnului, încrede-te în El și El va lucra.” — Psalmul 37:5",
+    "conversation": "Care este o speranță pentru noi pe care vrei s-o așezi înaintea lui Dumnezeu, fără să-mi ceri o garanție astăzi?",
+    "prompts": [
+      "Un caracter comun",
+      "O familie sănătoasă",
+      "O slujire împreună",
+      "Un loc al nostru",
+      "O călătorie",
+      "O pace mai adâncă"
+    ],
+    "action": "Priviți cerul câteva minute, chiar dacă nu vedeți meteori, și spuneți o rugăciune scurtă unul pentru altul.",
+    "prayer": "Ce speranță vrem să punem în mâna lui Dumnezeu?",
+    "source": {
+      "name": "NASA — Perseids Meteor Shower",
+      "url": "https://science.nasa.gov/solar-system/meteors-meteorites/perseids/"
+    }
+  },
+  {
+    "id": 10,
+    "date": "2026-08-13",
+    "title": "A iubi în limba celuilalt",
+    "subtitle": "Când intenția bună are nevoie de traducere",
+    "icon": "🫶",
+    "theme": "rose",
+    "hook": "Poți iubi sincer și totuși să nu ajungi acolo unde celălalt simte iubirea cel mai clar.",
+    "story": [
+      "În Evanghelia după Ioan, după înviere, Isus îl întreabă pe Petru de trei ori dacă Îl iubește. De fiecare dată, răspunsul nu se oprește la emoție: «Paște oile Mele.» Dragostea este chemată să primească o formă potrivită nevoii celui iubit.",
+      "În relații, oferim adesea ceea ce ne-ar face bine nouă. Unul scrie mesaje lungi; celălalt are nevoie de consecvență. Unul oferă soluții; celălalt are nevoie să fie ascultat. Unul spune «te iubesc»; celălalt simte iubirea când cineva își amintește un detaliu mic.",
+      "Nu există o singură formă corectă. Dar există o întrebare matură: «Cum ajunge iubirea mea la tine?» Răspunsul poate cere schimbare. Nu pentru că gesturile tale au fost false, ci pentru că dragostea atentă învață să se traducă."
+    ],
+    "wisdom": "Nu este suficient să iubesc în felul meu; vreau să învăț cum poate inima ta să primească iubirea.",
+    "scripture": "„Copilașilor, să nu iubim cu vorba, nici cu limba, ci cu fapta și cu adevărul.” — 1 Ioan 3:18",
+    "conversation": "Ce gest al meu te face să te simți cel mai iubit(ă) și ce gest bine intenționat nu ajunge la fel de adânc?",
+    "prompts": [
+      "Timp fără telefon",
+      "Cuvinte concrete",
+      "Ajutor practic",
+      "Afecțiune",
+      "Rugăciune",
+      "Consecvență"
+    ],
+    "action": "Fă astăzi un gest ales din „limba” celuilalt, nu din reflexul tău.",
+    "prayer": "Cum vrem să-I cerem lui Dumnezeu să ne învețe să iubim mai atent?",
+    "source": {
+      "name": "Biblia — Ioan 21",
+      "url": "https://www.biblegateway.com/passage/?search=Ioan%2021&version=NTLR"
+    }
+  },
+  {
+    "id": 11,
+    "date": "2026-08-14",
+    "title": "Ce luăm cu noi din vacanță",
+    "subtitle": "Să nu lăsăm apropierea să rămână doar într-un sezon frumos",
+    "icon": "🧳",
+    "theme": "gold",
+    "hook": "Vacanțele au un fel de a face viața mai clară. Problema este că multe lucruri bune rămân pe plajă când începe din nou rutina.",
+    "story": [
+      "În Val Rahmeh, plante din multe regiuni ale lumii au fost aduse treptat și aclimatizate. Unele aveau nevoie de sere, altele de un loc umbrit, altele de protecție împotriva umidității. A păstra o plantă vie într-un mediu nou nu înseamnă să o lași singură și să speri. Înseamnă să-i înțelegi nevoile și să creezi condiții potrivite.",
+      "Apropierea pe care o simțiți în aceste zile trebuie și ea aclimatizată la viața obișnuită. În concediu există timp, peisaje, energie diferită. La muncă apar oboseala, grabă, mesaje scurte și zile în care nu se întâmplă nimic spectaculos.",
+      "Nu trebuie să păstrați totul. Alegeți puțin, dar real. Poate întrebarea sinceră de seară. Poate rugăciunea liberă. Poate un timp fără telefon. Ceea ce este mic și repetabil are mai multe șanse să devină cultură de familie decât un plan perfect ținut trei zile."
+    ],
+    "wisdom": "O relație nu păstrează automat ce a fost frumos; păstrează ceea ce doi oameni aleg să practice.",
+    "scripture": "„Cercetați toate lucrurile și păstrați ce este bun.” — 1 Tesaloniceni 5:21",
+    "conversation": "Care sunt două obiceiuri din aceste zile pe care vrei să le păstrăm când revine rutina?",
+    "prompts": [
+      "Un check-in sincer",
+      "Rugăciune împreună",
+      "Timp fără telefon",
+      "Un gest mic zilnic",
+      "O conversație săptămânală"
+    ],
+    "action": "Alegeți doar două obiceiuri și stabiliți când le veți practica prima dată după întoarcere.",
+    "prayer": "Ce vrem să păstrăm și să protejăm în următoarea perioadă?",
+    "source": {
+      "name": "Jardin botanique Val Rahmeh-Menton — A Botanical Garden",
+      "url": "https://www.jardinbotaniquevalrahmehmenton.fr/en/a-botanical-garden"
+    }
+  },
+  {
+    "id": 12,
+    "date": "2026-08-15",
+    "title": "Al doilea post: ce a crescut deja",
+    "subtitle": "Nu performanță, ci rod observabil",
+    "icon": "🌱",
+    "theme": "quiet",
+    "hook": "Uneori ne rugăm pentru schimbări mari și ratăm primele semne mici: un răspuns mai blând, o mărturisire mai sinceră, o teamă spusă fără mască.",
+    "story": [
+      "Isus a vorbit adesea despre semințe. Ele nu fac zgomot când încep să crească. Pentru o vreme, pământul pare neschimbat. Apoi apare ceva fragil, ușor de ignorat și ușor de strivit.",
+      "În relații, schimbarea adevărată începe deseori la fel. Poate nu v-ați transformat în câteva zile. Dar poate unul dintre voi a ascultat fără să se apere. Poate ați numit o nevoie. Poate v-ați rugat pentru ceva ce înainte evitați. Acestea nu sunt rezultate mici; sunt începuturi care au nevoie de protecție.",
+      "Postul de astăzi nu este o evaluare cu note. Este un moment de recunoștință și adevăr. Ce a lucrat Dumnezeu deja? Unde sunteți încă slabi? Ce trebuie udat prin disciplină, răbdare și har?"
+    ],
+    "wisdom": "Rodul nu se măsoară prin cât de impresionant ne simțim, ci prin ce a devenit puțin mai adevărat în viața noastră.",
+    "scripture": "„Roada Duhului este dragostea, bucuria, pacea, îndelunga răbdare...” — Galateni 5:22",
+    "conversation": "Ce schimbare mică ai observat în mine sau în noi și ce ai vrea să continuăm să cultivăm?",
+    "prompts": [
+      "Mai multă sinceritate",
+      "Mai multă răbdare",
+      "Mai multă rugăciune",
+      "Mai puțină defensivă",
+      "Mai multă grijă practică"
+    ],
+    "action": "Spune-i celuilalt o schimbare reală pe care ai observat-o, fără exagerare și fără lingușire.",
+    "prayer": "Pentru ce rod Îi mulțumim lui Dumnezeu și unde avem încă nevoie de ajutor?",
+    "source": {
+      "name": "Biblia — Galateni 5",
+      "url": "https://www.biblegateway.com/passage/?search=Galateni%205&version=NTLR"
+    }
+  },
+  {
+    "id": 13,
+    "date": "2026-08-16",
+    "title": "Duminica întoarcerii",
+    "subtitle": "Credința care intră în bagaj și vine acasă",
+    "icon": "🕊️",
+    "theme": "sunday",
+    "hook": "Este ușor să simți ceva frumos într-o duminică. Mai greu — și mai valoros — este să duci acel adevăr în tonul vocii de luni.",
+    "story": [
+      "În Iacov, credinciosul este comparat cu cineva care se privește în oglindă și apoi pleacă uitând imediat cum arăta. Cuvântul lui Dumnezeu nu este oferit doar pentru o emoție de moment, ci pentru o viață care se lasă schimbată.",
+      "Întoarcerea din vacanță poate fi un mic test. Ce rămâne când peisajul se schimbă? Dacă o predică despre răbdare nu ajunge în felul în care răspunzi când ești obosit, ea rămâne doar o idee frumoasă. Dacă o rugăciune despre iubire nu schimbă o alegere concretă, încă nu a coborât în viață.",
+      "Astăzi, nu încercați să rezumați tot ce ați auzit la biserică. Alegeți o singură propoziție. Una pe care vreți s-o purtați în săptămâna care începe. Credința devine comună nu doar când vă rugați împreună, ci când vă ajutați să trăiți ceea ce ați mărturisit."
+    ],
+    "wisdom": "Un adevăr devine parte din relație când intră în comportament, nu doar în conversație.",
+    "scripture": "„Fiți împlinitori ai Cuvântului, nu numai ascultători.” — Iacov 1:22",
+    "conversation": "Ce adevăr din această duminică vrei să se vadă în felul în care mă iubești săptămâna aceasta?",
+    "prompts": [
+      "Răbdare",
+      "Slujire",
+      "Iertare",
+      "Curaj",
+      "Blândețe",
+      "Adevăr"
+    ],
+    "action": "Scrie o aplicare atât de concretă încât mâine să puteți spune dacă s-a întâmplat sau nu.",
+    "prayer": "Ce adevăr vrem să ne ajute Dumnezeu să trăim, nu doar să-l admirăm?",
+    "source": {
+      "name": "Biblia — Iacov 1",
+      "url": "https://www.biblegateway.com/passage/?search=Iacov%201&version=NTLR"
+    }
+  },
+  {
+    "id": 14,
+    "date": "2026-08-17",
+    "title": "Prima zi de lucru, primul pas în viața obișnuită",
+    "subtitle": "Iubirea care nu dispare când începe programul",
+    "icon": "☀️",
+    "theme": "morning",
+    "hook": "Astăzi nu mai este vacanță. Tocmai de aceea, ziua aceasta poate spune mai multe despre viitor decât o mie de promisiuni făcute lângă mare.",
+    "story": [
+      "În multe povești de iubire, momentul culminant este întâlnirea. În viața reală, lucrurile importante încep adesea după. După călătorie. După emoție. După ce sună alarma și cineva trebuie să meargă la muncă.",
+      "A sprijini un om în ziua lui obișnuită înseamnă să-i respecți ritmul, să nu transformi dorul tău într-o obligație pentru el și să fii atent la felul în care se întoarce acasă — obosit, plin de gânduri, poate bucuros, poate copleșit. Dragostea pe termen lung se vede mult în felul în care doi oameni își fac loc unul altuia în zilele fără decor.",
+      "Nu trebuie să declarați astăzi că știți tot despre viitor. Puteți spune ceva mai matur: «Vreau să învăț să fiu omul lângă care viața ta obișnuită devine mai bună, mai sigură și mai aproape de Dumnezeu.» Apoi alegeți un pas pentru următoarele treizeci de zile."
+    ],
+    "wisdom": "Viitorul unei relații nu se construiește într-o singură conversație despre viitor, ci în felul în care iubim zilele obișnuite.",
+    "scripture": "„Tot ce faceți să fie făcut cu dragoste.” — 1 Corinteni 16:14",
+    "conversation": "Cum pot fi pentru tine un sprijin real în zilele de muncă, fără să te controlez și fără să dispar?",
+    "prompts": [
+      "Un mesaj la momentul potrivit",
+      "Spațiu după muncă",
+      "O conversație scurtă și atentă",
+      "Ajutor practic",
+      "Rugăciune",
+      "O seară planificată"
+    ],
+    "action": "Alegeți un singur obicei pentru următoarele 30 de zile și o dată la care veți discuta sincer dacă v-a ajutat.",
+    "prayer": "Pentru ce vrem să-I cerem lui Dumnezeu călăuzire în următoarele 30 de zile?",
+    "source": {
+      "name": "Biblia — 1 Corinteni 16",
+      "url": "https://www.biblegateway.com/passage/?search=1%20Corinteni%2016&version=NTLR"
+    }
+  }
+]
