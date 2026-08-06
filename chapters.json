@@ -21,12 +21,19 @@
       "Ce te-a făcut să zâmbești?",
       "Ce ai fi vrut să vezi împreună cu mine?"
     ],
-    "action": "Trimite-i astăzi un mesaj vocal de maximum un minut în care nu explici planuri, ci îi povestești un singur moment real din ziua ta.",
+    "action": "Alege un mod simplu de a rămâne aproape: un mesaj vocal, o întrebare sau o amintire împărtășită.",
     "prayer": "Pentru ce vrem să ne rugăm împreună în seara aceasta?",
     "source": {
       "name": "Library of Congress — Ralph Emerson Jones Collection",
       "url": "https://www.loc.gov/collections/veterans-history-project-collection/serving-our-voices/world-war-i/world-war-i-rememebered-100-years-later/wwi-remembered-correspondence-and-photographs/item/afc2001001.05651/"
-    }
+    },
+    "understoodTitle": "Ce mi-ar plăcea să păstrez din ziua ta",
+    "understoodHelp": "Scrie detaliul prin care ai simțit că ai intrat puțin mai mult în lumea celuilalt.",
+    "understoodPlaceholder": "Astăzi am descoperit în ziua ta…",
+    "actionTitle": "Un detaliu pe care vreau să nu-l las să treacă",
+    "actionLabel": "Cum voi rămâne aproape",
+    "actionPlaceholder": "Astăzi vreau să intru în ziua ta prin…",
+    "prayerHint": "Poate pentru apropiere în distanță, pentru sinceritate sau pentru bucuria lucrurilor mici."
   },
   {
     "id": 2,
@@ -51,12 +58,19 @@
       "Mai multă blândețe",
       "Mai multă disciplină spirituală"
     ],
-    "action": "Alege un lucru mic pe care îl vei „cultiva” astăzi: o întrebare mai atentă, un ton mai blând sau o rugăciune mai sinceră.",
+    "action": "Nu promite ceva mare. Numește un lucru mic pe care îl poți îngriji astăzi.",
     "prayer": "Ce vrem să-I cerem lui Dumnezeu să crească în noi?",
     "source": {
       "name": "Jardin botanique Val Rahmeh-Menton — L’histoire du jardin",
       "url": "https://www.jardinbotaniquevalrahmehmenton.fr/fr/l-histoire-du-jardin"
-    }
+    },
+    "understoodTitle": "Ce vreau să rămână viu din ceea ce mi-ai spus",
+    "understoodHelp": "Păstrează o dorință, o valoare sau un lucru pe care celălalt vrea să-l cultive în timp.",
+    "understoodPlaceholder": "Vreau să țin minte că tu îți dorești…",
+    "actionTitle": "Ce aleg să cultiv între noi",
+    "actionLabel": "Lucrul pe care îl cultiv",
+    "actionPlaceholder": "Astăzi voi cultiva…",
+    "prayerHint": "Poate pentru o iubire statornică, pentru răbdare, pentru familie sau pentru ceva frumos care să rămână peste ani."
   },
   {
     "id": 3,
@@ -65,28 +79,31 @@
     "subtitle": "Cum rămâi curios față de omul pe care îl iubești",
     "icon": "🧭",
     "theme": "sky",
-    "hook": "Anne Sullivan a încercat mai întâi s-o învețe pe Helen Keller după reguli. Apoi a înțeles că, pentru a ajunge la ea, trebuia mai întâi să intre în lumea ei.",
+    "hook": "Helen Keller trăia într-o lume fără lumină și fără sunet. Anne Sullivan nu a venit doar cu o metodă de predare; a venit cu hotărârea de a găsi drumul spre un copil pe care ceilalți aproape nu-l mai puteau înțelege.",
     "story": [
-      "Când Anne Sullivan a ajuns în Alabama, în martie 1887, Helen Keller avea șase ani. O boală o lăsase fără vedere și fără auz înainte de a împlini doi ani. Helen avea propriile semne pentru câteva nevoi, dar nu înțelegea că fiecare lucru are un nume. Frustrarea ei se transforma adesea în izbucniri, iar familia nu mai știa cum să ajungă la ea.",
-      "Anne venise de la Perkins School for the Blind cu metode clare și un program strict. Îi punea obiecte în mână și îi forma literele în palmă. Helen imita mișcările, dar pentru ea erau doar un joc al degetelor. După puțin timp, Anne a observat ceva esențial: lecțiile rigide nu se potriveau copilului viu și curios din fața ei. A renunțat la ideea de a o obliga pe Helen să intre în metoda ei și a început ea să intre în lumea lui Helen. A urmărit ce îi plăcea, a folosit natura, joaca și lucrurile pe care fata voia să le atingă.",
-      "Pe 5 aprilie, lângă pompa de apă, Anne a lăsat apa rece să curgă peste mâna lui Helen și a scris în cealaltă palmă literele W-A-T-E-R. Deodată, Helen a înțeles: mișcările acelea nu erau un joc; numeau lucrul viu și rece care îi curgea peste degete. Anne a scris mai târziu că pe fața fetei a apărut „o lumină nouă”. În câteva ore, Helen a învățat zeci de cuvinte.",
-      "Anne nu a ajuns la Helen vorbind mai tare și nici repetând la nesfârșit aceeași metodă. A ajuns la ea observând, adaptându-se și iubind suficient de atent încât să întrebe, fără cuvinte: „Cum pot să te întâlnesc acolo unde ești?” Uneori și într-o relație apropiată înțelegerea începe exact așa."
+      "Helen Keller s-a născut în 1880, în Alabama, sănătoasă și curioasă. La numai nouăsprezece luni s-a îmbolnăvit grav, iar după ce febra a trecut, părinții au înțeles că fetița nu mai vedea și nu mai auzea. Pentru că nu putea auzi cuvintele, nu putea învăța nici să vorbească. Avea câteva semne inventate de ea pentru lucrurile de care avea nevoie, însă cea mai mare parte a lumii rămânea pentru ea fără nume. Când nu era înțeleasă, frustrarea se transforma în izbucniri: arunca obiecte, lovea și se agăța cu disperare de orice încercare de a se face înțeleasă. Familia o iubea, dar nu mai știa cum să ajungă la ea.",
+      "Mama ei, Kate Keller, a refuzat să creadă că fiica ei nu va putea învăța niciodată. După ce a citit despre educarea copiilor surdo-nevăzători, familia a cerut sfatul medicului Alexander Graham Bell, care lucra și cu persoane cu deficiențe de auz. El i-a îndrumat către Perkins School for the Blind din Boston. Directorul școlii a trimis-o pe Anne Sullivan, o absolventă de numai douăzeci de ani. Anne nu venea dintr-o viață ușoară: crescuse în sărăcie, își pierduse mama, fusese abandonată de tată și ajunsese într-un azil unde fratele ei mai mic murise. O boală îi afectase grav vederea, iar după mai multe operații reușise să vadă doar parțial. Poate tocmai de aceea, când a întâlnit-o pe Helen, nu a văzut un copil imposibil, ci un copil izolat într-o lume în care nimeni nu găsise încă ușa.",
+      "Primele săptămâni nu au fost deloc blânde. Helen smulgea lucrurile din mâinile Annei, refuza regulile și nu înțelegea de ce această străină îi cerea să stea la masă sau să folosească lingura. Anne a înțeles că nu putea educa un copil dacă fiecare lecție se pierdea în haos. A cerut să locuiască o vreme singură cu Helen într-o căsuță de lângă casa familiei. Acolo a început să-i ofere două lucruri în același timp: limite clare și o răbdare care nu dispărea după primul eșec. Îi punea un obiect în mână și, în cealaltă palmă, îi forma literele cu degetele: păpușă, cană, pâine, mamă. Helen imita semnele foarte repede, dar încă nu înțelegea că acele mișcări purtau un sens.",
+      "Anne a observat apoi că Helen învăța mai bine când lecția pornea din ceea ce o interesa. Nu a mai încercat să țină copilul într-un program rigid. Dacă Helen atingea o floare, Anne îi scria numele florii în palmă. Dacă simțea vântul, îi dădea un cuvânt pentru vânt. Lecția nu mai era doar într-o cameră; întreaga zi devenea o lecție. Totuși, legătura dintre obiect și cuvânt încă nu se aprinsese. Momentul decisiv a venit la pompa de apă din curte. Anne a lăsat apa rece să curgă peste o mână a lui Helen și, în cealaltă, a scris încet W-A-T-E-R. Helen s-a oprit. A cerut ca semnul să fie repetat. Pentru prima dată a înțeles că acea mișcare a degetelor era numele lucrului pe care îl simțea.",
+      "Din acel moment, lumea a început să se deschidă. Helen a atins pământul, copacul, treptele și mâna profesoarei, cerând numele fiecărui lucru. În aceeași zi a învățat zeci de cuvinte. Mai târziu a învățat Braille, a scris, a studiat și a devenit prima persoană surdo-nevăzătoare care a absolvit o universitate. Anne a rămas alături de ea aproape cincizeci de ani, ca profesoară, interpretă și prietenă. Ceea ce a schimbat viața lui Helen nu a fost doar o metodă bună, ci faptul că un om a privit dincolo de furie și neputință și a continuat să caute drumul spre ea."
     ],
-    "wisdom": "Să iubești atent înseamnă să nu ceri mereu celuilalt să înțeleagă limba ta, ci să înveți și tu drumul către lumea lui.",
+    "wisdom": "Uneori omul de lângă noi nu are nevoie să fie reparat repede, ci să fie cunoscut cu suficientă răbdare încât să găsim limba în care inima lui poate răspunde.",
     "scripture": "„Fiecare să fie grabnic la ascultare, încet la vorbire.” — Iacov 1:19",
-    "conversation": "Ce s-a schimbat în tine în ultimele luni și simți că încă nu am înțeles pe deplin?",
-    "prompts": [
-      "Un vis nou",
-      "O teamă nouă",
-      "Felul în care văd viitorul",
-      "Ce am nevoie acum de la tine"
-    ],
-    "action": "În timpul conversației de azi, pune o întrebare de continuare înainte să vorbești despre tine.",
-    "prayer": "Pentru ce parte din lumea interioară a celuilalt vrem să ne rugăm?",
+    "conversation": "Există ceva în inima ta pe care încă nu l-am descoperit și ai vrea, într-o zi, să-l cunosc?",
+    "prompts": [],
+    "action": "Scrie un gest simplu prin care vei arăta că nu ai uitat ceea ce ai aflat astăzi. Poate fi o întrebare mai atentă, mai multă răbdare sau un moment în care alegi să asculți fără să te aperi.",
+    "prayer": "Pentru ce vrem să vorbim cu Dumnezeu după povestea de astăzi?",
     "source": {
       "name": "Perkins School for the Blind — Helen Keller and Anne Sullivan",
       "url": "https://www.perkins.org/helen-keller/"
-    }
+    },
+    "understoodTitle": "Un lucru pe care îl păstrez din răspunsul tău",
+    "understoodHelp": "Nu rezuma tot ce ai auzit. Păstrează o singură idee despre inima, teama, dorința sau visul celuilalt.",
+    "understoodPlaceholder": "Din ceea ce mi-ai spus, vreau să țin minte că…",
+    "actionTitle": "Cum vreau să am grijă de ceea ce mi-ai încredințat",
+    "actionLabel": "Gestul pe care îl aleg",
+    "actionPlaceholder": "Vreau să am grijă de ceea ce mi-ai spus prin…",
+    "prayerHint": "Poate pentru răbdare, pentru un om greu de înțeles, pentru curajul de a ne deschide sau pentru înțelepciunea de a nu renunța prea repede."
   },
   {
     "id": 4,
@@ -111,12 +128,19 @@
       "Răbdare într-un moment greu",
       "Felul în care m-ai încurajat"
     ],
-    "action": "Mulțumește astăzi pentru un lucru concret. Fără „ești minunată” în general; numește gestul și efectul lui asupra ta.",
+    "action": "Alege un mod concret de a mulțumi, fără formule generale.",
     "prayer": "Pentru ce dar primit prin celălalt Îi mulțumim lui Dumnezeu?",
     "source": {
       "name": "Chapelle Matisse — Histoire de la chapelle",
       "url": "https://www.chapellematisse.com/FR/chapelle.php"
-    }
+    },
+    "understoodTitle": "Gestul tău pe care vreau să-l văd mai bine",
+    "understoodHelp": "Numește lucrul concret pe care l-ai observat și de ce a avut valoare pentru tine.",
+    "understoodPlaceholder": "Am observat și vreau să țin minte…",
+    "actionTitle": "Recunoștința mea devine faptă",
+    "actionLabel": "Cum voi arăta recunoștință",
+    "actionPlaceholder": "Îți voi arăta că am observat prin…",
+    "prayerHint": "Poate pentru recunoștință, pentru oamenii care ne-au îngrijit sau pentru o inimă atentă la binele primit."
   },
   {
     "id": 5,
@@ -141,12 +165,19 @@
       "Am nevoie de susținere",
       "Vreau mai ales timp de rugăciune"
     ],
-    "action": "Stabiliți un moment exact în care vă întrebați: „Cum ești? Cum te pot susține?”",
+    "action": "Alege o formă de sprijin care nu controlează și nu compară.",
     "prayer": "Scrieți liber motivele voastre pentru postul și rugăciunea de astăzi.",
     "source": {
       "name": "U.S. Army — Desmond T. Doss Medal of Honor",
       "url": "https://achh.army.mil/regiment/moh-bios-doss/"
-    }
+    },
+    "understoodTitle": "Ce vreau să respect în conștiința ta",
+    "understoodHelp": "Păstrează ceea ce ai înțeles despre limitele, energia și felul în care celălalt Îl caută pe Dumnezeu.",
+    "understoodPlaceholder": "Astăzi vreau să respect faptul că…",
+    "actionTitle": "Cum te pot susține fără presiune",
+    "actionLabel": "Sprijinul meu concret",
+    "actionPlaceholder": "Astăzi te voi susține prin…",
+    "prayerHint": "Poate pentru putere, sănătate, libertate de conștiință și o apropiere sinceră de Dumnezeu."
   },
   {
     "id": 6,
@@ -172,12 +203,19 @@
       "Sprijin practic",
       "Generozitate"
     ],
-    "action": "Alegeți o persoană sau o nevoie pentru care să vă rugați împreună astăzi.",
+    "action": "Alegeți un lucru mic pe care îl puteți face împreună, chiar și de la distanță.",
     "prayer": "Ce direcție comună vrem să-I încredințăm lui Dumnezeu?",
     "source": {
       "name": "Billy Graham Evangelistic Association — Marriage Encouragement From Ruth Bell Graham",
       "url": "https://billygraham.org/articles/marriage-encouragement-from-ruth-bell-graham"
-    }
+    },
+    "understoodTitle": "Ce admir în felul în care îți trăiești credința",
+    "understoodHelp": "Păstrează un lucru real, nu o laudă generală.",
+    "understoodPlaceholder": "Astăzi am văzut în tine…",
+    "actionTitle": "Cum putem lucra umăr la umăr",
+    "actionLabel": "Contribuția mea",
+    "actionPlaceholder": "Eu pot aduce în echipa noastră…",
+    "prayerHint": "Poate pentru chemarea fiecăruia, pentru unitate, pentru biserică sau pentru a sluji fără să ne pierdem unul pe altul."
   },
   {
     "id": 7,
@@ -203,12 +241,19 @@
       "Un vis personal",
       "Relația mea cu Dumnezeu"
     ],
-    "action": "Încurajează astăzi o parte din viața celuilalt care nu te are pe tine în centru.",
+    "action": "Alege un gest mic, repetabil, nu o promisiune spectaculoasă.",
     "prayer": "Pentru ce chemare sau responsabilitate a celuilalt vrem să ne rugăm?",
     "source": {
       "name": "C.S. Lewis Official Site — Mere Friendship: Lewis on a Great Joy",
       "url": "https://www.cslewis.com/mere-friendship-lewis-on-a-great-joy/"
-    }
+    },
+    "understoodTitle": "Ce nu vreau să pierdem peste douăzeci de ani",
+    "understoodHelp": "Păstrează lucrul din răspunsul celuilalt care descrie iubirea la care visează.",
+    "understoodPlaceholder": "Peste ani, vreau să-mi amintesc că pentru tine contează…",
+    "actionTitle": "Un obicei care ne ajută să ne alegem din nou",
+    "actionLabel": "Obiceiul pe care îl aleg",
+    "actionPlaceholder": "Vreau să continuăm să ne alegem prin…",
+    "prayerHint": "Poate pentru fidelitate, prietenie, bucurie și o iubire mai mare decât orgoliul."
   },
   {
     "id": 8,
@@ -233,12 +278,19 @@
       "Ajută-mă să înțeleg",
       "Putem reîncepe mai blând?"
     ],
-    "action": "Alegeți o frază de reparare pe care amândoi promiteți să o respectați.",
+    "action": "Scrie un acord simplu pe care îl puteți folosi când apare tensiunea.",
     "prayer": "Unde avem nevoie de blândețe, iertare sau înțelepciune?",
     "source": {
       "name": "The Gottman Institute — R is for Repair",
       "url": "https://www.gottman.com/blog/r-is-for-repair/"
-    }
+    },
+    "understoodTitle": "Ce ai nevoie să nu uit când apare o problemă",
+    "understoodHelp": "Păstrează nevoia din spatele cuvintelor, nu doar poziția dintr-o discuție.",
+    "understoodPlaceholder": "Într-un conflict, vreau să nu uit că tu ai nevoie de…",
+    "actionTitle": "Cum rămânem de aceeași parte",
+    "actionLabel": "Acordul nostru",
+    "actionPlaceholder": "Când nu vom fi de acord, vreau să…",
+    "prayerHint": "Poate pentru blândețe, adevăr, iertare și înțelepciunea de a lupta cu problema, nu unul cu altul."
   },
   {
     "id": 9,
@@ -265,12 +317,19 @@
       "O călătorie",
       "O pace mai adâncă"
     ],
-    "action": "Priviți cerul câteva minute, chiar dacă nu vedeți meteori, și spuneți o rugăciune scurtă unul pentru altul.",
+    "action": "Alege un mod prin care poți susține speranța celuilalt fără să promiți ce nu știi.",
     "prayer": "Ce speranță vrem să punem în mâna lui Dumnezeu?",
     "source": {
       "name": "NASA — The Story Behind Apollo 8’s Earthrise Photo",
       "url": "https://science.nasa.gov/resource/the-story-behind-apollo-8s-famous-earthrise-photo/"
-    }
+    },
+    "understoodTitle": "Speranța ta pe care vreau s-o port cu grijă",
+    "understoodHelp": "Păstrează o speranță fără să o transformi imediat într-un plan sau într-o garanție.",
+    "understoodPlaceholder": "Vreau să port cu grijă speranța ta pentru…",
+    "actionTitle": "Cum îi fac loc fără să o forțez",
+    "actionLabel": "Felul în care o susțin",
+    "actionPlaceholder": "Pot face loc acestei speranțe prin…",
+    "prayerHint": "Poate pentru viitor, pentru călăuzire, pentru pace și pentru încrederea de a lăsa lucrurile în mâna lui Dumnezeu."
   },
   {
     "id": 10,
@@ -297,12 +356,19 @@
       "Rugăciune",
       "Consecvență"
     ],
-    "action": "Fă astăzi un gest ales din „limba” celuilalt, nu din reflexul tău.",
+    "action": "Alege un gest din răspunsul celuilalt, nu din reflexul tău.",
     "prayer": "Cum vrem să-I cerem lui Dumnezeu să ne învețe să iubim mai atent?",
     "source": {
       "name": "Perkins School for the Blind — Anne Sullivan",
       "url": "https://www.perkins.org/anne-sullivan/"
-    }
+    },
+    "understoodTitle": "Limba în care inima ta primește iubirea",
+    "understoodHelp": "Păstrează gestul care ajunge cu adevărat la celălalt și nu-l confunda cu ceea ce ți-ar plăcea ție să primești.",
+    "understoodPlaceholder": "Mă simți aproape mai ales atunci când eu…",
+    "actionTitle": "Astăzi traduc iubirea în limba ta",
+    "actionLabel": "Gestul ales",
+    "actionPlaceholder": "Astăzi vreau să te iubesc prin…",
+    "prayerHint": "Poate pentru atenție, pentru înțelepciunea de a iubi prin fapte și pentru o inimă dispusă să învețe."
   },
   {
     "id": 11,
@@ -328,12 +394,19 @@
       "Un gest mic zilnic",
       "O conversație săptămânală"
     ],
-    "action": "Alegeți doar două obiceiuri și stabiliți când le veți practica prima dată după întoarcere.",
+    "action": "Alegeți un singur obicei și un moment real pentru el.",
     "prayer": "Ce vrem să păstrăm și să protejăm în următoarea perioadă?",
     "source": {
       "name": "Fred Rogers Institute — Joanne Rogers",
       "url": "https://www.fredrogersinstitute.org/resources/icons-of-womens-history-in-the-neighborhood"
-    }
+    },
+    "understoodTitle": "Ce vrei să luăm cu noi din aceste zile",
+    "understoodHelp": "Păstrează obiceiul sau starea pe care celălalt nu vrea să o piardă când revine rutina.",
+    "understoodPlaceholder": "Din vacanța aceasta, tu ai vrea să păstrăm…",
+    "actionTitle": "Un lucru pe care îl așezăm în calendar",
+    "actionLabel": "Primul moment concret",
+    "actionPlaceholder": "Vom începe prin…",
+    "prayerHint": "Poate pentru recunoștință, pentru continuitate și pentru ca apropierea să nu rămână doar într-un sezon frumos."
   },
   {
     "id": 12,
@@ -359,12 +432,19 @@
       "Mai puțină defensivă",
       "Mai multă grijă practică"
     ],
-    "action": "Spune-i celuilalt o schimbare reală pe care ai observat-o, fără exagerare și fără lingușire.",
+    "action": "Alege un lucru simplu care ajută rodul acesta să continue.",
     "prayer": "Pentru ce rod Îi mulțumim lui Dumnezeu și unde avem încă nevoie de ajutor?",
     "source": {
       "name": "Joni and Friends — The Love of Jesus Holds Our Marriage Together",
       "url": "https://joniandfriends.org/posts-by-joni/the-love-of-jesus-holds-our-marriage-together/"
-    }
+    },
+    "understoodTitle": "Rodul mic pe care îl văd în tine",
+    "understoodHelp": "Numește o schimbare reală, chiar dacă este discretă.",
+    "understoodPlaceholder": "În tine am observat că a crescut…",
+    "actionTitle": "Cum protejăm ceea ce a început să crească",
+    "actionLabel": "Ce voi proteja",
+    "actionPlaceholder": "Vreau să protejez această schimbare prin…",
+    "prayerHint": "Poate pentru rodul deja apărut, pentru putere în slăbiciune și pentru ajutor acolo unde încă este greu."
   },
   {
     "id": 13,
@@ -391,12 +471,19 @@
       "Blândețe",
       "Adevăr"
     ],
-    "action": "Scrie o aplicare atât de concretă încât mâine să puteți spune dacă s-a întâmplat sau nu.",
+    "action": "Scrie ceva atât de concret încât mâine să puteți vedea dacă s-a întâmplat.",
     "prayer": "Ce adevăr vrem să ne ajute Dumnezeu să trăim, nu doar să-l admirăm?",
     "source": {
       "name": "Crossway — The Story of Corrie ten Boom",
       "url": "https://www.crossway.org/press-room/the-story-of-corrie-ten-boom-tpb/"
-    }
+    },
+    "understoodTitle": "Adevărul pe care vreau să-l văd trăit între noi",
+    "understoodHelp": "Păstrează aplicarea care ar schimba tonul, gesturile sau alegerile voastre în săptămâna următoare.",
+    "understoodPlaceholder": "Săptămâna aceasta vreau să văd în noi…",
+    "actionTitle": "Primul pas după ce închidem pagina",
+    "actionLabel": "Aplicarea mea",
+    "actionPlaceholder": "Mâine voi trăi acest adevăr prin…",
+    "prayerHint": "Poate pentru puterea de a ierta, pentru ascultarea Cuvântului și pentru curajul de a-l transforma în faptă."
   },
   {
     "id": 14,
@@ -423,11 +510,18 @@
       "Rugăciune",
       "O seară planificată"
     ],
-    "action": "Alegeți un singur obicei pentru următoarele 30 de zile și o dată la care veți discuta sincer dacă v-a ajutat.",
+    "action": "Alegeți un singur obicei realist, nu un program perfect.",
     "prayer": "Pentru ce vrem să-I cerem lui Dumnezeu călăuzire în următoarele 30 de zile?",
     "source": {
       "name": "Fred Rogers Institute — About Fred and Joanne Rogers",
       "url": "https://www.fredrogersinstitute.org/about-fred"
-    }
+    },
+    "understoodTitle": "Cum pot fi aproape în zilele tale obișnuite",
+    "understoodHelp": "Păstrează forma de sprijin de care celălalt are nevoie când programul devine plin.",
+    "understoodPlaceholder": "În zilele de lucru, pentru tine contează să…",
+    "actionTitle": "Obiceiul nostru pentru următoarele treizeci de zile",
+    "actionLabel": "Obiceiul ales",
+    "actionPlaceholder": "În următoarele treizeci de zile vom…",
+    "prayerHint": "Poate pentru muncă, odihnă, echilibru, călăuzire și o iubire care rămâne prezentă în viața obișnuită."
   }
 ]
