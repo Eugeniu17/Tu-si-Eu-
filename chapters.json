@@ -15,25 +15,29 @@
     ],
     "wisdom": "Apropierea nu se păstrează prin mesaje multe, ci prin acele detalii adevărate care îi spun celuilalt: „Te las să intri în ziua mea.”",
     "scripture": "„Purtați-vă sarcinile unii altora și veți împlini astfel legea lui Hristos.” — Galateni 6:2",
-    "conversation": "Care este un lucru mic din ziua ta pe care ai vrea să-l cunosc mai bine, ca să simți că sunt cu adevărat aproape?",
+    "conversation": "Dacă aș fi fost astăzi lângă tine, ce moment simplu din zi ai fi vrut cel mai mult să-l trăim împreună?",
     "prompts": [
-      "Ce te-a obosit astăzi?",
-      "Ce te-a făcut să zâmbești?",
-      "Ce ai fi vrut să vezi împreună cu mine?"
+      "O plimbare fără grabă",
+      "O masă pregătită împreună",
+      "Un apus sau un răsărit",
+      "O conversație înainte de somn"
     ],
-    "action": "Alege un mod simplu de a rămâne aproape: un mesaj vocal, o întrebare sau o amintire împărtășită.",
+    "action": "Apropierea se construiește și din lucruri obișnuite: să gătim, să mergem după pâine, să bem ceva cald sau să ne plimbăm fără destinație.",
     "prayer": "Pentru ce vrem să ne rugăm împreună în seara aceasta?",
     "source": {
       "name": "Library of Congress — Ralph Emerson Jones Collection",
       "url": "https://www.loc.gov/collections/veterans-history-project-collection/serving-our-voices/world-war-i/world-war-i-rememebered-100-years-later/wwi-remembered-correspondence-and-photographs/item/afc2001001.05651/"
     },
-    "understoodTitle": "Ce mi-ar plăcea să păstrez din ziua ta",
-    "understoodHelp": "Scrie detaliul prin care ai simțit că ai intrat puțin mai mult în lumea celuilalt.",
-    "understoodPlaceholder": "Astăzi am descoperit în ziua ta…",
-    "actionTitle": "Un detaliu pe care vreau să nu-l las să treacă",
-    "actionLabel": "Cum voi rămâne aproape",
-    "actionPlaceholder": "Astăzi vreau să intru în ziua ta prin…",
-    "prayerHint": "Poate pentru apropiere în distanță, pentru sinceritate sau pentru bucuria lucrurilor mici."
+    "understoodTitle": "Astăzi m-am gândit la tine când…",
+    "understoodHelp": "Nu trebuie să fie ceva mare. Povestește clipa în care ai simțit dor, bucurie sau dorința de a o avea pe cealaltă persoană aproape.",
+    "understoodPlaceholder": "Astăzi m-am gândit la tine când…",
+    "actionTitle": "Un lucru simplu pe care abia aștept să-l facem",
+    "actionLabel": "Lucrul la care visez",
+    "actionPlaceholder": "Abia aștept ziua în care vom…",
+    "prayerHint": "Poate pentru apropiere în distanță, pentru bucuria lucrurilor mici sau pentru ca dorul să vă facă mai atenți, nu mai reci.",
+    "conversationEyebrow": "DIN ZIUA TA, SPRE MINE",
+    "understoodEyebrow": "UN DETALIU PE CARE VREAU SĂ ȚI-L DĂRUIESC",
+    "actionEyebrow": "CÂND VOM FI DIN NOU ÎMPREUNĂ"
   },
   {
     "id": 2,
@@ -51,26 +55,29 @@
     ],
     "wisdom": "O relație bună nu ne păstrează doar amintirile; ea cultivă în noi lucruri care vor continua să dea rod.",
     "scripture": "„Orice mlădiță care aduce rod, El o curăță, ca să aducă și mai mult rod.” — Ioan 15:2",
-    "conversation": "Ce ai vrea să crească în tine datorită relației noastre — nu în ea, ci în tine?",
+    "conversation": "Dacă într-o zi am veni împreună la Val Rahmeh, ce ai vrea să simțim și să ne amintim din acea zi?",
     "prompts": [
-      "Mai multă răbdare",
-      "Mai mult curaj",
-      "Mai multă blândețe",
-      "Mai multă disciplină spirituală"
+      "Să mergem încet printre alei",
+      "Să stăm în liniște",
+      "Să vorbim despre viitor",
+      "Să facem o amintire numai a noastră"
     ],
-    "action": "Nu promite ceva mare. Numește un lucru mic pe care îl poți îngriji astăzi.",
+    "action": "Cele mai frumoase lucruri nu cresc într-o singură zi. Alege ceva ce merită îngrijit în relația voastră luni și ani.",
     "prayer": "Ce vrem să-I cerem lui Dumnezeu să crească în noi?",
     "source": {
       "name": "Jardin botanique Val Rahmeh-Menton — L’histoire du jardin",
       "url": "https://www.jardinbotaniquevalrahmehmenton.fr/fr/l-histoire-du-jardin"
     },
-    "understoodTitle": "Ce vreau să rămână viu din ceea ce mi-ai spus",
-    "understoodHelp": "Păstrează o dorință, o valoare sau un lucru pe care celălalt vrea să-l cultive în timp.",
-    "understoodPlaceholder": "Vreau să țin minte că tu îți dorești…",
-    "actionTitle": "Ce aleg să cultiv între noi",
-    "actionLabel": "Lucrul pe care îl cultiv",
-    "actionPlaceholder": "Astăzi voi cultiva…",
-    "prayerHint": "Poate pentru o iubire statornică, pentru răbdare, pentru familie sau pentru ceva frumos care să rămână peste ani."
+    "understoodTitle": "Datorită iubirii noastre, mi-aș dori să devin…",
+    "understoodHelp": "Scrie despre omul care ai vrea să devii în timp: mai răbdător, mai curajos, mai blând, mai aproape de Dumnezeu.",
+    "understoodPlaceholder": "Datorită iubirii noastre, mi-aș dori să devin…",
+    "actionTitle": "Ce aș vrea să construim încet, fără grabă",
+    "actionLabel": "Lucrul pe care vreau să-l construim",
+    "actionPlaceholder": "Încet, împreună, aș vrea să construim…",
+    "prayerHint": "Poate pentru răbdare, pentru o iubire care rodește, pentru viitoarea familie sau pentru ceva bun care să rămână după voi.",
+    "conversationEyebrow": "DACĂ NE-AM ÎNTOARCE AICI ÎMPREUNĂ",
+    "understoodEyebrow": "CE VREAU SĂ CREASCĂ ÎN MINE",
+    "actionEyebrow": "O SĂMÂNȚĂ PENTRU VIITOR"
   },
   {
     "id": 3,
@@ -89,21 +96,29 @@
     ],
     "wisdom": "Uneori omul de lângă noi nu are nevoie să fie reparat repede, ci să fie cunoscut cu suficientă răbdare încât să găsim limba în care inima lui poate răspunde.",
     "scripture": "„Fiecare să fie grabnic la ascultare, încet la vorbire.” — Iacov 1:19",
-    "conversation": "Există ceva în inima ta pe care încă nu l-am descoperit și ai vrea, într-o zi, să-l cunosc?",
-    "prompts": [],
-    "action": "Scrie un gest simplu prin care vei arăta că nu ai uitat ceea ce ai aflat astăzi. Poate fi o întrebare mai atentă, mai multă răbdare sau un moment în care alegi să asculți fără să te aperi.",
+    "conversation": "Dacă am avea toată seara numai pentru noi, ce mi-ai povesti despre tine și încă nu am avut ocazia să aflu?",
+    "prompts": [
+      "Un vis pe care îl porți în tăcere",
+      "O teamă despre care vorbești rar",
+      "Ceva ce te face cu adevărat fericit(ă)",
+      "Felul în care îți imaginezi viitorul"
+    ],
+    "action": "Închide ochii pentru câteva clipe și imaginează-ți că distanța a dispărut. Unde mergeți, ce vedeți și despre ce vorbiți?",
     "prayer": "Pentru ce vrem să vorbim cu Dumnezeu după povestea de astăzi?",
     "source": {
       "name": "Perkins School for the Blind — Helen Keller and Anne Sullivan",
       "url": "https://www.perkins.org/helen-keller/"
     },
-    "understoodTitle": "Un lucru pe care îl păstrez din răspunsul tău",
-    "understoodHelp": "Nu rezuma tot ce ai auzit. Păstrează o singură idee despre inima, teama, dorința sau visul celuilalt.",
-    "understoodPlaceholder": "Din ceea ce mi-ai spus, vreau să țin minte că…",
-    "actionTitle": "Cum vreau să am grijă de ceea ce mi-ai încredințat",
-    "actionLabel": "Gestul pe care îl aleg",
-    "actionPlaceholder": "Vreau să am grijă de ceea ce mi-ai spus prin…",
-    "prayerHint": "Poate pentru răbdare, pentru un om greu de înțeles, pentru curajul de a ne deschide sau pentru înțelepciunea de a nu renunța prea repede."
+    "understoodTitle": "Ceea ce aș vrea să descoperi despre mine, în timp, este…",
+    "understoodHelp": "Nu căuta un secret spectaculos. Poate fi simplitatea ta, dorința de succes, felul în care iubești sau ceea ce speri să devii.",
+    "understoodPlaceholder": "Ceea ce aș vrea să descoperi despre mine este…",
+    "actionTitle": "Cum mi-aș imagina o seară împreună în Menton",
+    "actionLabel": "Seara pe care mi-o imaginez",
+    "actionPlaceholder": "Dacă aș fi lângă tine acum, cred că am…",
+    "prayerHint": "Poate pentru curajul de a vă deschide, pentru răbdare, pentru oamenii greu de înțeles sau pentru înțelepciunea de a nu renunța prea repede.",
+    "conversationEyebrow": "SPUNE-MI CEVA CE ÎNCĂ NU ȘTIU",
+    "understoodEyebrow": "O PARTE DIN INIMA MEA",
+    "actionEyebrow": "DACĂ AȘ FI LÂNGĂ TINE ACUM"
   },
   {
     "id": 4,
@@ -121,26 +136,29 @@
     ],
     "wisdom": "Un gest mic de grijă poate deveni începutul unui lucru mult mai mare atunci când este primit cu recunoștință și întors cu inimă întreagă.",
     "scripture": "„Iubiți-vă unii pe alții cu o dragoste frățească. În cinste, fiecare să dea întâietate altuia.” — Romani 12:10",
-    "conversation": "Ce ai făcut pentru mine în ultima vreme și poate nu ți-am arătat suficient că am observat?",
+    "conversation": "Care este un lucru pe care l-ai primit în ultima vreme — de la mine, de la familie sau de la Dumnezeu — și ai vrea să nu-l consideri ceva obișnuit?",
     "prompts": [
-      "O grijă practică",
-      "O rugăciune",
-      "Răbdare într-un moment greu",
-      "Felul în care m-ai încurajat"
+      "Un mesaj venit la timp",
+      "Grija cuiva",
+      "O zi liniștită",
+      "Un răspuns la rugăciune"
     ],
-    "action": "Alege un mod concret de a mulțumi, fără formule generale.",
+    "action": "Alege un gest mic prin care recunoștința să nu rămână doar un gând frumos.",
     "prayer": "Pentru ce dar primit prin celălalt Îi mulțumim lui Dumnezeu?",
     "source": {
       "name": "Chapelle Matisse — Histoire de la chapelle",
       "url": "https://www.chapellematisse.com/FR/chapelle.php"
     },
-    "understoodTitle": "Gestul tău pe care vreau să-l văd mai bine",
-    "understoodHelp": "Numește lucrul concret pe care l-ai observat și de ce a avut valoare pentru tine.",
-    "understoodPlaceholder": "Am observat și vreau să țin minte…",
-    "actionTitle": "Recunoștința mea devine faptă",
-    "actionLabel": "Cum voi arăta recunoștință",
-    "actionPlaceholder": "Îți voi arăta că am observat prin…",
-    "prayerHint": "Poate pentru recunoștință, pentru oamenii care ne-au îngrijit sau pentru o inimă atentă la binele primit."
+    "understoodTitle": "Un lucru pentru care inima mea este recunoscătoare",
+    "understoodHelp": "Povestește concret. Uneori recunoștința devine mai adevărată când numim exact gestul, omul sau clipa.",
+    "understoodPlaceholder": "Astăzi sunt recunoscător/recunoscătoare pentru…",
+    "actionTitle": "Cum aș vrea să arăt că am observat",
+    "actionLabel": "Gestul meu",
+    "actionPlaceholder": "Vreau să arăt că am observat prin…",
+    "prayerHint": "Poate pentru recunoștință, pentru oamenii care v-au îngrijit sau pentru ochi care observă binele primit.",
+    "conversationEyebrow": "UN BINE PE CARE POATE L-AM TRECUT CU VEDEREA",
+    "understoodEyebrow": "ASTĂZI VREAU SĂ SPUN MULȚUMESC",
+    "actionEyebrow": "RECUNOȘTINȚA DEVINE VIAȚĂ"
   },
   {
     "id": 5,
@@ -158,26 +176,29 @@
     ],
     "wisdom": "Convingerea care vine de la Dumnezeu nu ne face mai aspri cu oamenii, ci mai disponibili să le purtăm povara.",
     "scripture": "„Oare acesta este postul plăcut Mie?... Împarte-ți pâinea cu cel flămând.” — Isaia 58:5–7",
-    "conversation": "Cum ești fizic și sufletește astăzi și ce formă de post sau rugăciune te-ar ajuta cu adevărat?",
+    "conversation": "Ce se întâmplă în tine în perioada aceasta și de ce fel de apropiere ai nevoie din partea mea?",
     "prompts": [
-      "Am energie și vreau să postesc",
-      "Am nevoie de o formă mai blândă",
-      "Am nevoie de susținere",
-      "Vreau mai ales timp de rugăciune"
+      "Să mă asculți fără să repari",
+      "Să-mi dai puțin spațiu",
+      "Să mă încurajezi",
+      "Să rămâi aproape în liniște"
     ],
-    "action": "Alege o formă de sprijin care nu controlează și nu compară.",
+    "action": "Nu căuta o soluție perfectă. Descrie felul de prezență care te-ar ajuta să nu te simți singur.",
     "prayer": "Scrieți liber motivele voastre pentru postul și rugăciunea de astăzi.",
     "source": {
       "name": "U.S. Army — Desmond T. Doss Medal of Honor",
       "url": "https://achh.army.mil/regiment/moh-bios-doss/"
     },
-    "understoodTitle": "Ce vreau să respect în conștiința ta",
-    "understoodHelp": "Păstrează ceea ce ai înțeles despre limitele, energia și felul în care celălalt Îl caută pe Dumnezeu.",
-    "understoodPlaceholder": "Astăzi vreau să respect faptul că…",
-    "actionTitle": "Cum te pot susține fără presiune",
-    "actionLabel": "Sprijinul meu concret",
-    "actionPlaceholder": "Astăzi te voi susține prin…",
-    "prayerHint": "Poate pentru putere, sănătate, libertate de conștiință și o apropiere sinceră de Dumnezeu."
+    "understoodTitle": "Când par bine, uneori în inima mea este…",
+    "understoodHelp": "Poți scrie despre oboseală, presiune, teamă, dor sau despre lucrul pe care îl porți singur fără să vrei.",
+    "understoodPlaceholder": "Când par bine, uneori în mine este…",
+    "actionTitle": "Cum mi-ar plăcea să fim unul pentru altul în zilele grele",
+    "actionLabel": "Felul de apropiere de care am nevoie",
+    "actionPlaceholder": "Într-o zi grea, mi-ar face bine să…",
+    "prayerHint": "Poate pentru putere, sănătate, libertate de conștiință și o apropiere sinceră de Dumnezeu.",
+    "conversationEyebrow": "CUM EȘTI CU ADEVĂRAT ASTĂZI?",
+    "understoodEyebrow": "CE NU SPUN ÎNTOTDEAUNA",
+    "actionEyebrow": "FĂRĂ PRESIUNE, DAR APROAPE"
   },
   {
     "id": 6,
@@ -195,27 +216,29 @@
     ],
     "wisdom": "Când doi oameni privesc în aceeași direcție spre Dumnezeu, dragostea lor poate deveni sprijin nu doar pentru ei, ci și pentru alții.",
     "scripture": "„Bisericile din Asia vă trimit sănătate. Acuila și Priscila... vă trimit multă sănătate în Domnul.” — 1 Corinteni 16:19",
-    "conversation": "În ce fel ai vrea ca relația noastră să-I slujească lui Dumnezeu și să facă bine altor oameni?",
+    "conversation": "Dacă Dumnezeu ne-ar încredința un lucru bun de făcut împreună, ce ți-ar plăcea să fie?",
     "prompts": [
-      "Ospitalitate",
-      "Rugăciune pentru alții",
-      "Slujire în biserică",
-      "Sprijin practic",
-      "Generozitate"
+      "Să ajutăm o familie",
+      "Să primim oameni în casa noastră",
+      "Să călătorim și să spunem povești",
+      "Să susținem o lucrare creștină"
     ],
-    "action": "Alegeți un lucru mic pe care îl puteți face împreună, chiar și de la distanță.",
+    "action": "Poate fi ceva foarte simplu: să gătiți pentru cineva, să ajutați, să învățați sau să creați ceva împreună.",
     "prayer": "Ce direcție comună vrem să-I încredințăm lui Dumnezeu?",
     "source": {
       "name": "Billy Graham Evangelistic Association — Marriage Encouragement From Ruth Bell Graham",
       "url": "https://billygraham.org/articles/marriage-encouragement-from-ruth-bell-graham"
     },
-    "understoodTitle": "Ce admir în felul în care îți trăiești credința",
-    "understoodHelp": "Păstrează un lucru real, nu o laudă generală.",
-    "understoodPlaceholder": "Astăzi am văzut în tine…",
-    "actionTitle": "Cum putem lucra umăr la umăr",
-    "actionLabel": "Contribuția mea",
-    "actionPlaceholder": "Eu pot aduce în echipa noastră…",
-    "prayerHint": "Poate pentru chemarea fiecăruia, pentru unitate, pentru biserică sau pentru a sluji fără să ne pierdem unul pe altul."
+    "understoodTitle": "În echipa noastră, cred că eu pot aduce…",
+    "understoodHelp": "Scrie despre o calitate, o abilitate sau o dorință reală pe care o poți pune în slujba familiei voastre.",
+    "understoodPlaceholder": "În echipa noastră, eu pot aduce…",
+    "actionTitle": "Un proiect mic pe care mi-ar plăcea să-l facem împreună",
+    "actionLabel": "Ideea noastră",
+    "actionPlaceholder": "Mi-ar plăcea ca într-o zi să…",
+    "prayerHint": "Poate pentru chemarea fiecăruia, pentru unitate, pentru biserică sau pentru a face bine fără să vă pierdeți unul pe altul.",
+    "conversationEyebrow": "CE AM PUTEA CONSTRUI ÎMPREUNĂ?",
+    "understoodEyebrow": "DARUL PE CARE ÎL ADUC EU",
+    "actionEyebrow": "UMĂR LA UMĂR"
   },
   {
     "id": 7,
@@ -233,27 +256,29 @@
     ],
     "wisdom": "Iubirea nu micșorează lumea celuilalt ca să ne facă nouă loc; ea îl ajută să-și trăiască mai deplin chemarea.",
     "scripture": "„Doi sunt mai buni decât unul... dacă se întâmplă să cadă, se ridică unul pe altul.” — Eclesiastul 4:9–10",
-    "conversation": "Ce parte din chemarea, munca sau visurile tale ai nevoie să simți că eu o respect și o susțin?",
+    "conversation": "Care este un lucru pe care speri să nu-l pierdem niciodată, chiar și atunci când vom trece prin perioade grele?",
     "prompts": [
-      "Munca mea",
-      "Slujirea mea",
-      "Odihna mea",
-      "Un vis personal",
-      "Relația mea cu Dumnezeu"
+      "Prietenia dintre noi",
+      "Umorul și joaca",
+      "Sinceritatea",
+      "Dorința de a ne cuceri din nou"
     ],
-    "action": "Alege un gest mic, repetabil, nu o promisiune spectaculoasă.",
+    "action": "Alege un obicei mic care poate proteja iubirea în viața reală.",
     "prayer": "Pentru ce chemare sau responsabilitate a celuilalt vrem să ne rugăm?",
     "source": {
       "name": "C.S. Lewis Official Site — Mere Friendship: Lewis on a Great Joy",
       "url": "https://www.cslewis.com/mere-friendship-lewis-on-a-great-joy/"
     },
-    "understoodTitle": "Ce nu vreau să pierdem peste douăzeci de ani",
-    "understoodHelp": "Păstrează lucrul din răspunsul celuilalt care descrie iubirea la care visează.",
-    "understoodPlaceholder": "Peste ani, vreau să-mi amintesc că pentru tine contează…",
-    "actionTitle": "Un obicei care ne ajută să ne alegem din nou",
-    "actionLabel": "Obiceiul pe care îl aleg",
-    "actionPlaceholder": "Vreau să continuăm să ne alegem prin…",
-    "prayerHint": "Poate pentru fidelitate, prietenie, bucurie și o iubire mai mare decât orgoliul."
+    "understoodTitle": "Cum îmi imaginez o seară obișnuită cu tine peste douăzeci de ani",
+    "understoodHelp": "Nu descrie o vacanță perfectă. Imaginează-ți o zi normală: casa, masa, oboseala, conversația, liniștea și felul în care vă alegeți din nou.",
+    "understoodPlaceholder": "Peste douăzeci de ani, într-o seară obișnuită, ne văd…",
+    "actionTitle": "Ce aș vrea să facem chiar și când viața va fi aglomerată",
+    "actionLabel": "Obiceiul nostru",
+    "actionPlaceholder": "Chiar și în perioadele aglomerate, aș vrea să…",
+    "prayerHint": "Poate pentru fidelitate, prietenie, bucurie și o iubire mai mare decât orgoliul.",
+    "conversationEyebrow": "CUM VISEZI SĂ NE IUBIM PESTE ANI?",
+    "understoodEyebrow": "O IMAGINE DIN VIITORUL NOSTRU",
+    "actionEyebrow": "UN OBICEI CARE NE ȚINE APROAPE"
   },
   {
     "id": 8,
@@ -271,26 +296,29 @@
     ],
     "wisdom": "Într-un conflict, succesul nu este să-l învingi pe celălalt, ci să păstrați un drum pe care să vă puteți întoarce unul spre altul.",
     "scripture": "„Un răspuns blând potolește mânia.” — Proverbe 15:1",
-    "conversation": "Ce semn sau ce frază ai vrea să folosim când simțim că o conversație începe să ne rănească?",
+    "conversation": "Cum ai vrea să te iubesc într-o zi în care suntem supărați unul pe altul?",
     "prompts": [
-      "Hai să facem o pauză",
-      "Sunt cu tine, chiar dacă nu sunt de acord",
-      "Ajută-mă să înțeleg",
-      "Putem reîncepe mai blând?"
+      "Să nu ridic vocea",
+      "Să nu plec fără să explic",
+      "Să te ascult până la capăt",
+      "Să ne oprim și să reluăm cu blândețe"
     ],
-    "action": "Scrie un acord simplu pe care îl puteți folosi când apare tensiunea.",
+    "action": "Alegeți o propoziție scurtă care vă readuce de aceeași parte.",
     "prayer": "Unde avem nevoie de blândețe, iertare sau înțelepciune?",
     "source": {
       "name": "The Gottman Institute — R is for Repair",
       "url": "https://www.gottman.com/blog/r-is-for-repair/"
     },
-    "understoodTitle": "Ce ai nevoie să nu uit când apare o problemă",
-    "understoodHelp": "Păstrează nevoia din spatele cuvintelor, nu doar poziția dintr-o discuție.",
-    "understoodPlaceholder": "Într-un conflict, vreau să nu uit că tu ai nevoie de…",
-    "actionTitle": "Cum rămânem de aceeași parte",
-    "actionLabel": "Acordul nostru",
-    "actionPlaceholder": "Când nu vom fi de acord, vreau să…",
-    "prayerHint": "Poate pentru blândețe, adevăr, iertare și înțelepciunea de a lupta cu problema, nu unul cu altul."
+    "understoodTitle": "Când mă supăr, de multe ori am nevoie de…",
+    "understoodHelp": "Încearcă să numești nevoia din spatele reacției: siguranță, timp, respect, ascultare sau reasigurare.",
+    "understoodPlaceholder": "Când mă supăr, în spatele cuvintelor mele este adesea nevoia de…",
+    "actionTitle": "Fraza pe care aș vrea să ne-o amintim într-un conflict",
+    "actionLabel": "Fraza noastră",
+    "actionPlaceholder": "Când ne va fi greu, vreau să ne spunem…",
+    "prayerHint": "Poate pentru blândețe, adevăr, iertare și înțelepciunea de a lupta cu problema, nu unul cu altul.",
+    "conversationEyebrow": "CÂND NU VOM VEDEA LUCRURILE LA FEL",
+    "understoodEyebrow": "CE SE ASCUNDE ÎN SPATELE SUPĂRĂRII MELE",
+    "actionEyebrow": "NOI ÎMPOTRIVA PROBLEMEI"
   },
   {
     "id": 9,
@@ -308,28 +336,29 @@
     ],
     "wisdom": "Uneori distanța nu micșorează ceea ce iubim; ne ajută să vedem mai limpede cât de prețios este.",
     "scripture": "„Încredințează-ți soarta în mâna Domnului, încrede-te în El și El va lucra.” — Psalmul 37:5",
-    "conversation": "Care este o speranță pentru noi pe care vrei s-o așezi înaintea lui Dumnezeu, fără să-mi ceri o garanție astăzi?",
+    "conversation": "Dacă în seara aceasta am privi amândoi același cer, ce vis pentru noi ai așeza în tăcere înaintea lui Dumnezeu?",
     "prompts": [
-      "Un caracter comun",
-      "O familie sănătoasă",
-      "O slujire împreună",
-      "Un loc al nostru",
-      "O călătorie",
-      "O pace mai adâncă"
+      "O călătorie împreună",
+      "Casa noastră",
+      "O familie unită",
+      "Un drum pe care încă nu-l înțelegem"
     ],
-    "action": "Alege un mod prin care poți susține speranța celuilalt fără să promiți ce nu știi.",
+    "action": "Imaginează-ți o zi fără grabă, fără obligații și fără telefoane. Cum începe și cum se termină?",
     "prayer": "Ce speranță vrem să punem în mâna lui Dumnezeu?",
     "source": {
       "name": "NASA — The Story Behind Apollo 8’s Earthrise Photo",
       "url": "https://science.nasa.gov/resource/the-story-behind-apollo-8s-famous-earthrise-photo/"
     },
-    "understoodTitle": "Speranța ta pe care vreau s-o port cu grijă",
-    "understoodHelp": "Păstrează o speranță fără să o transformi imediat într-un plan sau într-o garanție.",
-    "understoodPlaceholder": "Vreau să port cu grijă speranța ta pentru…",
-    "actionTitle": "Cum îi fac loc fără să o forțez",
-    "actionLabel": "Felul în care o susțin",
-    "actionPlaceholder": "Pot face loc acestei speranțe prin…",
-    "prayerHint": "Poate pentru viitor, pentru călăuzire, pentru pace și pentru încrederea de a lăsa lucrurile în mâna lui Dumnezeu."
+    "understoodTitle": "La ce visez în ultima vreme când mă gândesc la noi",
+    "understoodHelp": "Poate fi un vis mare sau ceva foarte simplu: să mergeți la mare, să gătiți împreună, să vă rugați sau să aveți o casă liniștită.",
+    "understoodPlaceholder": "În ultima vreme, când mă gândesc la noi, visez la…",
+    "actionTitle": "Cum am petrece o zi numai a noastră",
+    "actionLabel": "Ziua pe care mi-o imaginez",
+    "actionPlaceholder": "Ziua noastră ar începe cu… și s-ar termina cu…",
+    "prayerHint": "Poate pentru viitor, călăuzire, pace și încrederea de a lăsa visurile în mâna lui Dumnezeu.",
+    "conversationEyebrow": "SUB ACELAȘI CER",
+    "understoodEyebrow": "UN VIS PE CARE ÎL PORT ÎN MINE",
+    "actionEyebrow": "DACĂ DISTANȚA AR DISPĂREA PENTRU O ZI"
   },
   {
     "id": 10,
@@ -347,28 +376,29 @@
     ],
     "wisdom": "Iubirea matură nu se mulțumește să spună „eu am vrut bine”; ea caută felul în care binele poate fi primit de celălalt.",
     "scripture": "„Copilașilor, să nu iubim cu vorba, nici cu limba, ci cu fapta și cu adevărul.” — 1 Ioan 3:18",
-    "conversation": "Ce gest al meu te face să te simți cel mai iubit(ă) și ce gest bine intenționat nu ajunge la fel de adânc?",
+    "conversation": "Care este gestul mic prin care te simți cel mai iubit(ă), chiar dacă altora li s-ar părea ceva obișnuit?",
     "prompts": [
-      "Timp fără telefon",
-      "Cuvinte concrete",
-      "Ajutor practic",
-      "Afecțiune",
-      "Rugăciune",
-      "Consecvență"
+      "Să-mi scrii fără motiv",
+      "Să mă asculți cu atenție",
+      "Să mă ajuți cu ceva concret",
+      "Să-mi oferi timp și tandrețe"
     ],
-    "action": "Alege un gest din răspunsul celuilalt, nu din reflexul tău.",
+    "action": "Nu promite perfecțiune. Alege un gest simplu pe care îl poți repeta.",
     "prayer": "Cum vrem să-I cerem lui Dumnezeu să ne învețe să iubim mai atent?",
     "source": {
       "name": "Perkins School for the Blind — Anne Sullivan",
       "url": "https://www.perkins.org/anne-sullivan/"
     },
-    "understoodTitle": "Limba în care inima ta primește iubirea",
-    "understoodHelp": "Păstrează gestul care ajunge cu adevărat la celălalt și nu-l confunda cu ceea ce ți-ar plăcea ție să primești.",
-    "understoodPlaceholder": "Mă simți aproape mai ales atunci când eu…",
-    "actionTitle": "Astăzi traduc iubirea în limba ta",
-    "actionLabel": "Gestul ales",
-    "actionPlaceholder": "Astăzi vreau să te iubesc prin…",
-    "prayerHint": "Poate pentru atenție, pentru înțelepciunea de a iubi prin fapte și pentru o inimă dispusă să învețe."
+    "understoodTitle": "Gestul prin care îmi vine cel mai natural să-ți arăt iubirea",
+    "understoodHelp": "Povestește cum oferi tu iubire, chiar dacă nu este întotdeauna aceeași formă în care celălalt o primește.",
+    "understoodPlaceholder": "Cel mai natural îți arăt că te iubesc atunci când…",
+    "actionTitle": "Ce aș vrea să fac mai des ca tu să te simți iubită/iubit",
+    "actionLabel": "Gestul pe care vreau să-l învăț",
+    "actionPlaceholder": "Aș vrea să învăț să te iubesc mai bine prin…",
+    "prayerHint": "Poate pentru atenție, pentru înțelepciunea de a iubi prin fapte și pentru o inimă dispusă să învețe.",
+    "conversationEyebrow": "CUM AJUNGE IUBIREA LA INIMA TA?",
+    "understoodEyebrow": "AȘA ȘTIU EU SĂ IUBESC",
+    "actionEyebrow": "UN GEST PENTRU TINE"
   },
   {
     "id": 11,
@@ -386,27 +416,29 @@
     ],
     "wisdom": "Unitatea nu înseamnă ca doi oameni să aibă aceeași voce, ci să învețe cum vocile lor diferite pot crea armonie.",
     "scripture": "„Cercetați toate lucrurile și păstrați ce este bun.” — 1 Tesaloniceni 5:21",
-    "conversation": "Care sunt două obiceiuri din aceste zile pe care vrei să le păstrăm când revine rutina?",
+    "conversation": "Dacă ai putea pune într-o cutie un singur moment din vacanța aceasta și să-l deschidem peste zece ani, pe care l-ai alege?",
     "prompts": [
-      "Un check-in sincer",
-      "Rugăciune împreună",
-      "Timp fără telefon",
-      "Un gest mic zilnic",
-      "O conversație săptămânală"
+      "Un răsărit la mare",
+      "Un apus",
+      "O plimbare prin oraș",
+      "O masă pregătită cu familia"
     ],
-    "action": "Alegeți un singur obicei și un moment real pentru el.",
+    "action": "Alege ceva real din orașul pe care îl cunoști: o plajă, o stradă, un colț, un gust sau un moment al zilei.",
     "prayer": "Ce vrem să păstrăm și să protejăm în următoarea perioadă?",
     "source": {
       "name": "Fred Rogers Institute — Joanne Rogers",
       "url": "https://www.fredrogersinstitute.org/resources/icons-of-womens-history-in-the-neighborhood"
     },
-    "understoodTitle": "Ce vrei să luăm cu noi din aceste zile",
-    "understoodHelp": "Păstrează obiceiul sau starea pe care celălalt nu vrea să o piardă când revine rutina.",
-    "understoodPlaceholder": "Din vacanța aceasta, tu ai vrea să păstrăm…",
-    "actionTitle": "Un lucru pe care îl așezăm în calendar",
-    "actionLabel": "Primul moment concret",
-    "actionPlaceholder": "Vom începe prin…",
-    "prayerHint": "Poate pentru recunoștință, pentru continuitate și pentru ca apropierea să nu rămână doar într-un sezon frumos."
+    "understoodTitle": "Ce cred că s-ar fi schimbat dacă eram lângă tine",
+    "understoodHelp": "Poate ai fi râs mai mult, ai fi mers mai departe, ai fi arătat un loc drag sau pur și simplu ați fi stat împreună în liniște.",
+    "understoodPlaceholder": "Dacă eram lângă tine în Menton, cred că…",
+    "actionTitle": "Un loc sau un moment pe care vreau să mi-l arăți într-o zi",
+    "actionLabel": "Lucrul pe care vreau să-l descoperim",
+    "actionPlaceholder": "Când vom veni împreună, vreau să-mi arăți…",
+    "prayerHint": "Poate pentru recunoștință, pentru întoarcerea cu pace și pentru ca frumusețea vacanței să rămână în inimă, nu doar în fotografii.",
+    "conversationEyebrow": "CE PĂSTRĂM DIN MENTON?",
+    "understoodEyebrow": "DACĂ AȘ FI FOST ACOLO CU TINE",
+    "actionEyebrow": "CE VREAU SĂ TRĂIM ÎMPREUNĂ"
   },
   {
     "id": 12,
@@ -424,27 +456,29 @@
     ],
     "wisdom": "Rodul nu apare întotdeauna ca o schimbare spectaculoasă; uneori este puterea de a rămâne sincer, blând și credincios încă o zi.",
     "scripture": "„Roada Duhului este dragostea, bucuria, pacea, îndelunga răbdare...” — Galateni 5:22",
-    "conversation": "Ce schimbare mică ai observat în mine sau în noi și ce ai vrea să continuăm să cultivăm?",
+    "conversation": "Care este o schimbare mică pe care ai observat-o în tine de când ne iubim și care îți aduce bucurie?",
     "prompts": [
-      "Mai multă sinceritate",
-      "Mai multă răbdare",
-      "Mai multă rugăciune",
-      "Mai puțină defensivă",
-      "Mai multă grijă practică"
+      "Vorbesc mai sincer",
+      "Am mai multă răbdare",
+      "Îndrăznesc să visez",
+      "Mă simt mai aproape de Dumnezeu"
     ],
-    "action": "Alege un lucru simplu care ajută rodul acesta să continue.",
+    "action": "Numește un obicei, o sinceritate sau o apropiere care merită continuată.",
     "prayer": "Pentru ce rod Îi mulțumim lui Dumnezeu și unde avem încă nevoie de ajutor?",
     "source": {
       "name": "Joni and Friends — The Love of Jesus Holds Our Marriage Together",
       "url": "https://joniandfriends.org/posts-by-joni/the-love-of-jesus-holds-our-marriage-together/"
     },
-    "understoodTitle": "Rodul mic pe care îl văd în tine",
-    "understoodHelp": "Numește o schimbare reală, chiar dacă este discretă.",
-    "understoodPlaceholder": "În tine am observat că a crescut…",
-    "actionTitle": "Cum protejăm ceea ce a început să crească",
-    "actionLabel": "Ce voi proteja",
-    "actionPlaceholder": "Vreau să protejez această schimbare prin…",
-    "prayerHint": "Poate pentru rodul deja apărut, pentru putere în slăbiciune și pentru ajutor acolo unde încă este greu."
+    "understoodTitle": "Datorită relației noastre, am început să înțeleg că…",
+    "understoodHelp": "Scrie despre o lecție reală, nu despre ce ar suna frumos.",
+    "understoodPlaceholder": "Datorită relației noastre, am început să înțeleg că…",
+    "actionTitle": "Un lucru bun care a început și nu vreau să se piardă",
+    "actionLabel": "Lucrul pe care îl protejez",
+    "actionPlaceholder": "Nu vreau să pierdem…",
+    "prayerHint": "Poate pentru rodul deja apărut, pentru putere în slăbiciune și pentru ajutor acolo unde încă este greu.",
+    "conversationEyebrow": "CE A CRESCUT DEJA ÎN NOI?",
+    "understoodEyebrow": "UN LUCRU PE CARE ÎL VĂD ALTFEL ACUM",
+    "actionEyebrow": "CE VREAU SĂ PROTEJEZ"
   },
   {
     "id": 13,
@@ -462,28 +496,29 @@
     ],
     "wisdom": "Cuvântul devine viu atunci când ne conduce spre un pas pe care singuri nu l-am fi putut face.",
     "scripture": "„Fiți împlinitori ai Cuvântului, nu numai ascultători.” — Iacov 1:22",
-    "conversation": "Ce adevăr din această duminică vrei să se vadă în felul în care mă iubești săptămâna aceasta?",
+    "conversation": "Ce adevăr despre Dumnezeu, despre tine sau despre noi ai vrea să nu uiți când începe din nou viața obișnuită?",
     "prompts": [
-      "Răbdare",
-      "Slujire",
-      "Iertare",
-      "Curaj",
-      "Blândețe",
-      "Adevăr"
+      "Nu trebuie să duc totul singur(ă)",
+      "Suntem de aceeași parte",
+      "Dumnezeu rămâne cu noi",
+      "Iubirea se vede în lucrurile mici"
     ],
-    "action": "Scrie ceva atât de concret încât mâine să puteți vedea dacă s-a întâmplat.",
+    "action": "Alege un adevăr și transformă-l într-un gest pentru următoarele zile.",
     "prayer": "Ce adevăr vrem să ne ajute Dumnezeu să trăim, nu doar să-l admirăm?",
     "source": {
       "name": "Crossway — The Story of Corrie ten Boom",
       "url": "https://www.crossway.org/press-room/the-story-of-corrie-ten-boom-tpb/"
     },
-    "understoodTitle": "Adevărul pe care vreau să-l văd trăit între noi",
-    "understoodHelp": "Păstrează aplicarea care ar schimba tonul, gesturile sau alegerile voastre în săptămâna următoare.",
-    "understoodPlaceholder": "Săptămâna aceasta vreau să văd în noi…",
-    "actionTitle": "Primul pas după ce închidem pagina",
-    "actionLabel": "Aplicarea mea",
-    "actionPlaceholder": "Mâine voi trăi acest adevăr prin…",
-    "prayerHint": "Poate pentru puterea de a ierta, pentru ascultarea Cuvântului și pentru curajul de a-l transforma în faptă."
+    "understoodTitle": "Cum îmi imaginez o duminică obișnuită în familia noastră",
+    "understoodHelp": "Imaginează-ți lucrurile simple: biserica, masa, odihna, oamenii pe care îi primiți și atmosfera din casă.",
+    "understoodPlaceholder": "În familia noastră, mi-aș dori ca duminicile să…",
+    "actionTitle": "Ce aș vrea să trăiesc, nu doar să spun",
+    "actionLabel": "Alegerea mea",
+    "actionPlaceholder": "Săptămâna aceasta vreau să…",
+    "prayerHint": "Poate pentru puterea de a ierta, pentru ascultarea Cuvântului și pentru curajul de a-l transforma în viață.",
+    "conversationEyebrow": "CE VREAU SĂ LUĂM CU NOI ÎN NOUA SĂPTĂMÂNĂ",
+    "understoodEyebrow": "O DUMINICĂ DIN VIITORUL NOSTRU",
+    "actionEyebrow": "UN LUCRU PE CARE ÎL DUC ÎN SĂPTĂMÂNĂ"
   },
   {
     "id": 14,
@@ -501,27 +536,28 @@
     ],
     "wisdom": "Dragostea pentru o viață se vede mai ales în felul în care doi oameni își fac loc unul altuia în zilele obișnuite.",
     "scripture": "„Tot ce faceți să fie făcut cu dragoste.” — 1 Corinteni 16:14",
-    "conversation": "Cum pot fi pentru tine un sprijin real în zilele de muncă, fără să te controlez și fără să dispar?",
+    "conversation": "Cum ai vrea să arate apropierea noastră într-o zi obișnuită de muncă, atunci când amândoi suntem obosiți și ocupați?",
     "prompts": [
-      "Un mesaj la momentul potrivit",
-      "Spațiu după muncă",
-      "O conversație scurtă și atentă",
-      "Ajutor practic",
-      "Rugăciune",
-      "O seară planificată"
+      "Un mesaj la mijlocul zilei",
+      "Câteva minute de vorbit seara",
+      "Să ne întrebăm sincer cum suntem",
+      "Să ne rugăm scurt împreună"
     ],
-    "action": "Alegeți un singur obicei realist, nu un program perfect.",
+    "action": "Alege ceva realist pentru următoarele treizeci de zile, nu o promisiune imposibilă.",
     "prayer": "Pentru ce vrem să-I cerem lui Dumnezeu călăuzire în următoarele 30 de zile?",
     "source": {
       "name": "Fred Rogers Institute — About Fred and Joanne Rogers",
       "url": "https://www.fredrogersinstitute.org/about-fred"
     },
-    "understoodTitle": "Cum pot fi aproape în zilele tale obișnuite",
-    "understoodHelp": "Păstrează forma de sprijin de care celălalt are nevoie când programul devine plin.",
-    "understoodPlaceholder": "În zilele de lucru, pentru tine contează să…",
-    "actionTitle": "Obiceiul nostru pentru următoarele treizeci de zile",
-    "actionLabel": "Obiceiul ales",
-    "actionPlaceholder": "În următoarele treizeci de zile vom…",
-    "prayerHint": "Poate pentru muncă, odihnă, echilibru, călăuzire și o iubire care rămâne prezentă în viața obișnuită."
+    "understoodTitle": "Un moment obișnuit din viața noastră pe care abia aștept să-l trăim",
+    "understoodHelp": "Poate fi să gătiți, să faceți cumpărături, să vă întoarceți de la muncă, să beți ceai sau să adormiți în aceeași casă.",
+    "understoodPlaceholder": "Abia aștept ziua în care vom…",
+    "actionTitle": "Un obicei mic care ne-ar ajuta să rămânem aproape",
+    "actionLabel": "Obiceiul nostru",
+    "actionPlaceholder": "În următoarele treizeci de zile, aș vrea să…",
+    "prayerHint": "Poate pentru muncă, odihnă, echilibru, călăuzire și o iubire care rămâne prezentă în viața obișnuită.",
+    "conversationEyebrow": "ÎNAPOI ÎN VIAȚA OBIȘNUITĂ",
+    "understoodEyebrow": "LUCRURILE SIMPLE LA CARE VISEZ",
+    "actionEyebrow": "RITMUL NOSTRU"
   }
 ]
